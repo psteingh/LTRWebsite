@@ -1,0 +1,270 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	background: linear-gradient(to right, #000000, #FFFFFF);
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: bold;
+	color: #FFFFF0;
+}
+h2 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: bold;
+	color: #36648B;
+}
+/* Webpage notice */
+h3 {
+	font-family: 'Libre Baskerville', serif;
+	color: #8C4845;
+}
+h4 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight: bold;
+	color: #368B88;
+}
+h5 {
+	font-family: 'Libre Baskerville', serif;
+	color: #E9EC47;
+}
+/* Input text */
+.form-control::placeholder {
+	color: #8C4845;
+}
+
+label {
+	color: #36648B;
+	margin-top: 5%;
+}
+
+/* Section background colors */
+.dblue {
+	background-color: #36648B;
+}
+.lblue {
+	background-color: #63B8FF;
+}
+
+.dgreen {
+	background-color: #368B88;
+}
+.lgreen {
+	background-color: #44B0AC;
+}
+
+.dred {
+	background-color: #8C4845;	
+}
+.lred {
+	background-color: #BD7D7A;
+}
+
+.opake {
+	opacity: 0.3;
+}
+
+.invisible {
+	color: none;
+}
+
+/* Navbar section */
+.navbar-brand {
+	margin-left: 1rem;
+	padding: 0;
+}
+
+/* Header section */
+.header-sec {
+	margin: 2% 2% 8% 2%;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	box-shadow: 2px 2px 5px #7F7F7F;
+	text-align: center;
+}
+
+/* Header titles section */
+.headertitle-text {
+	font-size: 4.5rem;
+	text-shadow: 2px 2px 2px #368B88, 4px 4px 4px #7F7F7F, 0 0 60px #FFFFFF;
+}
+
+.headersubtitle-text {
+	font-size: 1.5rem;
+}
+
+/* Carousel section */
+.carousel-indicators {
+	display: none;
+}
+
+.carousel-control-prev, .carousel-control-next {
+	opacity: 0.0;
+}
+
+.carousel-caption {
+	position: static;
+	font-size: 2.5rem;
+}
+
+/* Home component notice */
+.notice-sec {
+	margin: 2%;
+}
+
+/* Footer section */
+.footer-sec {
+	margin: 8% 2% 2% 2%;
+	box-shadow: 2px 2px 5px #7F7F7F;
+	text-align: center;
+}
+
+.footertext-sec {
+	padding: 2% 1%;
+}
+
+.fmess-text {
+	font-size: 0.85rem;
+}
+
+.fabout-text {
+	font-size: 0.95rem;
+}
+
+.logo-ftr {
+	width: 3.0rem;
+	height: 1.5rem;
+}
+
+/* Login Register */
+.card-container.card {
+	max-width: 350px !important;
+	padding: 2%;
+}
+
+.card {
+	background-color: #f7f7f7;
+	padding: 20px 25px 30px;
+	margin: 0 auto 25px;
+	margin-top: 50px;
+	border-radius: 2px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+}
+
+.alert-notice {
+	background-color: #BD7D7A;
+}
+
+.alert {
+	padding: 0.25rem 1rem;
+	margin-bottom: 0.10rem;
+	font-size: 85%;
+}
+
+.alert-success {
+	background-color: #44B0AC;
+	border-color: #44B0AC;
+	color: #FFFFFF;
+}
+
+/* LtrLie */
+.list {
+	text-align: left;
+	max-width: 750px;
+	margin: auto;
+}
+
+.list-group-item.active {
+	color: #FFFFFF;
+	background-color: #36648B;
+	border-color: #36648B;
+}
+
+.submit-form {
+	max-width: 300px;
+	margin: auto;
+}
+
+.edit-form {
+	max-width: 300px;
+	margin: auto;
+}
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: .5rem;
+  }
+
+/* Buttons */
+.action-button {
+	background: #8C4845;
+	border-radius: 0.6rem;
+	color: #FFFFFF;
+}
+
+.submit-button {
+	background: #44B0AC;
+	border-radius: 0.6rem;
+	color: #FFFFFF;
+}
+
+.logo-btn {
+	width: 6.2rem;
+	height: 3.1rem;
+	border-radius: 0.1rem;
+}
+
+/* Links */
+/* Navbar button */
+.navbar-nav .nav-item .nav-link {
+	color: #FFFFFF;	
+}
+/* Navbar hover */
+.navbar-nav .nav-item .nav-link:hover {
+	color: #63B8FF;
+}
+
+/* Contact Us button */
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/* Contact Us hover */
+a:hover {
+	color: #63B8FF;
+}
+
+/* Cell phone size */
+@media (max-width: 576px) {
+	html {
+		font-size: 50%;
+	}
+	
+	label {
+		margin-top: 0%;
+	}
+
+	.navbar {
+		font-size: 150%;
+	}
+
+	.form-control::placeholder {
+		font-size: 125%;
+	}
+	
+	.submit-button {
+		font-size: 120%;
+	}
+}
