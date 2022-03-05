@@ -29,7 +29,7 @@ db.mongoose
       { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false }
   )
   .then(() => {
-    console.log("server.js.db.mongoose");
+    console.log("app.js.db.mongoose");
   })
   .catch(err => {
     console.error("Connection error", err);
@@ -54,5 +54,5 @@ app.get('*', function (req, res) {
 const port = process.env.PORT || 3001;
 // listen for requests
 app.listen(port, () => {
-  console.log(`server.js.listen: ${port}`);
+  console.log(`app.js.listen: ${port}`);
 });
