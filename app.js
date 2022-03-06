@@ -56,6 +56,7 @@ if (process.env.NODE_ENV === 'development') {
 //   console.log(`app.js.listen: ${port}`);
 // });
 
+if (process.env.NODE_ENV === 'production') {
 const http = require('http')
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -69,6 +70,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`app.js.server.listen: http://${hostname}:${port}/`);
 });
+}
 
 // if (process.env.NODE_ENV === 'production') {
 // app.use(express.static(path.join(__dirname, 'client', 'build')));
