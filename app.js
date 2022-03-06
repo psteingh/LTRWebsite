@@ -7,8 +7,8 @@ dotenv.config();
 const app = express();
 
 // Accessing the path module
-const path = require("path");
-const mongoose = require("mongoose");
+// const path = require("path");
+// const mongoose = require("mongoose");
 
 // let corsOptions = {
 //   origin: "http://localhost:3000"};
@@ -45,16 +45,20 @@ require("./routes/contact.routes")(app);
 
 const http = require('http')
 const hostname = '127.0.0.1';
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Lies to Remember \n');
+  res.end('Lies to Remember 3001 \n');
 });
 
 server.listen(port, hostname, () => {
-  console.log(`app.js.listen: http://${hostname}:${port}/`);
+  console.log(`app.js.server.listen: http://${hostname}:${port}/`);
+});
+
+app.listen(port, () => {
+  console.log(`app.js.app.listen: ${port}`);
 });
 
 // if (process.env.NODE_ENV === 'production') {
