@@ -44,25 +44,26 @@ require("./routes/ltrlie.routes")(app);
 require("./routes/contact.routes")(app);
 
 // code for npm run dev only set port
-const port = process.env.PORT || 3001;
+// const port = process.env.PORT || 3001;
 // listen for requests
-  app.listen(port, () => {
-    console.log(`dev app.js.app.listen: ${port}`); });
+  // app.listen(port, () => {
+  //   console.log(`dev app.js.app.listen: ${port}`); });
 
 // code for BHSNA only
-// const http = require('http')
-// const hostname = '127.0.0.1';
-// const port = 3000;
+const http = require('http')
+const hostname = '127.0.0.1';
+const port = 3000;
+const PORT = process.env.PORT || port;
 
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Lies to Remember BHSNA 3000 \n');
-// });
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Lies to Remember BHSNA 3000 \n');
+});
 
-// server.listen(port, hostname, () => {
-//   console.log(`bhsna app.js.server.listen: http://${hostname}:${port}/`);
-// });
+app.listen(PORT, hostname, () => {
+  console.log(`bhsna app.js.app.listen: http://${hostname}:${PORT}/`);
+});
 
 // if (process.env.NODE_ENV === 'production') {
 // app.use(express.static(path.join(__dirname, 'client', 'build')));
