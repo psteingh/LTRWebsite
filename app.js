@@ -43,17 +43,11 @@ require("./routes/ltrlie.routes")(app);
 
 require("./routes/contact.routes")(app);
 
-// if (process.env.NODE_ENV === 'dev') {
-  const port = process.env.PORT || 3001;
+// set port
+const port = process.env.PORT || 3001;
+// listen for requests
   app.listen(port, () => {
     console.log(`dev app.js.app.listen: ${port}`); });
-
-// set port
-// const port = process.env.PORT || 3001;
-// listen for requests
-// app.listen(port, () => {
-//   console.log(`app.js.listen: ${port}`);
-// });
 
 if (process.env.NODE_ENV === 'production') {
 const http = require('http')
