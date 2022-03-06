@@ -43,33 +43,35 @@ require("./routes/ltrlie.routes")(app);
 
 require("./routes/contact.routes")(app);
 
-const http = require('http')
-const hostname = '127.0.0.1';
-const port = process.env.PORT || 3001;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Lies to Remember 3001 \n');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`app.js.server.listen: http://${hostname}:${port}/`);
-});
-
-app.listen(port, () => {
-  console.log(`app.js.app.listen: ${port}`);
-});
-
-// if (process.env.NODE_ENV === 'production') {
-// app.use(express.static(path.join(__dirname, 'client', 'build')));
-// app.get('*', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-// });
+if (process.env.NODE_ENV === 'development') {
+  const port = process.env.PORT || 3001;
+  app.listen(port, () => {
+    console.log(`app.js.app.listen: ${port}`); });
+};
 
 // set port
 // const port = process.env.PORT || 3001;
 // listen for requests
 // app.listen(port, () => {
 //   console.log(`app.js.listen: ${port}`);
+// });
+
+const http = require('http')
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Lies to Remember 3000 \n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`app.js.server.listen: http://${hostname}:${port}/`);
+});
+
+// if (process.env.NODE_ENV === 'production') {
+// app.use(express.static(path.join(__dirname, 'client', 'build')));
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 // });
