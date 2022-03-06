@@ -43,27 +43,26 @@ require("./routes/ltrlie.routes")(app);
 
 require("./routes/contact.routes")(app);
 
-// set port
+// code for npm run dev only set port
 const port = process.env.PORT || 3001;
 // listen for requests
   app.listen(port, () => {
     console.log(`dev app.js.app.listen: ${port}`); });
 
-if (process.env.NODE_ENV === 'production') {
-const http = require('http')
-const hostname = '127.0.0.1';
-const port = 3000;
+// code for BHSNA only
+// const http = require('http')
+// const hostname = '127.0.0.1';
+// const port = 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Lies to Remember prod 3000 \n');
-});
+// const server = http.createServer((req, res) => {
+//   res.statusCode = 200;
+//   res.setHeader('Content-Type', 'text/plain');
+//   res.end('Lies to Remember BHSNA 3000 \n');
+// });
 
-server.listen(port, hostname, () => {
-  console.log(`prod app.js.server.listen: http://${hostname}:${port}/`);
-});
-}
+// server.listen(port, hostname, () => {
+//   console.log(`prod app.js.server.listen: http://${hostname}:${port}/`);
+// });
 
 // if (process.env.NODE_ENV === 'production') {
 // app.use(express.static(path.join(__dirname, 'client', 'build')));
