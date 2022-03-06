@@ -53,6 +53,7 @@ require("./routes/contact.routes")(app);
 const http = require('http')
 const hostname = '127.0.0.1';
 const port = 3000;
+const PORT = process.env.PORT || port;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
@@ -60,8 +61,8 @@ const server = http.createServer((req, res) => {
   res.end('Lies to Remember BHSNA 3000 \n');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`bhsna app.js.server.listen: http://${hostname}:${port}/`);
+server.listen(PORT, hostname, () => {
+  console.log(`bhsna app.js.server.listen: http://${hostname}:${PORT}/`);
 });
 
 // if (process.env.NODE_ENV === 'production') {
