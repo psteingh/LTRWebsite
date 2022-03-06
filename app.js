@@ -43,7 +43,7 @@ require("./routes/ltrlie.routes")(app);
 
 require("./routes/contact.routes")(app);
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'dev') {
   const port = process.env.PORT || 3001;
   app.listen(port, () => {
     console.log(`app.js.app.listen: ${port}`); });
