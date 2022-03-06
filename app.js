@@ -46,7 +46,7 @@ require("./routes/contact.routes")(app);
 // if (process.env.NODE_ENV === 'dev') {
   const port = process.env.PORT || 3001;
   app.listen(port, () => {
-    console.log(`app.js.app.listen: ${port}`); });
+    console.log(`dev app.js.app.listen: ${port}`); });
 
 // set port
 // const port = process.env.PORT || 3001;
@@ -67,7 +67,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log(`app.js.server.listen: http://${hostname}:${port}/`);
+  console.log(`prod app.js.server.listen: http://${hostname}:${port}/`);
 });
 }
 
