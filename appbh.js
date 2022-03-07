@@ -7,7 +7,8 @@ dotenv.config();
 const app = express();
 
 // Accessing the path module
-// const path = require("path");
+const path = require("path");
+
 // const mongoose = require("mongoose");
 
 // let corsOptions = {
@@ -43,6 +44,12 @@ require("./routes/ltrlie.routes")(app);
 
 require("./routes/contact.routes")(app);
 
+// if (process.env.NODE_ENV === 'production') {
+app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
+
 // code for npm run dev only set port
 // const port = process.env.PORT || 3001;
 // listen for requests
@@ -64,9 +71,3 @@ const server = http.createServer((req, res) => {
 app.listen(PORT, hostname, () => {
   console.log(`bhsna app.js.app.listen: http://${hostname}:${PORT}/`);
 });
-
-// if (process.env.NODE_ENV === 'production') {
-// app.use(express.static(path.join(__dirname, 'client', 'build')));
-// app.get('*', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-// });
