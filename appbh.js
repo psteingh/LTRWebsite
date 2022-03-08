@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 
 // Accessing the path module
-const path = require("path");
+// const path = require("path");
 
 // const mongoose = require("mongoose");
 
@@ -44,11 +44,13 @@ require("./routes/ltrlie.routes")(app);
 
 require("./routes/contact.routes")(app);
 
+app.use(express.static("routes"));
+
 // if (process.env.NODE_ENV === 'production') {
-app.use(express.static(path.join(__dirname, 'client', 'build')));
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-});
+// app.use(express.static(path.join(__dirname, 'client', 'build')));
+// app.get('*', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+// });
 
 // code for npm run dev only set port
 // const port = process.env.PORT || 3001;
