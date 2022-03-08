@@ -8,7 +8,7 @@ function Footer(){
 
     <div className="footertext-sec">
       <div className="fmess-text">
-        03.06.22 - Due to limited server space,
+        03.08.22 - Due to limited server space,
         lawyers & politicians are not allowed to use this site.
       </div>
     </div>
