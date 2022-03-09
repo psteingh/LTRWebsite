@@ -45,9 +45,9 @@ require("./routes/ltrlie.routes")(app);
 require("./routes/contact.routes")(app);
 
 // if (process.env.NODE_ENV === 'production') {
-app.use(express.static(path.join(__dirname, 'public_html')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public_html', 'index.html'));
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // code for npm run dev only set port
