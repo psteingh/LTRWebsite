@@ -9,11 +9,6 @@ const app = express();
 // Accessing the path module
 const path = require("path");
 
-// const mongoose = require("mongoose");
-
-// let corsOptions = {
-//   origin: "http://localhost:3000"};
-
 app.use(cors());
 
 // parse requests of content-type - application/json
@@ -50,23 +45,10 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-// code for npm run dev only set port
-// const port = process.env.PORT || 3001;
-// listen for requests
-  // app.listen(port, () => {
-  //   console.log(`dev app.js.app.listen: ${port}`); });
-
 // code for BHSNA only
-// const http = require('http')
 const hostname = '127.0.0.1';
 const port = 3000;
 const PORT = process.env.PORT || port;
-
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Lies to Remember BHSNA 3000 \n');
-// });
 
 app.listen(PORT, hostname, () => {
   console.log(`bhsna app.js.app.listen: http://${hostname}:${PORT}/`);
