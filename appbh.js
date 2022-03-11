@@ -47,7 +47,7 @@ app.get('*', (req, res) => {
 
 // code for BHSNA only
 const hostname = '127.0.0.1';
-const port = 3001;
+const port = 3000;
 const PORT = process.env.PORT || port;
 
 app.listen(PORT, hostname, () => {
