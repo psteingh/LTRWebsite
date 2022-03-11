@@ -51,5 +51,5 @@ const port = 3001;
 const PORT = process.env.PORT || port;
 
 app.listen(PORT, hostname, () => {
-  console.log(`bhsna app.js.app.listen: http://${hostname}:${PORT}/`);
+  console.log(`app.js.app.listen: http://${hostname}:${PORT}/`);
 });
