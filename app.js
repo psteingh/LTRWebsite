@@ -39,14 +39,16 @@ require("./routes/ltrlie.routes")(app);
 
 require("./routes/contact.routes")(app);
 
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, "client", "build")));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+app.use(express.static("public"));
+
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 // code for BHSNA only
-const hostname = '127.0.0.1';
+const hostname = "127.0.0.1";
 const port = 3001;
 const PORT = process.env.PORT || port;
 
