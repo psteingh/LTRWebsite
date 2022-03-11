@@ -44,7 +44,7 @@ require("./routes/contact.routes")(app);
 app.use(express.static("public"));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // code for BHSNA only
