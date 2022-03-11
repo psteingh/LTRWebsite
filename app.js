@@ -41,6 +41,10 @@ require("./routes/contact.routes")(app);
 
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
+app.get("/api", (req, res) => {
+  res.send({ message: "Hello"})
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
