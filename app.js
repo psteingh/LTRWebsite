@@ -40,9 +40,9 @@ require("./routes/ltrlie.routes")(app);
 require("./routes/contact.routes")(app);
 
 // if (process.env.NODE_ENV === 'production') {
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, './client/public')));
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client', 'index.html'));
+  res.sendFile(path.join(__dirname, './client/public', 'index.html'));
 });
 
 // code for BHSNA only
