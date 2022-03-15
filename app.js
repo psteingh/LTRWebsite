@@ -39,8 +39,7 @@ require("./routes/ltrlie.routes")(app);
 
 require("./routes/contact.routes")(app);
 
-// app.use(express.static(path.join(__dirname, "client", "build")));
-
+// for build
 app.use(express.static("public"));
 
 app.get("*", (req, res) => {
