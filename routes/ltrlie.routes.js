@@ -11,7 +11,7 @@ module.exports = app => {
     next();
   });
 
-  // Create a new LtrLie - 1st
+  // Create a LtrLie - 1st
   router.post("/", ltrlies.create);
   
   // Retrieve all LtrLies
