@@ -7,7 +7,7 @@ function LieList(){
       <h4>List of Lies</h4>
       <ul className="list-group">
       <li className="list-group-item">
-        Current Lie
+        teacher
       </li>
       </ul>
       <p><button className="submit-button">
@@ -18,15 +18,19 @@ function LieList(){
     </div>
 
     <div className="col-md-6">
+    <div>
       <h5>Lie details</h5>
-        <div><label><strong>Name:</strong>
-             </label></div>
+        <div className="form-group">
+        <label><strong>Name:</strong></label>
+            teacher
+        </div>
         <div><label><strong>Subject:</strong>
              </label></div>
         <div><label><strong>Stuff:</strong>
              </label></div>
         <button className="submit-button">
           Edit </button>
+    </div>
     </div>
     
     </div>
