@@ -2,7 +2,12 @@ import React from "react";
 
 function LieList(){
   return(
-    <div className="list row">
+    <div className="list row lielist-sec">
+      <div className="lielisttext-sec">
+        This is what you can do & find inside
+      </div>
+
+
     <div className="col-md-6">
       <h4>List of Lies</h4>
       <ul className="list-group">
@@ -21,13 +26,12 @@ function LieList(){
     <div>
       <h5>Lie details</h5>
         <div className="form-group">
-        <label><strong>Name:</strong></label>
-            teacher
-        </div>
+        <label><strong>Name:</strong>
+        </label> teacher</div>
         <div><label><strong>Subject:</strong>
-             </label></div>
+        </label> dog ate my homework</div>
         <div><label><strong>Stuff:</strong>
-             </label></div>
+        </label> Algebra, March 28, 2022</div>
         <button className="submit-button">
           Edit </button>
     </div>
