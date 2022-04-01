@@ -44,8 +44,13 @@ render() {
     return (
         <div>
         <nav className="dblue navbar navbar-expand navbar-dark">
+          
           <Link to={"/"} className="navbar-brand">
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
+          </Link>
+
+          <Link to={"/lierboard"} className="nav-link">
+          Lier Board A
           </Link>
           
           {currentUser ? (
@@ -73,7 +78,7 @@ render() {
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
                 <Link to={"/lierboard"} className="nav-link">
-                 Lier Board
+                 Lier Board B
                 </Link>
               </li>
             
