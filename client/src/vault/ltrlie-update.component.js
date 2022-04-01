@@ -9,6 +9,7 @@ export default class LtrLieUpdate extends Component {
     this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onChangeStuff = this.onChangeStuff.bind(this);
     this.getLtrLie = this.getLtrLie.bind(this);
+    this.updatePublished = this.updatePublished.bind(this);
     this.updateLtrLie = this.updateLtrLie.bind(this);
     this.deleteLtrLie = this.deleteLtrLie.bind(this);
 
@@ -18,6 +19,7 @@ export default class LtrLieUpdate extends Component {
         name: "",
         subject: "",
         stuff: "",
+        published: false
       },
       message: ""
     };
@@ -68,6 +70,30 @@ export default class LtrLieUpdate extends Component {
         this.setState({
           currentLtrLie: response.data
         });
+        console.log(response.data);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  }
+
+  updatePublished(status) {
+    var data = {
+      name: this.state.name,
+      subject: this.state.subject,
+      stuff: this.state.stuff,
+      currentUser: this.state.currentUser.id,
+      published: status
+    };
+
+    LtrLieDataService.update(this.state.currentLtrLie.id, data)
+      .then(response => {
+        this.setState(prevState => ({
+          currentLtrLie: {
+            ...prevState.currentLtrLie,
+            published: status
+          }
+        }));
         console.log(response.data);
       })
       .catch(e => {
@@ -141,7 +167,29 @@ export default class LtrLieUpdate extends Component {
                   onChange={this.onChangeStuff}
                 />
               </div>
+              <div className="form-group">
+                <label>
+                  <strong>Status:</strong>
+                </label>
+                {currentLtrLie.published ? "Published" : "Pending"}
+              </div>
             </form>
+
+            {currentLtrLie.published ? (
+              <button
+                className="badge badge-primary mr-2"
+                onClick={() => this.updatePublished(false)}
+              >
+                UnPublish
+              </button>
+            ) : (
+              <button
+                className="badge badge-primary mr-2"
+                onClick={() => this.updatePublished(true)}
+              >
+                Publish
+              </button>
+            )}
 
             <button
               className="action-button"
