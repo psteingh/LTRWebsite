@@ -49,10 +49,10 @@ render() {
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
           </Link>
 
-          <Link to={"/lierboard"} className="nav-link">
-          Lier Board A
+          <Link to={"/lierboard"} className="navbar-lierboard">
+          Lier Board
           </Link>
-          
+                    
           {currentUser ? (
             <div className="navbar-nav ml-auto">
             
@@ -76,12 +76,7 @@ render() {
             </div>
           ) : (
             <div className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link to={"/lierboard"} className="nav-link">
-                 Lier Board B
-                </Link>
-              </li>
-            
+
               <li className="nav-item">
                 <Link to={"/login"} className="nav-link">
                  Log In

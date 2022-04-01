@@ -240,6 +240,12 @@ label {
 .navbar-nav .nav-item .nav-link {
 	color: #FFFFFF;	
 }
+
+/* Navbar Lier Board button */
+.navbar-lierboard {
+	padding-right: .5rem;
+}
+
 /* Navbar hover */
 .navbar-nav .nav-item .nav-link:hover {
 	color: #63B8FF;
