@@ -79,10 +79,10 @@ export default class LtrLieUpdate extends Component {
 
   updatePublished(status) {
     var data = {
-      name: this.state.name,
-      subject: this.state.subject,
-      stuff: this.state.stuff,
-      currentUser: this.state.currentUser.id,
+      id: this.state.currentLtrLie.id,
+      name: this.state.currentLtrLie.name,
+      subject: this.state.currentLtrLie.subject,
+      stuff: this.state.currentLtrLie.stuff,
       published: status
     };
 
@@ -168,23 +168,19 @@ export default class LtrLieUpdate extends Component {
                 />
               </div>
               <div className="form-group">
-                <label>
-                  <strong>Status:</strong>
-                </label>
+                <label><strong>Status:</strong></label>
                 {currentLtrLie.published ? "Published" : "Pending"}
               </div>
             </form>
 
             {currentLtrLie.published ? (
-              <button
-                className="badge badge-primary mr-2"
+              <button className="action-button"
                 onClick={() => this.updatePublished(false)}
               >
                 UnPublish
               </button>
             ) : (
-              <button
-                className="badge badge-primary mr-2"
+              <button className="submit-button"
                 onClick={() => this.updatePublished(true)}
               >
                 Publish
