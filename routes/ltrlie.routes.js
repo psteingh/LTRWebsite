@@ -19,6 +19,9 @@ module.exports = app => {
     [authJwt.verifyToken],
     ltrlies.findAll);
 
+  // Retrieve all published LtrLies
+  router.get("/published", ltrlies.findAllPublished);
+
   // Update a LtrLie with id
   router.put("/:id", ltrlies.update);
     

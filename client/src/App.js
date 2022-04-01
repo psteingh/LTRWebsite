@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
 import Home from "./components/home.component";
+import LierBoard from "./components/lierboard.component";
 import Login from "./components/login.component";
 import Profile from "./components/profile.component";
 import Register from "./components/register.component";
@@ -25,6 +26,7 @@ class App extends Component {
         <div className="container mt-3">
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/lierboard" component={LierBoard} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/register" component={Register} />

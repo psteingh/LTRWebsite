@@ -2,11 +2,7 @@ import React, { Component } from "react";
 
 import UserService from "../services/user.service";
 
-import Tophead from "../home/tophead";
-import LieList from "../home/lielist";
-import Footer from "../home/footer";
-
-export default class Home extends Component {
+export default class LierBoard extends Component {
   constructor(props) {
     super(props);
 
@@ -36,9 +32,11 @@ export default class Home extends Component {
   render() {
     return (
       <div className="container">
-        <Tophead />
-        <LieList />
-        <Footer />
+        
+        <div className="notice-sec opake">
+          <h3>{this.state.content}</h3>
+        </div>
+        
       </div>
     );
   }

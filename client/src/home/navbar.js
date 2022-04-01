@@ -72,12 +72,18 @@ render() {
           ) : (
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
+                <Link to={"/lierboard"} className="nav-link">
+                 Lier Board
+                </Link>
+              </li>
+            
+              <li className="nav-item">
                 <Link to={"/login"} className="nav-link">
                  Log In
                 </Link>
               </li>
 
-    <li className="nav-item">
+              <li className="nav-item">
                 <Link to={"/register"} className="nav-link">
                   Sign Up
                 </Link>

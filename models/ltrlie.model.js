@@ -5,6 +5,7 @@ const LtrLieSchema = new mongoose.Schema({
   subject: String,
   stuff: String,
   currentUser: String,
+  published: Boolean,
 },
   { timestamps: false }
 );
