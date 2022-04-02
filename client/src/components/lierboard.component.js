@@ -12,15 +12,17 @@ export default class LierBoard extends Component {
     this.refreshPage = this.refreshPage.bind(this);
 
     this.state = {
-      content: "",
       ltrlies: [],
-      currentLtrLie: {
-        id: null,
-        name: "",
-        subject: "",
-        stuff: "",
-        published: false,
-      },
+      currentLtrLie: null,
+      currentIndex: -1,
+      // content: "",
+      // currentLtrLie: {
+      //   id: null,
+      //   name: "",
+      //   subject: "",
+      //   stuff: "",
+      //   published: false,
+      // },
     };
   }
 
