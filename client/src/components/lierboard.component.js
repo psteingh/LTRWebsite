@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import UserService from "../services/user.service";
+// import UserService from "../services/user.service";
 import LtrLieDataService from "../services/ltrlie.service";
 
 export default class LierBoard extends Component {
@@ -29,21 +29,21 @@ export default class LierBoard extends Component {
   componentDidMount() {
     this.retrieveLtrLies();
 
-    UserService.getPublicContent().then(
-      response => {
-        this.setState({
-          content: response.data
-        });
-      },
-      error => {
-        this.setState({
-          content:
-            (error.response && error.response.data) ||
-            error.message ||
-            error.toString()
-        });
-      }
-    );
+    // UserService.getPublicContent().then(
+    //   response => {
+    //     this.setState({
+    //       content: response.data
+    //     });
+    //   },
+    //   error => {
+    //     this.setState({
+    //       content:
+    //         (error.response && error.response.data) ||
+    //         error.message ||
+    //         error.toString()
+    //     });
+    //   }
+    // );
   }
 
   retrieveLtrLies() {
@@ -74,8 +74,12 @@ export default class LierBoard extends Component {
     });
   }
 
+  refreshPage() {
+    window.location.reload(false);
+  }
+
   render() {
-    const { ltrlies, currentLtrLie, currentIndex } = this.state;
+    const { ltrlies, currentIndex } = this.state;
     
     return (
       <div className="container">
@@ -101,14 +105,18 @@ export default class LierBoard extends Component {
               </li>
               ))}
           </ul>
-                    
+
+          {/* <div>
+            {currentLtrLie.name}
+          </div> */}
+
           <p><button className="submit-button"
               onClick={this.refreshPage}>
             List of Lies
           </button></p>
         </div>
 
-        <div className="col-md-6">
+        {/* <div className="col-md-6">
             <div>
               <h5>Lie details</h5>
               <div>
@@ -121,7 +129,7 @@ export default class LierBoard extends Component {
                 {currentLtrLie.name}
               </div>
             </div>
-        </div>
+        </div> */}
 
       </div>
     );
