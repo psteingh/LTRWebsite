@@ -77,30 +77,44 @@ export default class LtrLieUpdate extends Component {
       });
   }
 
-  updatePublished(status) {
-    var data = {
-      id: this.state.currentLtrLie.id,
-      name: this.state.currentLtrLie.name,
-      subject: this.state.currentLtrLie.subject,
-      stuff: this.state.currentLtrLie.stuff,
-      published: status
-    };
-
-    LtrLieDataService.update(this.state.currentLtrLie.id, data)
+ updatePublished(status) {
+    LtrLieDataService.update(this.state.currentLtrLie.id)
       .then(response => {
-        this.setState(prevState => ({
-          currentLtrLie: {
-            ...prevState.currentLtrLie,
-            published: status
-          }
-        }));
         console.log(response.data);
-        this.props.history.push("/lierboard");
+        this.props.history.push({
+          pathname: "/lierboard",
+          state: this.state.currentLtrLie.subject
+         })
       })
       .catch(e => {
         console.log(e);
       });
   }
+
+  // updatePublished(status) {
+  //   var data = {
+  //     id: this.state.currentLtrLie.id,
+  //     name: this.state.currentLtrLie.name,
+  //     subject: this.state.currentLtrLie.subject,
+  //     stuff: this.state.currentLtrLie.stuff,
+  //     published: status
+  //   };
+
+  //   LtrLieDataService.update(this.state.currentLtrLie.id, data)
+  //     .then(response => {
+  //       this.setState(prevState => ({
+  //         currentLtrLie: {
+  //           ...prevState.currentLtrLie,
+  //           published: status
+  //         }
+  //       }));
+  //       console.log(response.data);
+  //       this.props.history.push("/lierboard");
+  //     })
+  //     .catch(e => {
+  //       console.log(e);
+  //     });
+  // }
 
   updateLtrLie() {
     LtrLieDataService.update(
@@ -169,7 +183,7 @@ export default class LtrLieUpdate extends Component {
                 />
               </div>
               <div className="form-group">
-                <label><strong>Status:</strong></label>
+                <label><h4>Status:</h4></label>
                 {currentLtrLie.published ? "Published" : "Pending"}
               </div>
             </form>
