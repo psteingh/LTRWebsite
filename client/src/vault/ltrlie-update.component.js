@@ -95,6 +95,7 @@ export default class LtrLieUpdate extends Component {
           }
         }));
         console.log(response.data);
+        this.props.history.push("/lierboard");
       })
       .catch(e => {
         console.log(e);
