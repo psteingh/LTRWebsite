@@ -6,7 +6,10 @@ import LtrLieDataService from "../services/ltrlie.service";
 export default class LierBoard extends Component {
   constructor(props) {
     super(props);
-    this.updatePublished = this.updatePublished.bind(this);
+    this.retrieveLtrLies = this.retrieveLtrLies.bind(this);
+    this.refreshList = this.refreshList.bind(this);
+    this.setActiveLtrLie = this.setActiveLtrLie.bind(this);
+    this.refreshPage = this.refreshPage.bind(this);
 
     this.state = {
       content: "",
@@ -22,6 +25,8 @@ export default class LierBoard extends Component {
   }
 
   componentDidMount() {
+    this.retrieveLtrLies();
+
     UserService.getPublicContent().then(
       response => {
         this.setState({
@@ -39,20 +44,11 @@ export default class LierBoard extends Component {
     );
   }
 
-  updatePublished(status) {
-    var data = {
-      id: this.state.currentLtrLie.id,
-      name: this.state.currentLtrLie.name,
-      subject: this.state.currentLtrLie.subject,
-      stuff: this.state.currentLtrLie.stuff,
-      published: status
-    }
-
-    LtrLieDataService.update(this.state.currentLtrLie.id, data)
+  retrieveLtrLies() {
+    LtrLieDataService.getAll()
       .then(response => {
         this.setState({
           ltrlies: response.data,
-          published: status,
         });
         console.log(response.data);
       })
@@ -61,8 +57,23 @@ export default class LierBoard extends Component {
       });
   }
 
+  refreshList() {
+    this.retrieveLtrLies();
+    this.setState({
+      currentLtrLie: null,
+      currentIndex: -1
+    });
+  }
+
+  setActiveLtrLie(ltrlie, index) {
+    this.setState({
+      currentLtrLie: ltrlie,
+      currentIndex: index,
+    });
+  }
+
   render() {
-    const { currentLtrLie } = this.state;
+    const { ltrlies, currentLtrLie, currentIndex } = this.state;
     
     return (
       <div className="container">
@@ -72,8 +83,35 @@ export default class LierBoard extends Component {
         </div>
 
         <div className="col-md-6">
+          <h4>List of Lies</h4>
+          <ul className="list-group">
+            {ltrlies &&
+              ltrlies.map((ltrlie, index) => (
+              <li
+                className={
+                "list-group-item " +
+                (index === currentIndex ? "active" : "")
+                }
+                onClick={() => this.setActiveLtrLie(ltrlie, index)}
+                key={index}>
+                
+                {ltrlie.name}
+              </li>
+              ))}
+          </ul>
+                    
+          <p><button className="submit-button"
+              onClick={this.refreshPage}>
+            List of Lies
+          </button></p>
+        </div>
+
+        <div className="col-md-6">
             <div>
               <h5>Lie details</h5>
+              <div>
+                  {ltrlies.subject}
+              </div>
               <div>
                 <label>
                   <strong>Name:</strong>
@@ -82,6 +120,7 @@ export default class LierBoard extends Component {
               </div>
             </div>
         </div>
+
       </div>
     );
   }
