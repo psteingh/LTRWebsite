@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-// import UserService from "../services/user.service";
+import UserService from "../services/user.service";
 import LtrLieDataService from "../services/ltrlie.service";
 
 export default class LierBoard extends Component {
@@ -13,37 +13,37 @@ export default class LierBoard extends Component {
 
     this.state = {
       ltrlies: [],
-      currentLtrLie: null,
+      // currentLtrLie: null,
       currentIndex: -1,
-      // content: "",
-      // currentLtrLie: {
-      //   id: null,
-      //   name: "",
-      //   subject: "",
-      //   stuff: "",
-      //   published: false,
-      // },
+      content: "",
+      currentLtrLie: {
+        id: null,
+        name: "",
+        subject: "",
+        stuff: "",
+        published: false,
+      },
     };
   }
 
   componentDidMount() {
     this.retrieveLtrLies();
 
-    // UserService.getPublicContent().then(
-    //   response => {
-    //     this.setState({
-    //       content: response.data
-    //     });
-    //   },
-    //   error => {
-    //     this.setState({
-    //       content:
-    //         (error.response && error.response.data) ||
-    //         error.message ||
-    //         error.toString()
-    //     });
-    //   }
-    // );
+    UserService.getPublicContent().then(
+      response => {
+        this.setState({
+          content: response.data
+        });
+      },
+      error => {
+        this.setState({
+          content:
+            (error.response && error.response.data) ||
+            error.message ||
+            error.toString()
+        });
+      }
+    );
   }
 
   retrieveLtrLies() {
@@ -51,6 +51,7 @@ export default class LierBoard extends Component {
       .then(response => {
         this.setState({
           ltrlies: response.data,
+          published: false,
         });
         console.log(response.data);
       })
@@ -63,7 +64,8 @@ export default class LierBoard extends Component {
     this.retrieveLtrLies();
     this.setState({
       currentLtrLie: null,
-      currentIndex: -1
+      currentIndex: -1,
+      published: true,
     });
   }
 
@@ -71,6 +73,7 @@ export default class LierBoard extends Component {
     this.setState({
       currentLtrLie: ltrlie,
       currentIndex: index,
+      published: true,
     });
   }
 
@@ -79,7 +82,7 @@ export default class LierBoard extends Component {
   }
 
   render() {
-    const { ltrlies, currentIndex } = this.state;
+    const { ltrlies, currentLtrLie, currentIndex } = this.state;
     
     return (
       <div className="container">
@@ -100,36 +103,17 @@ export default class LierBoard extends Component {
                 }
                 onClick={() => this.setActiveLtrLie(ltrlie, index)}
                 key={index}>
-                
-                {ltrlie.name}
+                  {ltrlie.name}
+                  {currentLtrLie.published}
               </li>
               ))}
           </ul>
-
-          {/* <div>
-            {currentLtrLie.name}
-          </div> */}
 
           <p><button className="submit-button"
               onClick={this.refreshPage}>
             List of Lies
           </button></p>
         </div>
-
-        {/* <div className="col-md-6">
-            <div>
-              <h5>Lie details</h5>
-              <div>
-                  {ltrlies.subject}
-              </div>
-              <div>
-                <label>
-                  <strong>Name:</strong>
-                </label>{" "}
-                {currentLtrLie.name}
-              </div>
-            </div>
-        </div> */}
 
       </div>
     );
