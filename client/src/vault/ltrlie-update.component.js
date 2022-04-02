@@ -76,45 +76,29 @@ export default class LtrLieUpdate extends Component {
         console.log(e);
       });
   }
-
- updatePublished(status) {
-    LtrLieDataService.update(this.state.currentLtrLie.id)
+ 
+  updatePublished(status) {
+    var data = {
+      id: this.state.currentLtrLie.id,
+      name: this.state.currentLtrLie.name,
+      subject: this.state.currentLtrLie.subject,
+      stuff: this.state.currentLtrLie.stuff,
+      published: status
+    };
+    LtrLieDataService.update(this.state.currentLtrLie.id, data)
       .then(response => {
+        this.setState(prevState => ({
+          currentLtrLie: {
+            ...prevState.currentLtrLie,
+            published: status
+          }
+        }));
         console.log(response.data);
-        this.props.history.push({
-          pathname: "/lierboard",
-          state: this.state.currentLtrLie.subject
-         })
       })
       .catch(e => {
         console.log(e);
       });
   }
-
-  // updatePublished(status) {
-  //   var data = {
-  //     id: this.state.currentLtrLie.id,
-  //     name: this.state.currentLtrLie.name,
-  //     subject: this.state.currentLtrLie.subject,
-  //     stuff: this.state.currentLtrLie.stuff,
-  //     published: status
-  //   };
-
-  //   LtrLieDataService.update(this.state.currentLtrLie.id, data)
-  //     .then(response => {
-  //       this.setState(prevState => ({
-  //         currentLtrLie: {
-  //           ...prevState.currentLtrLie,
-  //           published: status
-  //         }
-  //       }));
-  //       console.log(response.data);
-  //       this.props.history.push("/lierboard");
-  //     })
-  //     .catch(e => {
-  //       console.log(e);
-  //     });
-  // }
 
   updateLtrLie() {
     LtrLieDataService.update(

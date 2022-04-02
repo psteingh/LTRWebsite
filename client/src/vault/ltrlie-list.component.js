@@ -163,6 +163,12 @@ export default class LtrLieList extends Component {
                 </label>{" "}
                 {currentLtrLie.stuff}
               </div>
+              <div>
+                <label>
+                  <strong>Status:</strong>
+                </label>{" "}
+                {currentLtrLie.published ? "Published" : "Pending"}
+              </div>
               <button className="submit-button">
                 <Link to={"/ltrlies/" + currentLtrLie.id}>
                   Edit </Link>

@@ -54,6 +54,7 @@ export default class LtrLieAdd extends Component {
       currentUser: AuthService.getCurrentUser(),
       loading: false,
       message: "",
+      published: false,
       submitted: false
     };
   }
@@ -103,6 +104,7 @@ handleCreate(e) {
           name: response.data.name,
           subject: response.data.subject,
           stuff: response.data.stuff,
+          published: response.data.published,
           submitted: true
         });
         console.log(response.data);
@@ -135,6 +137,7 @@ handleCreate(e) {
       name: "",
       subject: "",
       stuff: "",
+      published: false,
       submitted: false
     });
   }
