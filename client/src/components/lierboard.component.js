@@ -11,11 +11,16 @@ export default class LierBoard extends Component {
     this.state = {
       content: "",
       ltrlies: [],
-      currentLtrLie: null,
+      currentLtrLie: {
+        subject: "",
+        published: false,
+      },
     };
   }
 
   componentDidMount() {
+    this.retrieveLtrLies();
+
     UserService.getPublicContent().then(
       response => {
         this.setState({
@@ -48,7 +53,7 @@ export default class LierBoard extends Component {
 
 
   render() {
-    const { state } = this.props.location;
+    const { currentLtrLie } = this.state;
     
     return (
       <div className="container">
@@ -57,10 +62,18 @@ export default class LierBoard extends Component {
           <h3>{this.state.content}</h3>
         </div>
 
-        <div>
-          {state.UserService}
+        <div className="col-md-6">
+            <div>
+              <h5>Lie details</h5>
+              <div>
+                <label>
+                  <strong>Name:</strong>
+                </label>{" "}
+                {currentLtrLie.name}
+              </div>
+            </div>
+          )
         </div>
-        
       </div>
     );
   }
