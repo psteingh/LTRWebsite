@@ -116,7 +116,7 @@ exports.delete = (req, res) => {
       });
 };
 
-// Find all published LtrLies
+// Retrieve all published LtrLies
 exports.findAllPublished = (req, res) => {
   LtrLie.find({ published: true })
   .then(data => {

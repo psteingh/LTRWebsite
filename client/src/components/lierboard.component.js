@@ -19,7 +19,7 @@ export default class LierBoard extends Component {
       currentLtrLie: {
         id: null,
         name: "",
-        subject: "",
+        // subject: "",
         stuff: "",
         published: false,
       },
