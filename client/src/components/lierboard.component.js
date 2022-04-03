@@ -7,15 +7,16 @@ export default class LierBoard extends Component {
   constructor(props) {
     super(props);
     this.getPublishedLtrLies = this.getPublishedLtrLies.bind(this);
-    this.refreshList = this.refreshList.bind(this);
-    this.setActiveLtrLie = this.setActiveLtrLie.bind(this);
-    this.refreshPage = this.refreshPage.bind(this);
+    // this.refreshList = this.refreshList.bind(this);
+    // this.setActiveLtrLie = this.setActiveLtrLie.bind(this);
+    // this.refreshPage = this.refreshPage.bind(this);
 
     this.state = {
       ltrlies: [],
       currentLtrLie: null,
       currentIndex: -1,
-      // content: "",
+      content: "",
+      published: false,
       // currentLtrLie: {
       //   id: null,
       //   name: "",
@@ -51,6 +52,7 @@ export default class LierBoard extends Component {
       .then(response => {
         this.setState({
           ltrlies: response.data,
+          published: true,
         });
         console.log(response.data);
       })
@@ -59,20 +61,20 @@ export default class LierBoard extends Component {
       });
   }
 
-  refreshList() {
-    this.retrieveLtrLies();
-    this.setState({
-      currentLtrLie: null,
-      currentIndex: -1,
-    });
-  }
+  // refreshList() {
+  //   this.retrieveLtrLies();
+  //   this.setState({
+  //     currentLtrLie: null,
+  //     currentIndex: -1,
+  //   });
+  // }
 
-  setActiveLtrLie(ltrlie, index) {
-    this.setState({
-      currentLtrLie: ltrlie,
-      currentIndex: index,
-    });
-  }
+  // setActiveLtrLie(ltrlie, index) {
+  //   this.setState({
+  //     currentLtrLie: ltrlie,
+  //     currentIndex: index,
+  //   });
+  // }
 
   refreshPage() {
     window.location.reload(false);
@@ -109,12 +111,13 @@ export default class LierBoard extends Component {
               </li>
               ))}
           </ul>
+          </div>
 
           <p><button className="submit-button"
               onClick={this.refreshPage}>
             List of Lies
           </button></p>
-        </div>
+        
 
       </div>
     );
