@@ -12,12 +12,12 @@ export default class LierBoard extends Component {
       ltrlies: [],
       // content: "",
       currentLtrLie: null,
-      // currentIndex: -1,
+      currentIndex: -1,
       // id: null,
       // name: "",
       // subject: "",
       // stuff: "",
-      published: false,
+      // published: false,
     };
   }
 
@@ -45,9 +45,7 @@ export default class LierBoard extends Component {
     LtrLieDataService.getAllPublished()
       .then(response => {
         this.setState({
-          
           ltrlies: response.data,
-          published: true
         });
         console.log(response.data);
       })
@@ -56,12 +54,19 @@ export default class LierBoard extends Component {
       });
   }
 
+  setActiveLtrLie(ltrlie, index) {
+    this.setState({
+      currentLtrLie: ltrlie,
+      currentIndex: index,
+    });
+  }
+
   refreshPage() {
     window.location.reload(false);
   }
 
   render() {
-    const { ltrlies } = this.state;
+    const { ltrlies, currentIndex } = this.state;
     
     return (
       <div className="container">
@@ -73,9 +78,19 @@ export default class LierBoard extends Component {
         <div className="col-md-6">
           <h4>List of Lies</h4>
           <ul className="list-group">
-            <li className="list-group-item">
-              <p>{ltrlies.name}</p>
-            </li>
+          {ltrlies &&
+              ltrlies.map((ltrlie, index) => (
+              <li
+                className={
+                "list-group-item " +
+                (index === currentIndex ? "active" : "")
+                }
+                onClick={() => this.setActiveLtrLie(ltrlie, index)}
+                key={index}>
+                
+                {ltrlie.name}
+              </li>
+              ))}
           </ul>
         </div>
 
