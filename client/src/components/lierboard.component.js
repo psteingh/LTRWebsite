@@ -11,14 +11,13 @@ export default class LierBoard extends Component {
     this.state = {
       ltrlies: [],
       // content: "",
-      // currentLtrLie: null,
+      currentLtrLie: null,
       // currentIndex: -1,
-      // published: false
       // id: null,
       // name: "",
       // subject: "",
       // stuff: "",
-      // published: false,
+      published: false,
     };
   }
 
@@ -46,7 +45,9 @@ export default class LierBoard extends Component {
     LtrLieDataService.getAllPublished()
       .then(response => {
         this.setState({
+          
           ltrlies: response.data,
+          published: true
         });
         console.log(response.data);
       })
