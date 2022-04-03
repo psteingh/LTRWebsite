@@ -79,7 +79,7 @@ export default class LierBoard extends Component {
   }
 
   render() {
-    const { ltrlies, currentLtrLie, currentIndex } = this.state;
+    const { ltrlies, currentIndex } = this.state;
     
     return (
       <div className="container">
@@ -103,7 +103,7 @@ export default class LierBoard extends Component {
 
                   <div className="lierboard-sec">
                   <p>{ltrlie.name}, {ltrlie.stuff}</p>
-                  <p>{ltrlie.subject}{currentLtrLie.published}</p>
+                  <p>{ltrlie.subject}</p>
                   </div>
 
               </li>
