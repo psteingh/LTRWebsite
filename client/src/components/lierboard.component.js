@@ -72,26 +72,11 @@ export default class LierBoard extends Component {
         <div className="col-md-6">
           <h4>List of Lies</h4>
           <ul className="list-group">
-            {ltrlies &&
-              ltrlies.map((ltrlie, index) => (
-              <li
-                className={
-                "list-group-item "
-                //  +
-                // (index === currentIndex ? "active" : "")
-                }
-                onClick={() => this.setActiveLtrLie(ltrlie, index)}
-                key={index}>
-
-                  <div className="lierboard-sec">
-                  <p>{ltrlie.name}, {ltrlie.stuff}</p>
-                  <p>{ltrlie.subject}</p>
-                  </div>
-
-              </li>
-              ))}
+            <li className="list-group-item">
+              <p>{ltrlies.name}</p>
+            </li>
           </ul>
-          </div>
+        </div>
 
           <p><button className="submit-button"
               onClick={this.refreshPage}>
