@@ -14,16 +14,16 @@ export default class LierBoard extends Component {
       // currentLtrLie: null,
       // currentIndex: -1,
       // published: false
-      id: null,
-      name: "",
-      subject: "",
-      stuff: "",
-      published: false,
+      // id: null,
+      // name: "",
+      // subject: "",
+      // stuff: "",
+      // published: false,
     };
   }
 
   componentDidMount() {
-    // this.getPublishedLtrLies();
+    this.getPublishedLtrLies();
 
     UserService.getPublicContent().then(
       response => {
@@ -73,13 +73,14 @@ export default class LierBoard extends Component {
           <h4>List of Lies</h4>
           {ltrlies.name}
 
-          {/* <ul className="list-group">
+          <ul className="list-group">
             {ltrlies &&
               ltrlies.map((ltrlie, index) => (
               <li
                 className={
-                "list-group-item " +
-                (index === currentIndex ? "active" : "")
+                "list-group-item "
+                //  +
+                // (index === currentIndex ? "active" : "")
                 }
                 onClick={() => this.setActiveLtrLie(ltrlie, index)}
                 key={index}>
@@ -91,7 +92,7 @@ export default class LierBoard extends Component {
 
               </li>
               ))}
-          </ul> */}
+          </ul>
           </div>
 
           <p><button className="submit-button"
