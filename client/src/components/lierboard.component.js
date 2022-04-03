@@ -6,28 +6,28 @@ import LtrLieDataService from "../services/ltrlie.service";
 export default class LierBoard extends Component {
   constructor(props) {
     super(props);
-    this.retrieveLtrLies = this.retrieveLtrLies.bind(this);
+    this.getPublishedLtrLies = this.getPublishedLtrLies.bind(this);
     this.refreshList = this.refreshList.bind(this);
     this.setActiveLtrLie = this.setActiveLtrLie.bind(this);
     this.refreshPage = this.refreshPage.bind(this);
 
     this.state = {
       ltrlies: [],
-      // currentLtrLie: null,
+      currentLtrLie: null,
       currentIndex: -1,
-      content: "",
-      currentLtrLie: {
-        id: null,
-        name: "",
-        // subject: "",
-        stuff: "",
-        published: false,
-      },
+      // content: "",
+      // currentLtrLie: {
+      //   id: null,
+      //   name: "",
+      //   // subject: "",
+      //   stuff: "",
+      //   published: false,
+      // },
     };
   }
 
   componentDidMount() {
-    this.retrieveLtrLies();
+    this.getPublishedLtrLies();
 
     UserService.getPublicContent().then(
       response => {
@@ -46,12 +46,11 @@ export default class LierBoard extends Component {
     );
   }
 
-  retrieveLtrLies() {
-    LtrLieDataService.getAll()
+  getPublishedLtrLies() {
+    LtrLieDataService.getAllPublished()
       .then(response => {
         this.setState({
           ltrlies: response.data,
-          published: true,
         });
         console.log(response.data);
       })

@@ -31,6 +31,11 @@ class LtrLieDataService {
   findName(name) {
     return api.get(`/ltrlies?name=${name}`);
   }
+
+  // Retrieve all published LtrLies
+  getAllPublished() {
+      return api.get("/ltrlies");
+  }
   
 }
 
