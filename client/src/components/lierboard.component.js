@@ -9,18 +9,16 @@ export default class LierBoard extends Component {
     this.getPublishedLtrLies = this.getPublishedLtrLies.bind(this);
 
     this.state = {
-      content: "",
       ltrlies: [],
+      // content: "",
       // currentLtrLie: null,
       // currentIndex: -1,
-      // published: false,
-      currentLtrLie: {
-        id: null,
-        name: "",
-        subject: "",
-        stuff: "",
-        published: false,
-      },
+      // published: false
+      id: null,
+      name: "",
+      subject: "",
+      stuff: "",
+      published: false,
     };
   }
 
@@ -31,7 +29,6 @@ export default class LierBoard extends Component {
       response => {
         this.setState({
           content: response.data,
-          published: true,
         });
       },
       error => {
@@ -63,7 +60,7 @@ export default class LierBoard extends Component {
   }
 
   render() {
-    const { ltrlies, currentIndex } = this.state;
+    const { ltrlies } = this.state;
     
     return (
       <div className="container">
@@ -76,8 +73,7 @@ export default class LierBoard extends Component {
           <h4>List of Lies</h4>
           {ltrlies.name}
 
-
-          <ul className="list-group">
+          {/* <ul className="list-group">
             {ltrlies &&
               ltrlies.map((ltrlie, index) => (
               <li
@@ -95,7 +91,7 @@ export default class LierBoard extends Component {
 
               </li>
               ))}
-          </ul>
+          </ul> */}
           </div>
 
           <p><button className="submit-button"
