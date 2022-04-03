@@ -71,8 +71,6 @@ export default class LierBoard extends Component {
 
         <div className="col-md-6">
           <h4>List of Lies</h4>
-          {ltrlies.name}
-
           <ul className="list-group">
             {ltrlies &&
               ltrlies.map((ltrlie, index) => (
