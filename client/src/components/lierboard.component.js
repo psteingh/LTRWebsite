@@ -51,7 +51,7 @@ export default class LierBoard extends Component {
       .then(response => {
         this.setState({
           ltrlies: response.data,
-          published: false,
+          published: true,
         });
         console.log(response.data);
       })
@@ -65,7 +65,6 @@ export default class LierBoard extends Component {
     this.setState({
       currentLtrLie: null,
       currentIndex: -1,
-      published: true,
     });
   }
 
@@ -73,7 +72,6 @@ export default class LierBoard extends Component {
     this.setState({
       currentLtrLie: ltrlie,
       currentIndex: index,
-      published: true,
     });
   }
 
@@ -103,8 +101,12 @@ export default class LierBoard extends Component {
                 }
                 onClick={() => this.setActiveLtrLie(ltrlie, index)}
                 key={index}>
-                  {ltrlie.name}
-                  {currentLtrLie.published}
+
+                  <div className="lierboard-sec">
+                  <p>{ltrlie.name}, {ltrlie.stuff}</p>
+                  <p>{ltrlie.subject}{currentLtrLie.published}</p>
+                  </div>
+
               </li>
               ))}
           </ul>

@@ -20,7 +20,7 @@ module.exports = app => {
     ltrlies.findAll);
 
   // Retrieve all published LtrLies
-  router.get("/published", ltrlies.findAllPublished);
+  router.get("/lierboard", ltrlies.findAllPublished);
 
   // Update a LtrLie with id
   router.put("/:id", ltrlies.update);

@@ -150,6 +150,12 @@ label {
 	height: 1.5rem;
 }
 
+/* Lier Board */
+.lierboard-sec {
+	padding: .5%;
+}
+
+
 /* Login Register */
 .card-container.card {
 	max-width: 350px !important;
