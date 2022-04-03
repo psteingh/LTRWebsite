@@ -9,28 +9,29 @@ export default class LierBoard extends Component {
     this.getPublishedLtrLies = this.getPublishedLtrLies.bind(this);
 
     this.state = {
-      ltrlies: [],
-      currentLtrLie: null,
-      currentIndex: -1,
       content: "",
-      published: false,
-      // currentLtrLie: {
-      //   id: null,
-      //   name: "",
-      //   // subject: "",
-      //   stuff: "",
-      //   published: false,
-      // },
+      ltrlies: [],
+      // currentLtrLie: null,
+      // currentIndex: -1,
+      // published: false,
+      currentLtrLie: {
+        id: null,
+        name: "",
+        subject: "",
+        stuff: "",
+        published: false,
+      },
     };
   }
 
   componentDidMount() {
-    this.getPublishedLtrLies();
+    // this.getPublishedLtrLies();
 
     UserService.getPublicContent().then(
       response => {
         this.setState({
-          content: response.data
+          content: response.data,
+          published: true,
         });
       },
       error => {
@@ -49,7 +50,6 @@ export default class LierBoard extends Component {
       .then(response => {
         this.setState({
           ltrlies: response.data,
-          published: true,
         });
         console.log(response.data);
       })
@@ -74,6 +74,9 @@ export default class LierBoard extends Component {
 
         <div className="col-md-6">
           <h4>List of Lies</h4>
+          {ltrlies.name}
+
+
           <ul className="list-group">
             {ltrlies &&
               ltrlies.map((ltrlie, index) => (
