@@ -65,9 +65,11 @@ export default class LierBoard extends Component {
   render() {
     return (
       <div className="container">
-        <div className="notice-sec opake">
+
+        {/* <div className="notice-sec opake">
           <h3>{this.state.content}</h3>
-        </div>
+        </div> */}
+
         <LieList />
       </div>
     );

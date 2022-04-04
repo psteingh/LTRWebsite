@@ -32,6 +32,8 @@ function LieList(){
         </label> am sick today</div>
         <div><label><strong>Stuff:</strong>
         </label> work, Apr 4, 2022</div>
+        <div><label><strong>Status:</strong>
+        </label> Pending</div>
         <button className="submit-button">
           Edit </button>
     </div>
