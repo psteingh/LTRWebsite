@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import UserService from "../services/user.service";
 
 import Tophead from "../home/tophead";
-import LieList from "../home/lielist";
 import Footer from "../home/footer";
 
 export default class Home extends Component {
@@ -37,7 +36,6 @@ export default class Home extends Component {
     return (
       <div className="container">
         <Tophead />
-        <LieList />
         <Footer />
       </div>
     );

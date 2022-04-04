@@ -3,8 +3,7 @@ import React, { Component } from "react";
 import UserService from "../services/user.service";
 import LtrLieDataService from "../services/ltrlie.service";
 
-// import AuthService from "../services/auth.service";
-
+import LieList from "../home/lielist";
 export default class LierBoard extends Component {
   constructor(props) {
     super(props);
@@ -63,45 +62,13 @@ export default class LierBoard extends Component {
     });
   }
 
-  refreshPage() {
-    window.location.reload(false);
-  }
-
   render() {
-    const { ltrlies, currentIndex } = this.state;
-    
     return (
       <div className="container">
-        
         <div className="notice-sec opake">
           <h3>{this.state.content}</h3>
         </div>
-
-        <div className="col-md-6">
-          <h4>List of Lies</h4>
-          <ul className="list-group">
-          {ltrlies &&
-              ltrlies.map((ltrlie, index) => (
-              <li
-                className={
-                "list-group-item " +
-                (index === currentIndex ? "active" : "")
-                }
-                onClick={() => this.setActiveLtrLie(ltrlie, index)}
-                key={index}>
-                
-                {ltrlie.name}
-              </li>
-              ))}
-          </ul>
-        </div>
-
-          <p><button className="submit-button"
-              onClick={this.refreshPage}>
-            List of Lies
-          </button></p>
-        
-
+        <LieList />
       </div>
     );
   }

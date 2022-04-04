@@ -4,7 +4,7 @@ function LieList(){
   return(
     <div className="list row lielist-sec">
       <div className="lielisttext-sec">
-        This is what you can do & find inside
+        After signing up...
       </div>
 
 
@@ -12,7 +12,7 @@ function LieList(){
       <h4>List of Lies</h4>
       <ul className="list-group">
       <li className="list-group-item">
-        teacher
+        boss
       </li>
       </ul>
       <p><button className="submit-button">
@@ -27,11 +27,11 @@ function LieList(){
       <h5>Lie details</h5>
         <div className="form-group">
         <label><strong>Name:</strong>
-        </label> teacher</div>
+        </label> boss</div>
         <div><label><strong>Subject:</strong>
-        </label> dog ate my homework</div>
+        </label> am sick today</div>
         <div><label><strong>Stuff:</strong>
-        </label> Algebra, March 28, 2022</div>
+        </label> work, Apr 4, 2022</div>
         <button className="submit-button">
           Edit </button>
     </div>
