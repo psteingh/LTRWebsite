@@ -56,7 +56,7 @@ export default class LierBoard extends Component {
       });
   }
 
-  setActiveLtrLie(ltrlie, index) {
+  setActiveLtrLie(ltrlie, index, published) {
     this.setState({
       currentLtrLie: ltrlie,
       currentIndex: index,
