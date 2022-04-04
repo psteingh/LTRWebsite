@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import UserService from "../services/user.service";
 import LtrLieDataService from "../services/ltrlie.service";
 
+// import AuthService from "../services/auth.service";
+
 export default class LierBoard extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +24,7 @@ export default class LierBoard extends Component {
   }
 
   componentDidMount() {
-    this.getPublishedLtrLies();
+    // this.getPublishedLtrLies();
 
     UserService.getPublicContent().then(
       response => {
