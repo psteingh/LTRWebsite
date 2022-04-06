@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
-import UserService from "../services/user.service";
+// import UserService from "../services/user.service";
 import LtrLieDataService from "../services/ltrlie.service";
+
+
 
 // import LieList from "../home/lielist";
 
@@ -9,6 +11,7 @@ export default class LierBoard extends Component {
   constructor(props) {
     super(props);
     this.getPublishedLtrLies = this.getPublishedLtrLies.bind(this);
+    this.retrieveLtrLies = this.retrieveLtrLies.bind(this);
 
     this.state = {
       ltrlies: [],
@@ -24,23 +27,38 @@ export default class LierBoard extends Component {
   }
 
   componentDidMount() {
-    // this.getPublishedLtrLies();
+    this.retrieveLtrLies();
 
-    UserService.getPublicContent().then(
-      response => {
+    this.getPublishedLtrLies();
+
+    // UserService.getPublicContent().then(
+    //   response => {
+    //     this.setState({
+    //       content: response.data,
+    //     });
+    //   },
+    //   error => {
+    //     this.setState({
+    //       content:
+    //         (error.response && error.response.data) ||
+    //         error.message ||
+    //         error.toString()
+    //     });
+    //   }
+    // );
+  }
+
+  retrieveLtrLies() {
+    LtrLieDataService.getAll()
+      .then(response => {
         this.setState({
-          content: response.data,
+          ltrlies: response.data,
         });
-      },
-      error => {
-        this.setState({
-          content:
-            (error.response && error.response.data) ||
-            error.message ||
-            error.toString()
-        });
-      }
-    );
+        console.log(response.data);
+      })
+      .catch(e => {
+        console.log(e);
+      });
   }
 
   getPublishedLtrLies() {
