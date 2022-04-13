@@ -37,6 +37,8 @@ require("./routes/auth.routes")(app);
 require("./routes/user.routes")(app);
 require("./routes/ltrlie.routes")(app);
 
+require("./routes/lierBoard.routes")(app);
+
 require("./routes/contact.routes")(app);
 
 // for build
