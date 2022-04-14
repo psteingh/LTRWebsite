@@ -108,7 +108,7 @@ handleCreate(e) {
           submitted: true
         });
         console.log(response.data);
-        // this.props.history.push("/ltrlies");
+        this.props.history.push("/ltrlies");
       },
       error => {
         const resMessage =
