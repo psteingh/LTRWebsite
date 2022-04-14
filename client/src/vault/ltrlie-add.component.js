@@ -40,10 +40,11 @@ const stuff = value => {
 export default class LtrLieAdd extends Component {
   constructor(props) {
     super(props);
-    this.handleCreate = this.handleCreate.bind(this);
+    // this.handleCreate = this.handleCreate.bind(this);
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onChangeStuff = this.onChangeStuff.bind(this);
+    this.saveLtrLie = this.saveLtrLie.bind(this);
     this.newLtrLie = this.newLtrLie.bind(this);
     
     this.state = {
@@ -77,17 +78,17 @@ export default class LtrLieAdd extends Component {
     });
   }
 
-handleCreate(e) {
-  e.preventDefault();
+// handleCreate(e) {
+//   e.preventDefault();
   
-  this.setState({
-    message: "",
-    loading: true
-  });
+//   this.setState({
+//     message: "",
+//     loading: true
+//   });
 
-  this.form.validateAll();
+  // this.form.validateAll();
   
-  // saveLtrLie() {
+  saveLtrLie() {
     var data = {
       name: this.state.name,
       subject: this.state.subject,
@@ -95,7 +96,7 @@ handleCreate(e) {
       currentUser: this.state.currentUser.id,
     };
 
-    if (this.checkBtn.context._errors.length === 0) {  
+    // if (this.checkBtn.context._errors.length === 0) {  
     
       LtrLieDataService.create(data)
       .then(response => {
@@ -108,27 +109,28 @@ handleCreate(e) {
           submitted: true
         });
         console.log(response.data);
-        this.props.history.push("/ltrlies");
+        // this.props.history.push("/ltrlies");
       },
-      error => {
-        const resMessage =
-          (error.response &&
-            error.response.data &&
-            error.response.data.message) ||
-          error.message ||
-          error.toString();
+      // error => {
+      //   const resMessage =
+      //     (error.response &&
+      //       error.response.data &&
+      //       error.response.data.message) ||
+      //     error.message ||
+      //     error.toString();
 
-        this.setState({
-          loading: false,
-          message: resMessage
-        });
-      }
+      //   this.setState({
+      //     loading: false,
+      //     message: resMessage
+      //   });
+      // }
+
       );
-  } else {
-    this.setState({
-      loading: false
-    });
-  }
+  // } else {
+  //   this.setState({
+  //     loading: false
+  //   });
+  // }
 }
 
   newLtrLie() {
