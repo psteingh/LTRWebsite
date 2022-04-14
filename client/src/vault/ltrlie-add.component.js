@@ -44,7 +44,6 @@ export default class LtrLieAdd extends Component {
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onChangeStuff = this.onChangeStuff.bind(this);
-    this.saveLtrLie = this.saveLtrLie.bind(this);
     this.newLtrLie = this.newLtrLie.bind(this);
     
     this.state = {
@@ -53,10 +52,10 @@ export default class LtrLieAdd extends Component {
       subject: "",
       stuff: "",
       currentUser: AuthService.getCurrentUser(),
-      published: false,
-      submitted: false,
       loading: false,
       message: "",
+      published: false,
+      submitted: false
     };
   }
 
@@ -78,25 +77,39 @@ export default class LtrLieAdd extends Component {
     });
   }
 
-  handleCreate(e) {
-    e.preventDefault();
+handleCreate(e) {
+  e.preventDefault();
   
-    this.setState({
-      message: "",
-      loading: true
-    });
+  this.setState({
+    message: "",
+    loading: true
+  });
 
   this.form.validateAll();
+  
+  // saveLtrLie() {
+    var data = {
+      name: this.state.name,
+      subject: this.state.subject,
+      stuff: this.state.stuff,
+      currentUser: this.state.currentUser.id,
+    };
 
-  if (this.checkBtn.context._errors.length === 0) {
-    AuthService.login(
-      this.state.username,
-      this.state.password,
-      this.state.currentUser,
-      ).then(
-      () => {this.props.history.push("/ltrlies");
-      window.location.reload();
-    },
+    if (this.checkBtn.context._errors.length === 0) {  
+    
+      LtrLieDataService.create(data)
+      .then(response => {
+        this.setState({
+          id: response.data.id,
+          name: response.data.name,
+          subject: response.data.subject,
+          stuff: response.data.stuff,
+          published: response.data.published,
+          submitted: true
+        });
+        console.log(response.data);
+        this.props.history.push("/ltrlies");
+      },
       error => {
         const resMessage =
           (error.response &&
@@ -110,40 +123,13 @@ export default class LtrLieAdd extends Component {
           message: resMessage
         });
       }
-    );
-    } else {
+      );
+  } else {
     this.setState({
       loading: false
     });
   }
 }
-
-  saveLtrLie() {
-    var data = {
-      name: this.state.name,
-      subject: this.state.subject,
-      stuff: this.state.stuff,
-      currentUser: this.state.currentUser.id,
-    };
-
-    LtrLieDataService.create(data)
-    .then(
-      response => {
-      this.setState({
-        id: response.data.id,
-        name: response.data.name,
-        subject: response.data.subject,
-        stuff: response.data.stuff,
-        published: response.data.published,
-        submitted: true
-      })
-      console.log(response.data);
-
-    })
-    .catch(e => {
-      console.log(e);
-    });
-  }
 
   newLtrLie() {
     this.setState({
