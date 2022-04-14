@@ -40,7 +40,7 @@ const stuff = value => {
 export default class LtrLieAdd extends Component {
   constructor(props) {
     super(props);
-    // this.handleCreate = this.handleCreate.bind(this);
+    this.handleCreate = this.handleCreate.bind(this);
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onChangeStuff = this.onChangeStuff.bind(this);
@@ -53,10 +53,10 @@ export default class LtrLieAdd extends Component {
       subject: "",
       stuff: "",
       currentUser: AuthService.getCurrentUser(),
+      published: false,
+      submitted: false,
       loading: false,
       message: "",
-      published: false,
-      submitted: false
     };
   }
 
@@ -78,16 +78,6 @@ export default class LtrLieAdd extends Component {
     });
   }
 
-// handleCreate(e) {
-//   e.preventDefault();
-  
-//   this.setState({
-//     message: "",
-//     loading: true
-//   });
-
-  // this.form.validateAll();
-  
   saveLtrLie() {
     var data = {
       name: this.state.name,
@@ -96,41 +86,64 @@ export default class LtrLieAdd extends Component {
       currentUser: this.state.currentUser.id,
     };
 
-    // if (this.checkBtn.context._errors.length === 0) {  
-    
-      LtrLieDataService.create(data)
-      .then(response => {
-        this.setState({
-          id: response.data.id,
-          name: response.data.name,
-          subject: response.data.subject,
-          stuff: response.data.stuff,
-          published: response.data.published,
-          submitted: true
-        });
-        console.log(response.data);
-        // this.props.history.push("/ltrlies");
+    LtrLieDataService.create(data)
+    .then(
+      response => {
+      this.setState({
+        id: response.data.id,
+        name: response.data.name,
+        subject: response.data.subject,
+        stuff: response.data.stuff,
+        published: response.data.published,
+        submitted: true
+      })
+      console.log(response.data);
+
+    })
+    .catch(e => {
+      console.log(e);
+    });
+  }
+
+  handleCreate(e) {
+    e.preventDefault();
+  
+    this.setState({
+      message: "",
+      loading: true
+    });
+
+  this.form.validateAll();
+
+  if (this.checkBtn.context._errors.length === 0) {
+    AuthService.login(
+      this.state.username,
+      this.state.password,
+      this.state.currentUser,
+      ).then(
+      () => {
+        this.props.history.push("/ltrlies");
+        window.location.reload();
       },
-      // error => {
-      //   const resMessage =
-      //     (error.response &&
-      //       error.response.data &&
-      //       error.response.data.message) ||
-      //     error.message ||
-      //     error.toString();
+        error => {
+        const resMessage =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
 
-      //   this.setState({
-      //     loading: false,
-      //     message: resMessage
-      //   });
-      // }
-
+        this.setState({
+          loading: false,
+          message: resMessage
+        });
+      }
       );
-  // } else {
-  //   this.setState({
-  //     loading: false
-  //   });
-  // }
+    } else {
+    this.setState({
+      loading: false
+    });
+  }
 }
 
   newLtrLie() {
