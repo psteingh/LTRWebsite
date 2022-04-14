@@ -78,33 +78,6 @@ export default class LtrLieAdd extends Component {
     });
   }
 
-  saveLtrLie() {
-    var data = {
-      name: this.state.name,
-      subject: this.state.subject,
-      stuff: this.state.stuff,
-      currentUser: this.state.currentUser.id,
-    };
-
-    LtrLieDataService.create(data)
-    .then(
-      response => {
-      this.setState({
-        id: response.data.id,
-        name: response.data.name,
-        subject: response.data.subject,
-        stuff: response.data.stuff,
-        published: response.data.published,
-        submitted: true
-      })
-      console.log(response.data);
-
-    })
-    .catch(e => {
-      console.log(e);
-    });
-  }
-
   handleCreate(e) {
     e.preventDefault();
   
@@ -144,7 +117,34 @@ export default class LtrLieAdd extends Component {
       loading: false
     });
   }
-}
+  }
+
+  saveLtrLie() {
+    var data = {
+      name: this.state.name,
+      subject: this.state.subject,
+      stuff: this.state.stuff,
+      currentUser: this.state.currentUser.id,
+    };
+
+    LtrLieDataService.create(data)
+    .then(
+      response => {
+      this.setState({
+        id: response.data.id,
+        name: response.data.name,
+        subject: response.data.subject,
+        stuff: response.data.stuff,
+        published: response.data.published,
+        submitted: true
+      })
+      console.log(response.data);
+
+    })
+    .catch(e => {
+      console.log(e);
+    });
+  }
 
   newLtrLie() {
     this.setState({
