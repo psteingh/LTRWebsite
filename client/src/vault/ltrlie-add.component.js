@@ -94,11 +94,10 @@ export default class LtrLieAdd extends Component {
       this.state.password,
       this.state.currentUser,
       ).then(
-      () => {
-        this.props.history.push("/ltrlies");
-        window.location.reload();
-      },
-        error => {
+      () => {this.props.history.push("/ltrlies");
+      window.location.reload();
+    },
+      error => {
         const resMessage =
           (error.response &&
             error.response.data &&
@@ -111,13 +110,13 @@ export default class LtrLieAdd extends Component {
           message: resMessage
         });
       }
-      );
+    );
     } else {
     this.setState({
       loading: false
     });
   }
-  }
+}
 
   saveLtrLie() {
     var data = {
