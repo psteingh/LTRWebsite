@@ -85,6 +85,7 @@ export default class LtrLieUpdate extends Component {
       stuff: this.state.currentLtrLie.stuff,
       published: status
     };
+    
     LtrLieDataService.update(this.state.currentLtrLie.id, data)
       .then(response => {
         this.setState(prevState => ({
