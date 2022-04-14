@@ -52,10 +52,10 @@ export default class LtrLieAdd extends Component {
       subject: "",
       stuff: "",
       currentUser: AuthService.getCurrentUser(),
+      published: false,
+      submitted: false,
       loading: false,
       message: "",
-      published: false,
-      submitted: false
     };
   }
 
@@ -108,7 +108,7 @@ handleCreate(e) {
           submitted: true
         });
         console.log(response.data);
-        this.props.history.push("/ltrlies");
+        // this.props.history.push("/ltrlies");
       },
       error => {
         const resMessage =
