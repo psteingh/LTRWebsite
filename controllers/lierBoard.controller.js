@@ -7,7 +7,7 @@ exports.findAllPublished = (req, res) => {
   LtrLie.find()
   .then(data => {
     
-    console.log("lierBoard.controller.js");
+    console.log("lierboard.controller.js");
 
     res.send(data);
   })
