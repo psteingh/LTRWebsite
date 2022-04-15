@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LtrLieDataService from "../services/ltrlie.service";
+import UserService from "../services/user.service";
 
 export default class LierBoard extends Component {
   constructor(props) {
@@ -12,11 +13,26 @@ export default class LierBoard extends Component {
       ltrlies: [],
       currentLtrLie: null,
       currentIndex: -1,
+      content: "",
     };
   }
 
   componentDidMount() {
-    this.getPublishedLtrLies();
+    UserService.getPublicContent().then(
+      response => {
+        this.setState({
+          content: response.data
+        });
+      },
+      error => {
+        this.setState({
+          content:
+            (error.response && error.response.data) ||
+            error.message ||
+            error.toString()
+        });
+      }
+    );
   }
 
   getPublishedLtrLies() {
@@ -52,6 +68,10 @@ export default class LierBoard extends Component {
 
     return (
       <div className="container">
+        <div className="opake">
+          <h3>{this.state.content}</h3>
+        </div>
+
         <div className="col-md-6">
           <h4>List of Lies</h4>
           <ul className="list-group">
