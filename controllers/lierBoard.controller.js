@@ -3,11 +3,11 @@ const { ltrlies: LtrLie, user: User } = db;
 
 // Retrieve all published LtrLies
 exports.findAllPublished = (req, res) => {
-
-  LtrLie.find({published: true})
+  
+  LtrLie.find()
   .then(data => {
     
-    console.log("lb");
+    console.log("lierBoard.controller.js");
 
     res.send(data);
   })

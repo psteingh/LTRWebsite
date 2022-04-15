@@ -11,12 +11,12 @@ export default class LierBoard extends Component {
     this.state = {
       content: "",
       name: "",
-      ltrlies: [],
+      ltrlies: "",
     };
   }
 
   componentDidMount() {
-    this.getPublishedLtrLies();
+    // this.getPublishedLtrLies();
 
     UserService.getPublicContent().then(
       response => {
