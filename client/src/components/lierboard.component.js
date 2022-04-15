@@ -5,7 +5,8 @@ export default class LierBoard extends Component {
   constructor(props) {
     super(props);
     this.getPublishedLtrLies = this.getPublishedLtrLies.bind(this);
-    this.retrieveLtrLies = this.retrieveLtrLies.bind(this);
+    this.refreshList = this.refreshList.bind(this);
+    this.setActiveLtrLie = this.setActiveLtrLie.bind(this);
 
     this.state = {
       ltrlies: [],
@@ -31,6 +32,14 @@ export default class LierBoard extends Component {
       });
   }
 
+  refreshList() {
+    this.retrieveLtrLies();
+    this.setState({
+      currentLtrLie: null,
+      currentIndex: -1
+    });
+  }
+
   setActiveLtrLie(ltrlie, index) {
     this.setState({
       currentLtrLie: ltrlie,
@@ -43,10 +52,6 @@ export default class LierBoard extends Component {
 
     return (
       <div className="container">
-        <div className="notice-sec opake">
-          <h3>{this.state.content}</h3>
-        </div>
-
         <div className="col-md-6">
           <h4>List of Lies</h4>
           <ul className="list-group">
