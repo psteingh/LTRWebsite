@@ -15,6 +15,7 @@ exports.create = (req, res) => {
     subject: req.body.subject,
     stuff: req.body.stuff,
     currentUser: req.body.currentUser,
+    published: req.body.published ? req.body.published : false
   });
   
   // Save a LtrLie

@@ -1,7 +1,7 @@
 module.exports = app => {
   const ltrlies = require("../controllers/lierboard.controller.js");
   const router = require("express").Router();
-  const { authJwt } = require("../middleware");
+  // const { authJwt } = require("../middleware");
   
   app.use(function(req, res, next) {
     res.header(
@@ -12,9 +12,7 @@ module.exports = app => {
   });
 
   // Retrieve all published LtrLies
-  router.get("/",
-    [authJwt.verifyToken],
-    ltrlies.findAllPublished);
+  router.get("/published", ltrlies.findAllPublished);
 
   console.log("lierboard.routes.js");
   

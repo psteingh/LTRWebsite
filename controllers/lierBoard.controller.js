@@ -1,10 +1,12 @@
 const db = require("../models");
-const { ltrlies: LtrLie } = db;
+const LtrLie = db.ltrlies;
+
+console.log("lierboard.controller.js above");
 
 // Retrieve all published LtrLies
 exports.findAllPublished = (req, res) => {
   
-  LtrLie.find()
+  LtrLie.find({ published: true })
   .then(data => {
     
     console.log("lierboard.controller.js");
