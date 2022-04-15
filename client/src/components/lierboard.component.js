@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-
-// import UserService from "../services/user.service";
 import LtrLieDataService from "../services/ltrlie.service";
-
-
-
-// import LieList from "../home/lielist";
 
 export default class LierBoard extends Component {
   constructor(props) {
@@ -15,50 +9,13 @@ export default class LierBoard extends Component {
 
     this.state = {
       ltrlies: [],
-      // content: "",
       currentLtrLie: null,
       currentIndex: -1,
-      // id: null,
-      // name: "",
-      // subject: "",
-      // stuff: "",
-      // published: false,
     };
   }
 
   componentDidMount() {
-    this.retrieveLtrLies();
-
     this.getPublishedLtrLies();
-
-    // UserService.getPublicContent().then(
-    //   response => {
-    //     this.setState({
-    //       content: response.data,
-    //     });
-    //   },
-    //   error => {
-    //     this.setState({
-    //       content:
-    //         (error.response && error.response.data) ||
-    //         error.message ||
-    //         error.toString()
-    //     });
-    //   }
-    // );
-  }
-
-  retrieveLtrLies() {
-    LtrLieDataService.getAll()
-      .then(response => {
-        this.setState({
-          ltrlies: response.data,
-        });
-        console.log(response.data);
-      })
-      .catch(e => {
-        console.log(e);
-      });
   }
 
   getPublishedLtrLies() {
@@ -74,7 +31,7 @@ export default class LierBoard extends Component {
       });
   }
 
-  setActiveLtrLie(ltrlie, index, published) {
+  setActiveLtrLie(ltrlie, index) {
     this.setState({
       currentLtrLie: ltrlie,
       currentIndex: index,
@@ -86,10 +43,9 @@ export default class LierBoard extends Component {
 
     return (
       <div className="container">
-        {/* <div className="notice-sec opake">
+        <div className="notice-sec opake">
           <h3>{this.state.content}</h3>
-        </div> */}
-        {/* <LieList /> */}
+        </div>
 
         <div className="col-md-6">
           <h4>List of Lies</h4>
@@ -156,10 +112,6 @@ export default class LierBoard extends Component {
             </div>
           )}
         </div>
-
-
-
-
 
       </div>
     );
