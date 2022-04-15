@@ -1,5 +1,5 @@
 const db = require("../models");
-const { ltrlies: LtrLie, user: User } = db;
+const { ltrlies: LtrLie } = db;
 
 // Retrieve all published LtrLies
 exports.findAllPublished = (req, res) => {

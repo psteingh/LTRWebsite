@@ -41,7 +41,7 @@ exports.findAll = (req, res) => {
 
       LtrLie.find(condition)
   .then(data => {
-
+    console.log("ltrlie.controller.js");
     res.send(data);
   })
   .catch(err => {
