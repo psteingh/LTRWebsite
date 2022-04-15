@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import LtrLieDataService from "../services/ltrlie.service";
 import UserService from "../services/user.service";
 
@@ -97,6 +98,12 @@ export default class LierBoard extends Component {
               onClick={this.refreshPage}>
             List of Lies
           </button></p>
+
+          <p><button className="submit-button">
+            <Link to={"/"}>
+              LTR
+            </Link></button></p>
+
         </div>
 
         <div className="col-md-6">
