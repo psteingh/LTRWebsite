@@ -20,7 +20,7 @@ exports.create = (req, res) => {
   // Save a LtrLie
   ltrlie.save(ltrlie)
     .then(data => {
-      
+      console.log(req.body);      
       res.send(data);
     })
     .catch(err => {

@@ -15,6 +15,8 @@ module.exports = app => {
   router.get("/",
     [authJwt.verifyToken],
     ltrlies.findAllPublished);
+
+  console.log("lierBoard.routes.js");
   
   app.use("/api/ltrlies", router);
 
