@@ -37,9 +37,7 @@ require("./routes/auth.routes")(app);
 require("./routes/user.routes")(app);
 require("./routes/contact.routes")(app);
 
-// LtrLie - 1st
 require("./routes/ltrlie.routes")(app);
-
 require("./routes/lierboard.routes")(app);
 
 // for build
