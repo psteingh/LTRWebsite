@@ -21,7 +21,6 @@ exports.create = (req, res) => {
   // Save a LtrLie
   ltrlie.save(ltrlie)
     .then(data => {
-      console.log(req.body);      
       res.send(data);
     })
     .catch(err => {
@@ -42,7 +41,7 @@ exports.findAll = (req, res) => {
 
       LtrLie.find(condition)
   .then(data => {
-    console.log("ltrlie.controller.js");
+    console.log("ltrlie.controller.js", condition);
     res.send(data);
   })
   .catch(err => {

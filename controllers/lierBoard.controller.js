@@ -3,22 +3,11 @@ const LtrLie = db.ltrlies;
 
 // Retrieve all published LtrLies
 exports.findAllPublished = (req, res) => {
-  // Validate request
-  // if (!req.body.name) {
-  //   res.status(400).send({ message: "Content can not be empty" });
-  //   return;
-  // }
 
-  // const currentUser = req.userId;
-  // const name = req.query.name;
-  // var condition = {$and: [
-  //         {name: {$regex: new RegExp(name), $options: "i"}},
-  //         {currentUser} ]};
-  
   LtrLie.find()
   .then(data => {
     
-    console.log("lierboard.controller.js");
+    console.log("lierboard.controller.js data:", data );
 
     res.send(data);
   })
