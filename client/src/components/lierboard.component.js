@@ -122,10 +122,7 @@ export default class LierBoard extends Component {
                 </label>{" "}
                 {currentLtrLie.published ? "Published" : "Pending"}
               </div>
-              <button className="submit-button">
-                <Link to={"/ltrlies/" + currentLtrLie.id}>
-                  Edit </Link>
-              </button>            
+                          
             </div>
           ) : (
             <div>
