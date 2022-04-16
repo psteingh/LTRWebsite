@@ -66,7 +66,7 @@ export default class LierBoard extends Component {
   }
 
   render() {
-    // const { currentLtrLie } = this.state;
+    const { ltrlies, currentLtrLie, currentIndex } = this.state;
 
     return (
       <div className="container">
@@ -76,6 +76,63 @@ export default class LierBoard extends Component {
 
         <div className="col-md-6">
           <h4>Lies made Public</h4>
+
+          <ul className="list-group">
+            {ltrlies &&
+              ltrlies.map((ltrlie, index) => (
+              <li
+                className={
+                "list-group-item " +
+                (index === currentIndex ? "active" : "")
+                }
+                onClick={() => this.setActiveLtrLie(ltrlie, index)}
+                key={index}>
+                
+                {ltrlie.name}
+              </li>
+              ))}
+          </ul>
+        </div>
+
+        <div className="col-md-6">
+          {currentLtrLie ? (
+            <div>
+              <h5>Lie details</h5>
+              <div>
+                <label>
+                  <strong>Name:</strong>
+                </label>{" "}
+                {currentLtrLie.name}
+              </div>
+              <div>
+                <label>
+                <strong>Subject:</strong>
+                </label>{" "}
+                {currentLtrLie.subject}
+              </div>
+              <div>
+                <label>
+                <strong>Stuff:</strong>
+                </label>{" "}
+                {currentLtrLie.stuff}
+              </div>
+              <div>
+                <label>
+                  <strong>Status:</strong>
+                </label>{" "}
+                {currentLtrLie.published ? "Published" : "Pending"}
+              </div>
+              <button className="submit-button">
+                <Link to={"/ltrlies/" + currentLtrLie.id}>
+                  Edit </Link>
+              </button>            
+            </div>
+          ) : (
+            <div>
+              <br />
+              <p>Click on Lie for details</p>
+            </div>
+          )}
 
           <p><button className="submit-button">
             <Link to={"/"}>
