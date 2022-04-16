@@ -12,8 +12,7 @@ module.exports = app => {
   });
 
   // Retrieve all published LtrLies
-  router.get("/lierboard",
-  [authJwt.verifyToken],
+  router.get("/",
   ltrlies.findAllPublished);
 
   console.log("lierboard.routes.js");
