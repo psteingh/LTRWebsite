@@ -33,8 +33,8 @@ class LtrLieDataService {
   }
 
   // Retrieve all published LtrLies
-  getAllPublished() {
-      return api.get("/ltrlies");
+  getAllPublished(data) {
+      return api.get("/ltrlies", data);
   }
   
 }

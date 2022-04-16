@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LtrLieDataService from "../services/ltrlie.service";
-import UserService from "../services/user.service";
+// import UserService from "../services/user.service";
 
 export default class LierBoard extends Component {
   constructor(props) {
@@ -9,30 +9,30 @@ export default class LierBoard extends Component {
     this.retrievePublishedLtrLies = this.retrievePublishedLtrLies.bind(this);
 
     this.state = {
-      content: "",
-      name: "",
       ltrlies: [],
+      currentLtrLie: null,
+      currentIndex: -1,
     };
   }
 
   componentDidMount() {
     this.retrievePublishedLtrLies();
 
-    UserService.getPublicContent().then(
-      response => {
-        this.setState({
-          content: response.data
-        });
-      },
-      error => {
-        this.setState({
-          content:
-            (error.response && error.response.data) ||
-            error.message ||
-            error.toString()
-        });
-      }
-    );
+    // UserService.getPublicContent().then(
+    //   response => {
+    //     this.setState({
+    //       content: response.data
+    //     });
+    //   },
+    //   error => {
+    //     this.setState({
+    //       content:
+    //         (error.response && error.response.data) ||
+    //         error.message ||
+    //         error.toString()
+    //     });
+    //   }
+    // );
   }
 
   retrievePublishedLtrLies() {
@@ -49,7 +49,7 @@ export default class LierBoard extends Component {
   }
 
   render() {
-    const { ltrlies } = this.state;
+    // const { ltrlies } = this.state;
 
     return (
       <div className="container">
@@ -64,7 +64,7 @@ export default class LierBoard extends Component {
           
           <div>{this.state.ltrlies}</div> */}
           
-          <div>{ltrlies.name}</div>
+          {/* <div>{ltrlies.name}</div> */}
 
           <p><button className="submit-button">
             <Link to={"/"}>
