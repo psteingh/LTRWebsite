@@ -6,7 +6,7 @@ import UserService from "../services/user.service";
 export default class LierBoard extends Component {
   constructor(props) {
     super(props);
-    this.getPublishedLtrLies = this.getPublishedLtrLies.bind(this);
+    this.retrievePublishedLtrLies = this.retrievePublishedLtrLies.bind(this);
 
     this.state = {
       content: "",
@@ -16,7 +16,7 @@ export default class LierBoard extends Component {
   }
 
   componentDidMount() {
-    this.getPublishedLtrLies();
+    this.retrievePublishedLtrLies();
 
     UserService.getPublicContent().then(
       response => {
@@ -35,7 +35,7 @@ export default class LierBoard extends Component {
     );
   }
 
-  getPublishedLtrLies() {
+  retrievePublishedLtrLies() {
     LtrLieDataService.getAllPublished()
       .then(response => {
         this.setState({
