@@ -11,12 +11,12 @@ export default class LierBoard extends Component {
     this.state = {
       content: "",
       name: "",
-      ltrlies: "",
+      ltrlies: [],
     };
   }
 
   componentDidMount() {
-    // this.getPublishedLtrLies();
+    this.getPublishedLtrLies();
 
     UserService.getPublicContent().then(
       response => {
@@ -53,15 +53,17 @@ export default class LierBoard extends Component {
 
     return (
       <div className="container">
-        <div className="opake">
+        {/* <div className="opake">
           <h3>{this.state.content}</h3>
-        </div>
+        </div> */}
 
         <div className="col-md-6">
           <h4>Lies made Public</h4>
 
-          <div>{this.state.name}</div>
-          <div>{this.state.ltrlies}</div>
+          {/* <div>{this.state.name}</div>
+          
+          <div>{this.state.ltrlies}</div> */}
+          
           <div>{ltrlies.name}</div>
 
           <p><button className="submit-button">
