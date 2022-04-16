@@ -4,7 +4,7 @@ const LtrLie = db.ltrlies;
 // Retrieve all published LtrLies
 exports.findAllPublished = (req, res) => {
 
-  LtrLie.find()
+  LtrLie.find({published: true})
   .then(data => {
     
     console.log("lierboard.controller.js data:", data );
