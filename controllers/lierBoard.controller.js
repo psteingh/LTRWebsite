@@ -1,8 +1,6 @@
 const db = require("../models");
 const LtrLie = db.ltrlies;
 
-console.log("lierboard.controller.js above");
-
 // Retrieve all published LtrLies
 exports.findAllPublished = (req, res) => {
   // Validate request
