@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import LtrLieDataService from "../services/ltrlie.service";
+import LierBoardService from "../services/lierboard.service";
 // import UserService from "../services/user.service";
 
 export default class LierBoard extends Component {
@@ -36,7 +36,7 @@ export default class LierBoard extends Component {
   }
 
   retrievePublishedLtrLies() {
-    LtrLieDataService.getAllPublished()
+    LierBoardService.getAllPublished()
       .then(response => {
         this.setState({
           ltrlies: response.data,
