@@ -118,16 +118,21 @@ label {
 }
 
 /* Homemid section */
-.notice-sec {
+.cd-body {
+	margin-bottom: 20%;
+}
+
+.cd-header {
+	padding-top: 2%;
+}
+
+.cd-text {
+	padding: 2%;
+}
+
+.cd-image {
+	width: 50%;
 	margin: 2%;
-}
-
-.lielist-sec {
-	box-shadow: 2px 2px 5px #7F7F7F;
-}
-
-.lielisttext-sec {
-	text-align: center;
 }
 
 /* Footer section */

@@ -2,7 +2,6 @@ import React from "react";
 import ltrcatalog from "../images/ltrcatalog.png";
 import ltrvault from "../images/ltrvault.png";
 
-
 function HomeMid(){
     return(
         <div>

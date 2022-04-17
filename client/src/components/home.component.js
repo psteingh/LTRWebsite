@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import UserService from "../services/user.service";
 
 import Tophead from "../home/tophead";
+import Homemid from "../home/homemid";
 import Footer from "../home/footer";
 
 export default class Home extends Component {
@@ -36,6 +37,7 @@ export default class Home extends Component {
     return (
       <div className="container">
         <Tophead />
+        <Homemid />
         <Footer />
       </div>
     );
