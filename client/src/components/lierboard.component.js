@@ -120,7 +120,7 @@ export default class LierBoard extends Component {
                 <label>
                   <strong>Status:</strong>
                 </label>{" "}
-                {currentLtrLie.published ? "Published" : "Pending"}
+                {currentLtrLie.published ? "Public" : "Private"}
               </div>
                           
             </div>
