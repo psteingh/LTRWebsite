@@ -169,7 +169,7 @@ export default class LtrLieUpdate extends Component {
               </div>
               <div className="form-group">
                 <label><h4>Status:</h4></label>
-                {currentLtrLie.published ? "Published" : "Pending"}
+                {currentLtrLie.published ? "Public" : "Private"}
               </div>
             </form>
 
