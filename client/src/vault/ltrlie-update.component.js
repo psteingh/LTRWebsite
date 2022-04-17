@@ -177,13 +177,13 @@ export default class LtrLieUpdate extends Component {
               <button className="action-button"
                 onClick={() => this.updatePublished(false)}
               >
-                UnPublish
+                Private
               </button>
             ) : (
               <button className="submit-button"
                 onClick={() => this.updatePublished(true)}
               >
-                Publish
+                Public
               </button>
             )}
 
