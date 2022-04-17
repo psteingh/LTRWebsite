@@ -98,10 +98,9 @@ export default class LierBoard extends Component {
             <div>
               <h5>Lie details</h5>
               <div>
-                <div>Name/Stuff: {currentLtrLie.name}, {currentLtrLie.stuff}
-                </div>
-                <div>Subject: {currentLtrLie.subject}
-                </div>
+                <div>Name: {currentLtrLie.name}</div>
+                <div>Stuff: {currentLtrLie.stuff}</div>
+                <div>Subject: {currentLtrLie.subject}</div>
               </div>
             </div>
           ) : (
