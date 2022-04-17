@@ -99,29 +99,18 @@ export default class LierBoard extends Component {
             <div>
               <h5>Lie details</h5>
               <div>
-                <label>
-                  <strong>Name:</strong>
-                </label>{" "}
+                <label><strong>Name:</strong></label>{" "}
                 {currentLtrLie.name}
-              </div>
-              <div>
-                <label>
-                <strong>Subject:</strong>
-                </label>{" "}
-                {currentLtrLie.subject}
-              </div>
-              <div>
-                <label>
-                <strong>Stuff:</strong>
-                </label>{" "}
+                <label><strong>Stuff:</strong></label>{" "}
                 {currentLtrLie.stuff}
-              </div>
-              <div>
-                <label>
-                  <strong>Status:</strong>
-                </label>{" "}
+                <label><strong>Status:</strong></label>{" "}
                 {currentLtrLie.published ? "Public" : "Private"}
               </div>
+              <div>
+                <label><strong>Subject:</strong></label>{" "}
+                {currentLtrLie.subject}
+              </div>
+              
                           
             </div>
           ) : (
