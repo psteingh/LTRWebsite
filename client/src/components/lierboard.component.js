@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import LierBoardService from "../services/lierboard.service";
 import UserService from "../services/user.service";
 
@@ -69,7 +68,7 @@ export default class LierBoard extends Component {
     const { ltrlies, currentLtrLie, currentIndex } = this.state;
 
     return (
-      <div className="container">
+      <div className="list row">
         <div className="opake">
           <h3>{this.state.content}</h3>
         </div>
@@ -99,19 +98,11 @@ export default class LierBoard extends Component {
             <div>
               <h5>Lie details</h5>
               <div>
-                <label><strong>Name:</strong></label>{" "}
-                {currentLtrLie.name}
-                <label><strong>Stuff:</strong></label>{" "}
-                {currentLtrLie.stuff}
-                <label><strong>Status:</strong></label>{" "}
-                {currentLtrLie.published ? "Public" : "Private"}
+                <div>Name/Stuff: {currentLtrLie.name}, {currentLtrLie.stuff}
+                </div>
+                <div>Subject: {currentLtrLie.subject}
+                </div>
               </div>
-              <div>
-                <label><strong>Subject:</strong></label>{" "}
-                {currentLtrLie.subject}
-              </div>
-              
-                          
             </div>
           ) : (
             <div>
@@ -119,12 +110,6 @@ export default class LierBoard extends Component {
               <p>Click on Lie for details</p>
             </div>
           )}
-
-          <p><button className="submit-button">
-            <Link to={"/"}>
-              LTR
-            </Link></button></p>
-
         </div>
 
       </div>
