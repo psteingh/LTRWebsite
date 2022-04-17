@@ -1,18 +1,15 @@
 import React from "react";
-
-import ltrvault from "../images/ltrvault.png";
 import ltrcatalog from "../images/ltrcatalog.png";
+import ltrvault from "../images/ltrvault.png";
+
 
 function HomeMid(){
     return(
-        <div className="headersubtitle-text">
-        <p>Coming Soon</p>
+        <div>
 
-        <img src={ltrvault} alt="LTR Vault"
-        className="profile-img-card" />
+        <img src={ltrcatalog} alt="LTR Catalog" />
 
-        <img src={ltrcatalog} alt="LTR Catalog"
-        className="profile-img-card" />
+        <img src={ltrvault} alt="LTR Vault" />
 
         </div>
     );
