@@ -8,8 +8,7 @@ function HomeMid(){
         <div className="grid-container">
         <div className="grid-child">
             <h1 className="cd-header">Lier Board</h1>
-            <div className="cd-text">Public ...see other lies
-            soon...rate, edit, advice</div>
+            <div className="cd-text">Public ...see other lies, coming soon ...rate & advice</div>
             <img className="cd-image" src={ltrcatalog} alt="LTR Catalog" />
         </div>
         <div className="grid-child">
