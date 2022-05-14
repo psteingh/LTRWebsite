@@ -8,8 +8,8 @@ function Footer(){
 
     <div className="footertext-sec">
       <div className="fmess-text">
-        Due to limited server space,
-        lawyers & politicians are not allowed to use this site.
+        Due to limited world-wide server space,
+        lawyers & politicians are not allowed to use this site
       </div>
     </div>
     
