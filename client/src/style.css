@@ -120,7 +120,7 @@ label {
 /* Homemid section */
 .grid-container {
 	display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2%;
 	margin: 2%;
 	text-align: center;
@@ -161,6 +161,10 @@ label {
 .logo-ftr {
 	width: 3.0rem;
 	height: 1.5rem;
+}
+
+.footerbutton-sec{
+	padding: 1%;
 }
 
 /* Lier Board */

@@ -19,13 +19,13 @@ function Footer(){
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
         </Link>
       </div>
-      <p>
+      <div className="footerbutton-sec">
         <button className="submit-button">
         <Link to={"/contact"}>
           Contact Us
         </Link>
         </button>
-        </p>
+      </div>
     </div>
 
   </footer>
