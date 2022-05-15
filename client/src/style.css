@@ -171,8 +171,7 @@ label {
 .footersmall-grid {
 	display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2%;
-	margin: 2%;
+	margin: 4%;
 	text-align: center;
 }
 
@@ -184,18 +183,9 @@ label {
 	padding: 1%;
 }
 
-.fmesssmall-text {
-	font-size: 0.75rem;
-}
-
-.faboutsmall-text {
-	font-size: 0.95rem;
-}
-
 .logosmall-ftr {
 	width: 18%;
 	padding: 1%;
-
 }
 
 .footersmallbutton-sec{
