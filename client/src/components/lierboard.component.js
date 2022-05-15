@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import LierBoardService from "../services/lierboard.service";
 import UserService from "../services/user.service";
 
+import FooterSmall from "../home/footersmall";
+
 export default class LierBoard extends Component {
   constructor(props) {
     super(props);
@@ -68,6 +70,7 @@ export default class LierBoard extends Component {
     const { ltrlies, currentLtrLie, currentIndex } = this.state;
 
     return (
+    <div className="container">
       <div className="list row">
         <div className="opake">
           <h3>{this.state.content}</h3>
@@ -110,8 +113,11 @@ export default class LierBoard extends Component {
             </div>
           )}
         </div>
-
       </div>
+
+      <FooterSmall />
+
+    </div>
     );
   }
 }

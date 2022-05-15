@@ -139,7 +139,7 @@ label {
 	margin: 1%;
 }
 
-/* Footer section */
+/* Footer section - standard */
 .footer-sec {
 	margin: 2% 2% 2% 2%;
 	box-shadow: 2px 2px 5px #7F7F7F;
@@ -167,11 +167,37 @@ label {
 	padding: 1%;
 }
 
+/* Footer section - small */
+.footersmall-sec {
+	margin-top: 2%;
+	box-shadow: 2px 2px 5px #7F7F7F;
+}
+
+.footersmalltext-sec {
+	padding: 2% 1%;
+}
+
+.fmesssmall-text {
+	font-size: 0.85rem;
+}
+
+.faboutsmall-text {
+	font-size: 0.95rem;
+}
+
+.logosmall-ftr {
+	width: 3.0rem;
+	height: 1.5rem;
+}
+
+.footersmallbutton-sec{
+	padding: 1%;
+}
+
 /* Lier Board */
 .lierboard-sec {
 	padding: .5%;
 }
-
 
 /* Login Register */
 .card-container.card {

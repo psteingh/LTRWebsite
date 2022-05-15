@@ -2,24 +2,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ltrbrand from "../images/ltrbrand.png";
 
-function Footer(){
+function FooterSmall(){
   return(
-  <footer className="dblue footer-sec">
+  <div className="container">
+  <div className="dblue footersmall-sec">
+  <div className="list row">
 
-    <div className="footertext-sec">
-      <div className="fmess-text">
+    <div className="footersmalltext-sec">
+      <div className="fmesssmall-text">
         Due to limited world-wide server space,
         lawyers & politicians are not allowed to use this site
       </div>
     </div>
     
-    <div className="footertext-sec">
-      <div className="fabout-text">
+    <div className="col-md-6">
+      <div className="footersmalltext-sec">
+        <div className="faboutsmall-text">
         <Link to="/">
-          <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
+          <img className="logosmall-ftr" src={ltrbrand} alt="LTR logo" />
         </Link>
+        </div>
       </div>
-      <div className="footerbutton-sec">
+    </div>
+
+    <div className="col-md-6">
+      <div className="footersmallbutton-sec">
         <button className="submit-button">
         <Link to={"/contact"}>
           Contact Us
@@ -27,10 +34,12 @@ function Footer(){
         </button>
       </div>
     </div>
-
-  </footer>
+      
+  </div>
+  </div>
+  </div>
 
   );
 }
 
-export default Footer;
+export default FooterSmall;
