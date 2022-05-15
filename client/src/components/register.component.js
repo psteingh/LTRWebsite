@@ -6,6 +6,8 @@ import { isEmail } from "validator";
 
 import AuthService from "../services/auth.service";
 
+import FooterSmall from "../home/footersmall";
+
 const email = value => {
   if (!isEmail(value)) {
     return (
@@ -185,6 +187,9 @@ export default class Register extends Component {
             />
           </Form>
         </div>
+
+        <FooterSmall />
+
       </div>
     );
   }

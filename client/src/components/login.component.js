@@ -5,6 +5,8 @@ import CheckButton from "react-validation/build/button";
 
 import AuthService from "../services/auth.service";
 
+import FooterSmall from "../home/footersmall";
+
 const username = value => {
   if (!value) {
     return (
@@ -153,6 +155,9 @@ export default class Login extends Component {
             />
           </Form>
         </div>
+
+        <FooterSmall />
+
       </div>
     );
   }

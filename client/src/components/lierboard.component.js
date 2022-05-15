@@ -71,7 +71,7 @@ export default class LierBoard extends Component {
 
     return (
     <div className="container">
-      <div className="list row">
+      {/* <div className="list row"> */}
         <div className="opake">
           <h3>{this.state.content}</h3>
         </div>
@@ -113,7 +113,7 @@ export default class LierBoard extends Component {
             </div>
           )}
         </div>
-      </div>
+      {/* </div> */}
 
       <FooterSmall />
 
