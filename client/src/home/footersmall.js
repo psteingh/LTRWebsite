@@ -4,15 +4,13 @@ import ltrbrand from "../images/ltrbrand.png";
 
 function FooterSmall(){
   return(
-  <div className="grid-container dblue footersmall-sec">
+  <div className="footersmall-grid dblue footersmall-sec">
     
     <div className="grid-child">
-      <div className="footersmalltext-sec">
-        <div className="faboutsmall-text">
+      <div className="footersmalllogo-sec">
         <Link to="/">
           <img className="logosmall-ftr" src={ltrbrand} alt="LTR logo" />
         </Link>
-        </div>
       </div>
     </div>
 

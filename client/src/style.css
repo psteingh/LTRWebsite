@@ -118,7 +118,7 @@ label {
 }
 
 /* Homemid section */
-.grid-container {
+.homemid-grid {
 	display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2%;
@@ -168,11 +168,19 @@ label {
 }
 
 /* Footer section - small */
+.footersmall-grid {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2%;
+	margin: 2%;
+	text-align: center;
+}
+
 .footersmall-sec {
 	box-shadow: 2px 2px 5px #7F7F7F;
 }
 
-.footersmalltext-sec {
+.footersmalllogo-sec {
 	padding: 1%;
 }
 
@@ -185,8 +193,9 @@ label {
 }
 
 .logosmall-ftr {
-	width: 3.0rem;
-	height: 1.5rem;
+	width: 18%;
+	padding: 1%;
+
 }
 
 .footersmallbutton-sec{

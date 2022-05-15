@@ -5,7 +5,7 @@ import ltrvault from "../images/ltrvault.png";
 
 function HomeMid(){
     return(
-        <div className="grid-container">
+        <div className="homemid-grid">
         <div className="grid-child">
             <Link to={"/lierboard"}>
             <h1 className="cd-header">Lier Board</h1>
