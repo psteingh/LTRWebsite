@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
@@ -186,6 +187,17 @@ export default class Register extends Component {
               }}
             />
           </Form>
+
+          <div>
+          <h4>Already sign up?
+          <button className="action-button">
+          <Link to={"/login"}>
+            Log In
+          </Link>
+          </button>
+          </h4>
+        </div>
+
         </div>
 
         <FooterSmall />
