@@ -4,7 +4,7 @@ import ltrbrand from "../images/ltrbrand.png";
 
 function FooterSmall(){
   return(
-  <div className="footersmall-grid dblue footersmall-sec">
+  <div className="footersmall-grid">
     
     <div className="grid-child">
       <div className="footersmalllogo-sec">

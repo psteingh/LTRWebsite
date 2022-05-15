@@ -171,12 +171,8 @@ label {
 .footersmall-grid {
 	display: grid;
     grid-template-columns: 1fr 1fr;
-	margin: 4%;
+	margin: 8%;
 	text-align: center;
-}
-
-.footersmall-sec {
-	box-shadow: 2px 2px 5px #7F7F7F;
 }
 
 .footersmalllogo-sec {
