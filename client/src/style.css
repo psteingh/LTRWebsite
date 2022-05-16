@@ -167,7 +167,14 @@ label {
 	padding: 1%;
 }
 
-/* Footer section - small */
+/* Footer section - logo & small */
+.footerlogo-grid {
+	display: grid;
+    grid-template-columns: 1fr;
+	margin: 8%;
+	text-align: center;
+}
+
 .footersmall-grid {
 	display: grid;
     grid-template-columns: 1fr 1fr;
@@ -176,6 +183,11 @@ label {
 }
 
 .footersmalllogo-sec {
+	padding: 1%;
+}
+
+.logologo-ftr {
+	width: 10%;
 	padding: 1%;
 }
 

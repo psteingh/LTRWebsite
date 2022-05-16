@@ -4,12 +4,12 @@ import ltrbrand from "../images/ltrbrand.png";
 
 function FooterLogo(){
   return(
-  <div className="footersmall-grid">
+  <div className="footerlogo-grid">
     
     <div className="grid-child">
       <div className="footersmalllogo-sec">
         <Link to="/">
-          <img className="logosmall-ftr" src={ltrbrand} alt="LTR logo" />
+          <img className="logologo-ftr" src={ltrbrand} alt="LTR logo" />
         </Link>
       </div>
     </div>
