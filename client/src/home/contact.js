@@ -3,7 +3,7 @@ import axios from "axios";
 
 import UserService from "../services/user.service";
 
-import FooterSmall from "./footersmall";
+import FooterLogo from "./footerlogo";
 
 export default class Contact extends React.Component {
 
@@ -143,7 +143,7 @@ render() {
     </div>
     </div>
 
-    <FooterSmall />
+    <FooterLogo />
 
     </div>
     );

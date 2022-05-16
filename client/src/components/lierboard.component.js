@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import LierBoardService from "../services/lierboard.service";
 import UserService from "../services/user.service";
 
-import FooterSmall from "../home/footersmall";
+import FooterLogo from "../home/footerlogo";
 
 export default class LierBoard extends Component {
   constructor(props) {
@@ -115,7 +115,7 @@ export default class LierBoard extends Component {
         </div>
       </div>
 
-      <FooterSmall />
+      <FooterLogo />
 
     </div>
     );
