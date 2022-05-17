@@ -189,7 +189,7 @@ export default class Register extends Component {
           </Form>
 
           <div>
-          <h4>Already sign up?
+          <h4>Already signed up?
           <button className="action-button">
           <Link to={"/login"}>
             Log In
