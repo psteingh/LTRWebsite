@@ -13,7 +13,7 @@ export default class LierBoard extends Component {
 
     this.state = {
       ltrlies: [],
-      currentLtrLie: null,
+      // currentLtrLie: null,
       currentIndex: -1,
     };
   }
@@ -54,20 +54,20 @@ export default class LierBoard extends Component {
   refreshList() {
     this.retrieveLtrLies();
     this.setState({
-      currentLtrLie: null,
+      // currentLtrLie: null,
       currentIndex: -1
     });
   }
 
   setActiveLtrLie(ltrlie, index) {
     this.setState({
-      currentLtrLie: ltrlie,
+      // currentLtrLie: ltrlie,
       currentIndex: index,
     });
   }
 
   render() {
-    const { ltrlies, currentLtrLie, currentIndex } = this.state;
+    const { ltrlies, currentIndex } = this.state;
 
     return (
     <div className="container">
@@ -86,33 +86,19 @@ export default class LierBoard extends Component {
                 className={
                 "list-group-item " +
                 (index === currentIndex ? "active" : "")
-                }
-                onClick={() => this.setActiveLtrLie(ltrlie, index)}
-                key={index}>
+                }>
                 
-                {ltrlie.name}
+                <div>Name: {ltrlie.name}</div>
+                
+                <div>Stuff: {ltrlie.stuff}</div>
+                
+                <div>Subject: {ltrlie.subject}</div>
+              
               </li>
               ))}
           </ul>
         </div>
 
-        <div className="col-md-6">
-          {currentLtrLie ? (
-            <div>
-              <h5>Lie details</h5>
-              <div>
-                <div>Name: {currentLtrLie.name}</div>
-                <div>Stuff: {currentLtrLie.stuff}</div>
-                <div>Subject: {currentLtrLie.subject}</div>
-              </div>
-            </div>
-          ) : (
-            <div>
-              <br />
-              <p>Click on Lie for details</p>
-            </div>
-          )}
-        </div>
       </div>
 
       <FooterLogo />
