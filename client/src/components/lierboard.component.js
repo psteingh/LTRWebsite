@@ -13,7 +13,6 @@ export default class LierBoard extends Component {
 
     this.state = {
       ltrlies: [],
-      // currentLtrLie: null,
       currentIndex: -1,
     };
   }
@@ -54,20 +53,18 @@ export default class LierBoard extends Component {
   refreshList() {
     this.retrieveLtrLies();
     this.setState({
-      // currentLtrLie: null,
       currentIndex: -1
     });
   }
 
   setActiveLtrLie(ltrlie, index) {
     this.setState({
-      // currentLtrLie: ltrlie,
       currentIndex: index,
     });
   }
 
   render() {
-    const { ltrlies, currentIndex } = this.state;
+    const { ltrlies } = this.state;
 
     return (
     <div className="container">
@@ -81,12 +78,8 @@ export default class LierBoard extends Component {
 
           <ul className="list-group">
             {ltrlies &&
-              ltrlies.map((ltrlie, index) => (
-              <li
-                className={
-                "list-group-item " +
-                (index === currentIndex ? "active" : "")
-                }>
+              ltrlies.map((ltrlie) => (
+              <li className={"list-group-item "}>
                 
                 <div>Name: {ltrlie.name}</div>
                 
