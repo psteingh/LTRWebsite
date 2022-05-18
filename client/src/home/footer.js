@@ -5,13 +5,6 @@ import ltrbrand from "../images/ltrbrand.png";
 function Footer(){
   return(
   <footer className="dblue footer-sec">
-
-    <div className="footertext-sec">
-      <div className="fmess-text">
-        Due to limited world-wide server space,
-        lawyers & politicians are not allowed to use this site
-      </div>
-    </div>
     
     <div className="footertext-sec">
       <div className="fabout-text">
