@@ -78,9 +78,11 @@ export default class LierBoard extends Component {
 
           <ul className="list-group">
             {ltrlies &&
-              ltrlies.map((ltrlie) => (
-              <li className={"list-group-item "}>
+              ltrlies.map((ltrlie, index) => (
+              <li className="list-group-item" key={index}>
                 
+                <div>Id: {ltrlie.id}</div>
+
                 <div>Name: {ltrlie.name}</div>
                 
                 <div>Stuff: {ltrlie.stuff}</div>
