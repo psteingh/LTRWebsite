@@ -201,7 +201,15 @@ label {
 }
 
 /* Lier Board */
-.lierboard-sec {
+.lierboard-row {
+	padding: .5%;
+}
+
+.lierboard-group {
+	padding: .5%;
+}
+
+.lierboard-group-item {
 	padding: .5%;
 }
 
