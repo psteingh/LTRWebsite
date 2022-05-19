@@ -202,15 +202,20 @@ label {
 
 /* Lier Board */
 .lierboard-row {
-	padding: .5%;
+	margin: 1px;
 }
 
 .lierboard-group {
-	padding: .5%;
+	padding: 1px;
 }
 
 .lierboard-group-item {
-	padding: .5%;
+	margin-top: 1%;
+	padding: 1%;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 1%;
 }
 
 /* Login Register */
@@ -244,7 +249,7 @@ label {
 	color: #FFFFFF;
 }
 
-/* LtrLie */
+/* LtrLies */
 .list {
 	text-align: left;
 	max-width: 750px;

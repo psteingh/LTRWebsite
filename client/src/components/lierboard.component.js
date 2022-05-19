@@ -81,11 +81,11 @@ export default class LierBoard extends Component {
               <li className="lierboard-group-item" key={index}>
                 
                 <div>Name: {ltrlie.name}</div>
+
+                <div>Subject: {ltrlie.subject}</div>
                 
                 <div>Stuff: {ltrlie.stuff}</div>
                 
-                <div>Subject: {ltrlie.subject}</div>
-              
               </li>
               ))}
           </ul>
