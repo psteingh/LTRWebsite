@@ -73,7 +73,6 @@ export default class LierBoard extends Component {
           <h3>{this.state.content}</h3>
         </div>
 
-        <div className="col-md-6">
           <h4>Lies made Public</h4>
 
           <ul className="list-group">
@@ -81,8 +80,6 @@ export default class LierBoard extends Component {
               ltrlies.map((ltrlie, index) => (
               <li className="list-group-item" key={index}>
                 
-                <div>Id: {ltrlie.id}</div>
-
                 <div>Name: {ltrlie.name}</div>
                 
                 <div>Stuff: {ltrlie.stuff}</div>
@@ -92,7 +89,6 @@ export default class LierBoard extends Component {
               </li>
               ))}
           </ul>
-        </div>
 
       </div>
 
