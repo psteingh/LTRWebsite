@@ -201,10 +201,6 @@ label {
 }
 
 /* Lier Board */
-.lierboard-row {
-	margin: 1px;
-}
-
 .lierboard-group {
 	padding: 1px;
 }
@@ -216,6 +212,18 @@ label {
 	background-color: #FFFFFF;
 	border: 1px solid #000000;
 	border-radius: 1%;
+}
+
+.lbname {
+	background: rgba(233, 236, 71, 0.5);
+}
+
+.lbsubject {
+	background: rgba(233, 236, 71, 0.7);
+}
+
+.lbstuff {
+	background: rgba(233, 236, 71, 0.9);
 }
 
 /* Login Register */
