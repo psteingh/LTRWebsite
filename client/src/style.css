@@ -208,6 +208,17 @@ label {
 }
 
 /* About Us */
+.abtop-container {
+	position: relative;
+}
+
+.abtext-centered {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .ab-image {
 	width: 100%;
 }
