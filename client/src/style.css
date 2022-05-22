@@ -70,6 +70,14 @@ label {
 	background-color: #BD7D7A;
 }
 
+.white {
+	background-color: #FFFFFF;
+}
+
+.offwhite {
+	background-color: #FFFFF0;
+}
+
 .blacktowhite {
 	margin: 0;
 	padding: 0;
@@ -234,6 +242,25 @@ label {
 	text-align: center;
 }
 
+.abmiss-container {
+	color: #000000;
+	margin: 2% 7.5% 2% 7.5%;
+	border-radius: 1%;
+}
+
+.abmiss-title {
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding: 1%;
+}
+
+.abmiss-mid {
+	padding: 1%;
+}
+
+.abmiss-bottom {
+	padding: 1%;
+}
 
 /* Lier Board */
 .lierboard-group {
