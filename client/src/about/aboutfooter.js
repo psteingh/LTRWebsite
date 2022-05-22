@@ -1,29 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ltrbrand from "../images/ltrbrand.png";
 
-function Footer(){
+function AboutFooter(){
   return(
-  <footer className="dblue footer-sec">
+  <div className="dblue footer-sec">
     
     <div className="footertext-sec">
-      <div className="fabout-text">
-        <Link to="/">
-          <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
-        </Link>
-      </div>
-      <div className="footerbutton-sec">
-        <button className="submit-button">
-        <Link to={"/contact"}>
-          Contact Us
-        </Link>
-        </button>
-      </div>
+      Mission Statement
+      
     </div>
 
-  </footer>
+  </div>
 
   );
 }
 
-export default Footer;
+export default AboutFooter;
