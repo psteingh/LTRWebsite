@@ -6,7 +6,7 @@ class AboutNavbar extends Component {
 render() {
     return (
       <div>
-        <nav className="blacktowhite navbar">
+        <nav className="blacktowhite navbar abnavbar-grid">
           
           <Link to={"/"} className="navbar-brand">
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />

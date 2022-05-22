@@ -212,6 +212,14 @@ label {
 	width: 100%;
 }
 
+.abnavbar-grid {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2%;
+	margin: 2% 7.5% 2% 7.5%;
+	text-align: center;
+}
+
 
 /* Lier Board */
 .lierboard-group {
