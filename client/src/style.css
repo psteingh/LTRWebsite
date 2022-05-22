@@ -214,7 +214,10 @@ label {
 
 .abtext-centered {
 	position: absolute;
-	top: 70%;
+	color: #FFFFF0;
+	font-size: 3rem;
+	font-weight: bold;
+	top: 75%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
