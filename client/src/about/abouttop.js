@@ -4,7 +4,7 @@ import ltrdeceive from "../images/ltrdeceive.png";
 function AboutTop(){
     return(
         <div>
-          <img className="cd-image" src={ltrdeceive} alt="LTR Deceive" />  
+          <img className="ab-image" src={ltrdeceive} alt="LTR Deceive" />  
         </div>
     );
 }

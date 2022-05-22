@@ -70,6 +70,13 @@ label {
 	background-color: #BD7D7A;
 }
 
+.blacktowhite {
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	background: linear-gradient(to right, #000000, #FFFFFF);
+}
+
 .opake {
 	opacity: 0.5;
 }
@@ -199,6 +206,12 @@ label {
 .footersmallbutton-sec{
 	padding: 1%;
 }
+
+/* About Us */
+.ab-image {
+	width: 100%;
+}
+
 
 /* Lier Board */
 .lierboard-group {

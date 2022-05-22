@@ -41,17 +41,13 @@ class AboutNavbar extends Component {
 render() {
     return (
       <div>
-        <nav className="dblue navbar navbar-expand navbar-dark">
+        <nav className="blacktowhite navbar navbar-expand navbar-dark">
           
           <Link to={"/"} className="navbar-brand">
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
           </Link>
 
-          <Link to={"/lierboard"} className="navbar-lierboard">
-          Lier Board
-          </Link>
-
-          <Link to={"/contact"} className="navbar-lierboard">
+          <Link to={"/contact"}>
           Contact Us
           </Link>
 
