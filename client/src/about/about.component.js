@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 import UserService from "../services/user.service";
 
-import AboutTop from "./abouttop.js";
+import AboutTop from "./abouttop";
+import AboutNavBar from "./aboutnavbar";
+import AboutFooter from "./aboutfooter";
 
 export default class About extends Component {
   constructor(props) {
@@ -35,6 +37,8 @@ export default class About extends Component {
     return (
       <div className="container">
         <AboutTop />
+        <AboutNavBar />
+        <AboutFooter />
       </div>
     );
   }
