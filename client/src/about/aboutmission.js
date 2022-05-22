@@ -1,6 +1,6 @@
 import React from "react";
 
-function AboutFooter(){
+function AboutMission(){
   return(
   <div className="dblue footer-sec">
     
@@ -14,4 +14,4 @@ function AboutFooter(){
   );
 }
 
-export default AboutFooter;
+export default AboutMission;

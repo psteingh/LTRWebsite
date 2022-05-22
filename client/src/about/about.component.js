@@ -4,7 +4,7 @@ import UserService from "../services/user.service";
 
 import AboutTop from "./abouttop";
 import AboutNavBar from "./aboutnavbar";
-import AboutFooter from "./aboutfooter";
+import AboutMission from "./aboutmission";
 
 export default class About extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ export default class About extends Component {
       <div className="container">
         <AboutTop />
         <AboutNavBar />
-        <AboutFooter />
+        <AboutMission />
       </div>
     );
   }
