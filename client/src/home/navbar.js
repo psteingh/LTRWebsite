@@ -49,6 +49,10 @@ render() {
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
           </Link>
 
+          <Link to={"/about"} className="navbar-lierboard">
+          About Us
+          </Link>
+
           <Link to={"/lierboard"} className="navbar-lierboard">
           Lier Board
           </Link>

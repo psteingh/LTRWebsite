@@ -12,6 +12,8 @@ import Register from "./components/register.component";
 import Navbar from "./home/navbar";
 import Contact from "./home/contact";
 
+import About from "./about/about.component";
+
 import LtrLieAdd from "./vault/ltrlie-add.component";
 import LtrLieList from "./vault/ltrlie-list.component";
 import LtrLieUpdate from "./vault/ltrlie-update.component";
@@ -31,6 +33,8 @@ class App extends Component {
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
+
+            <Route exact path="/about" component={About} />
 
             <Route exact path="/ltrlies" component={LtrLieList} />
             <Route exact path="/add" component={LtrLieAdd} />
