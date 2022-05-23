@@ -4,7 +4,7 @@ function AboutMission(){
   return(
   <div className="white abmiss-container">
     <div className="abmiss-title">
-    You have to stay in control
+    You want to stay in control
     </div>
 
     <div className="abmiss-mid">
@@ -18,9 +18,9 @@ function AboutMission(){
 
     <div className="abmiss-bottom">
     <p>Social sites are about getting as many people signed up
-    and then telling all of their friends.</p>
-    <p>This is the opposite of that - The anti-social site.</p>
-    <p>Everyone will be on this site but no one will want
+    and then telling all of their friends.
+    This is the opposite of that - The anti-social site.<br />
+    Everyone will be on this site but no one will want
     to know that.</p>
     </div>
 
