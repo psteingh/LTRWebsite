@@ -49,11 +49,11 @@ render() {
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
           </Link>
 
-          <Link to={"/about"} className="navbar-lierboard">
+          <Link to={"/about"}>
           About Us
           </Link>
 
-          <Link to={"/lierboard"} className="navbar-lierboard">
+          <Link to={"/lierboard"}>
           Lier Board
           </Link>
                     
@@ -82,19 +82,15 @@ render() {
             <div className="navbar-nav ml-auto navbar-logsign">
 
               <li className="nav-item">
-              <button className="submit-button">
                 <Link to={"/login"} className="nav-link">
                  Log In
                 </Link>
-              </button>
               </li>
 
               <li className="nav-item">
-              <button className="submit-button">
                 <Link to={"/register"} className="nav-link">
                   Sign Up
                 </Link>
-              </button>
               </li>
             </div>
           )}

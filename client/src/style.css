@@ -43,11 +43,6 @@ label {
 	margin-top: 5%;
 }
 
-.label-lierboard {
-	color: #36648B;
-	margin-top: 5%;
-}
-
 /* Section background colors */
 .dblue {
 	background-color: #36648B;
@@ -106,11 +101,6 @@ label {
 /* Navbar button */
 .navbar-nav .nav-item .nav-link {
 	color: #FFFFFF;	
-}
-
-/* Navbar Lier Board button */
-.navbar-lierboard {
-	padding-right: .5rem;
 }
 
 /* Navbar hover */
