@@ -79,7 +79,7 @@ render() {
               </li>
             </div>
           ) : (
-            <div className="navbar-nav ml-auto">
+            <div className="navbar-nav ml-auto navbar-logsign">
 
               <li className="nav-item">
               <button className="submit-button">

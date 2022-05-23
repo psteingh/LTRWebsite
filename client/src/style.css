@@ -99,6 +99,24 @@ label {
 	padding: 0;
 }
 
+.navbar-logsign {
+	margin-left: auto;
+}
+
+/* Navbar button */
+.navbar-nav .nav-item .nav-link {
+	color: #FFFFFF;	
+}
+
+/* Navbar Lier Board button */
+.navbar-lierboard {
+	padding-right: .5rem;
+}
+
+/* Navbar hover */
+.navbar-nav .nav-item .nav-link:hover {
+	color: #63B8FF;
+}
 
 /* Header section */
 .header-sec {
@@ -366,22 +384,6 @@ label {
 	width: 6.2rem;
 	height: 3.1rem;
 	border-radius: 0.1rem;
-}
-
-/* Links */
-/* Navbar button */
-.navbar-nav .nav-item .nav-link {
-	color: #FFFFFF;	
-}
-
-/* Navbar Lier Board button */
-.navbar-lierboard {
-	padding-right: .5rem;
-}
-
-/* Navbar hover */
-.navbar-nav .nav-item .nav-link:hover {
-	color: #63B8FF;
 }
 
 /* Contact Us button */
