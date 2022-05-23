@@ -82,15 +82,19 @@ render() {
             <div className="navbar-nav ml-auto">
 
               <li className="nav-item">
+              <button className="submit-button">
                 <Link to={"/login"} className="nav-link">
                  Log In
                 </Link>
+              </button>
               </li>
 
               <li className="nav-item">
+              <button className="submit-button">
                 <Link to={"/register"} className="nav-link">
                   Sign Up
                 </Link>
+              </button>
               </li>
             </div>
           )}
