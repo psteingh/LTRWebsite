@@ -49,11 +49,11 @@ render() {
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
           </Link>
 
-          <Link to={"/about"}>
+          <Link to={"/about"} className="navbar-mid">
           About Us
           </Link>
 
-          <Link to={"/lierboard"}>
+          <Link to={"/lierboard"} className="navbar-mid">
           Lier Board
           </Link>
                     

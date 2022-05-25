@@ -91,10 +91,18 @@ label {
 /* Navbar section */
 .navbar-brand {
 	margin-left: 1rem;
-	padding: 0;
+}
+
+.navbar-mid {
+	margin-left: 1rem;
+}
+
+.navbar-nav {
+	margin-left: 1rem;
 }
 
 .navbar-logsign {
+	margin-right: 1rem;
 	margin-left: auto;
 }
 
