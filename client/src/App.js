@@ -13,6 +13,7 @@ import Navbar from "./home/navbar";
 import Contact from "./home/contact";
 
 import About from "./about/about.component";
+import Lies from "./lies/lies.component";
 
 import LtrLieAdd from "./vault/ltrlie-add.component";
 import LtrLieList from "./vault/ltrlie-list.component";
@@ -35,6 +36,7 @@ class App extends Component {
             <Route exact path="/contact" component={Contact} />
 
             <Route exact path="/about" component={About} />
+            <Route exact path="/lies" component={Lies} />
 
             <Route exact path="/ltrlies" component={LtrLieList} />
             <Route exact path="/add" component={LtrLieAdd} />

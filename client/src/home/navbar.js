@@ -56,7 +56,11 @@ render() {
           <Link to={"/lierboard"} className="navbar-mid">
           Lier Board
           </Link>
-                    
+
+          <Link to={"/lies"} className="navbar-mid">
+          About Lies
+          </Link>
+
           {currentUser ? (
             <div className="navbar-nav ml-auto">
             
