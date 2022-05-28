@@ -13,7 +13,7 @@ render() {
           </Link>
 
           <Link to={"/liesgeneral"}>
-          Lies in general
+          General
           </Link>
 
           <Link to={"/contact"}>
