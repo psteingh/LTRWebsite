@@ -305,6 +305,15 @@ label {
 	background: rgba(233, 236, 71, 0.9);
 }
 
+/* Lies */
+.liesnavbar-grid {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2%;
+	margin: 2% 7.5% 2% 7.5%;
+	text-align: center;
+}
+
 /* Login Register */
 .card-container.card {
 	max-width: 350px !important;
