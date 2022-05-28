@@ -1,6 +1,6 @@
 import React from "react";
 
-function LiesPurpose(){
+function LiesGeneral(){
   return(
   <div className="white abmiss-container">
     <div className="abmiss-title">
@@ -20,4 +20,4 @@ function LiesPurpose(){
   );
 }
 
-export default LiesPurpose;
+export default LiesGeneral;

@@ -1,7 +1,7 @@
 import React from "react";
-import ltrdeceive from "../images/ltrdeceive.png";
+import ltrdeceive from "/client/src/images/ltrdeceive.png";
 
-function LiesTop(){
+function LiesGeneralTop(){
     return(
         <div className="abtop-container">
           <img className="ab-image" src={ltrdeceive} alt="LTR Deceive" />  
@@ -14,4 +14,4 @@ function LiesTop(){
     );
 }
     
-export default LiesTop;
+export default LiesGeneralTop;
