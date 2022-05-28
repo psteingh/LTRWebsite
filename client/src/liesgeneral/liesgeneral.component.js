@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import UserService from "/client/src/services/user.service";
+import UserService from "../services/user.service";
 
 import LiesGeneralTop from "./liesgentop";
-import LiesNavBar from "../liesnavbar";
+import LiesNavBar from "../lies/liesnavbar";
 import LiesGeneral from "./liesgeneral";
 
 export default class LiesGeneralComponent extends Component {

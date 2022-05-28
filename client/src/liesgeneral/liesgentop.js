@@ -1,5 +1,5 @@
 import React from "react";
-import ltrdeceive from "/client/src/images/ltrdeceive.png";
+import ltrdeceive from "../images/ltrdeceive.png";
 
 function LiesGeneralTop(){
     return(
@@ -7,7 +7,7 @@ function LiesGeneralTop(){
           <img className="ab-image" src={ltrdeceive} alt="LTR Deceive" />  
         
         <div className="abtext-centered">
-          About Lies
+          Lies in general
         </div>
         
         </div>

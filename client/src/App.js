@@ -15,7 +15,7 @@ import Contact from "./home/contact";
 import About from "./about/about.component";
 import Lies from "./lies/lies.component";
 
-import LiesGeneral from "./lies/liesgeneral/liesgeneral.component";
+import LiesGeneral from "./liesgeneral/liesgeneral.component";
 
 import LtrLieAdd from "./vault/ltrlie-add.component";
 import LtrLieList from "./vault/ltrlie-list.component";

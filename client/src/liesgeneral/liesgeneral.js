@@ -4,7 +4,7 @@ function LiesGeneral(){
   return(
   <div className="white abmiss-container">
     <div className="abmiss-title">
-    Purpose of Lies
+    Examples of Lies in general
     </div>
 
     <div className="abmiss-mid">
