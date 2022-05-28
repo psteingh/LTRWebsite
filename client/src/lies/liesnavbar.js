@@ -12,6 +12,10 @@ render() {
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
           </Link>
 
+          <Link to={"/lies"}>
+          About Lies
+          </Link>
+
           <Link to={"/liesgeneral"}>
           General
           </Link>
