@@ -1,10 +1,10 @@
 import React from "react";
-import ltrdeceive from "../images/ltrdeceive.png";
+import ltrliestruth from "../images/ltrliestruth.png"
 
 function LiesGeneralTop(){
     return(
         <div className="liestop-container">
-          <img className="lies-image" src={ltrdeceive} alt="LTR Deceive" />  
+          <img className="lies-image" src={ltrliestruth} alt="LTR Lies Truth" />  
         
         <div className="liestext-centered">
           General Lies
