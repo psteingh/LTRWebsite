@@ -1,32 +1,43 @@
 import React from "react";
 
-function LiesGeneral(){
+function LiesMedia(){
   return(
   <div>
   <div className="white lies-container">
     <div className="lies-title">
-    Examples of Lies in general
+    Lies in the Media
     </div>
     <div className="lies-mid">
-    brief explanation
+    Umbrella term for Media: Movies, TV Shows, Books, Games
     </div>
     <div className="lies-bottom">
-    <p>Lies that you come across in daily life</p>
+    <p>Lies that you see in daily life</p>
     </div>
   </div>
 
   <div className="white lies-container">
     <div className="lies-title">
-    Gender Lies
+    Movie
     </div>
     <div className="lies-mid">
-    Female
+    Easy A
     </div>
     <div className="lies-bottom">
-    <p>Women who are 40, but say they are 38</p>
+    <p>"Acclerated velocity of terminological inexactitude"</p>
     </div>
   </div>
 
+  <div className="white lies-container">
+    <div className="lies-title">
+    Movie
+    </div>
+    <div className="lies-mid">
+    Jupiter Ascending
+    </div>
+    <div className="lies-bottom">
+    <p>“Lies are a necessity, they are the source of meaning”</p>
+    </div>
+  </div>
   </div>
 
   
@@ -34,4 +45,4 @@ function LiesGeneral(){
   );
 }
 
-export default LiesGeneral;
+export default LiesMedia;

@@ -17,6 +17,7 @@ import Lies from "./lies/lies.component";
 
 import LiesGeneral from "./liesgeneral/liesgeneral.component";
 import LiesBible from "./liesbible/liesbible.component";
+import LiesMedia from "./liesmedia/liesmedia.component";
 
 import LtrLieAdd from "./vault/ltrlie-add.component";
 import LtrLieList from "./vault/ltrlie-list.component";
@@ -43,6 +44,7 @@ class App extends Component {
 
             <Route exact path="/liesgeneral" component={LiesGeneral} />
             <Route exact path="/liesbible" component={LiesBible} />
+            <Route exact path="/liesmedia" component={LiesMedia} />
 
             <Route exact path="/ltrlies" component={LtrLieList} />
             <Route exact path="/add" component={LtrLieAdd} />

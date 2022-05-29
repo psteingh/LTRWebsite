@@ -24,6 +24,10 @@ render() {
           Bible
           </Link>
 
+          <Link to={"/liesmedia"}>
+          Media
+          </Link>
+
           <Link to={"/contact"}>
           Contact Us
           </Link>
