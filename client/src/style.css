@@ -305,13 +305,51 @@ label {
 	background: rgba(233, 236, 71, 0.9);
 }
 
-/* Lies */
+/* About Lies */
+.liestop-container {
+	position: relative;
+}
+
+.liestext-centered {
+	position: absolute;
+	color: #FFFFF0;
+	font-size: 3rem;
+	font-weight: bold;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.lies-image {
+	width: 100%;
+}
+
 .liesnavbar-grid {
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 2%;
 	margin: 2% 7.5% 2% 7.5%;
 	text-align: center;
+}
+
+.lies-container {
+	color: #000000;
+	margin: 2% 7.5% 2% 7.5%;
+	border-radius: 1%;
+}
+
+.lies-title {
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding: 1%;
+}
+
+.lies-mid {
+	padding: 1%;
+}
+
+.lies-bottom {
+	padding: 1%;
 }
 
 /* Login Register */
