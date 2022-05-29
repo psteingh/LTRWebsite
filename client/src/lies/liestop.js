@@ -3,13 +3,13 @@ import ltrdeceive from "../images/ltrdeceive.png";
 
 function LiesTop(){
     return(
-        <div className="abtop-container">
-          <img className="ab-image" src={ltrdeceive} alt="LTR Deceive" />  
-        
-        <div className="abtext-centered">
+        <div className="liestop-container">
+          <img className="lies-image" src={ltrdeceive} alt="LTR Deceive" />
+
+        <div className="liestext-centered">
           About Lies
         </div>
-        
+
         </div>
     );
 }
