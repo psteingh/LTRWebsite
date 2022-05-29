@@ -7,7 +7,7 @@ function LiesBibleTop(){
           <img className="lies-image" src={ltrblackbkgrnd} alt="LTR Black background" />  
         
         <div className="liestext-centered">
-          Lies in the Bible
+          Biblical Lies
         </div>
         
         </div>

@@ -7,7 +7,7 @@ function LiesMediaTop(){
           <img className="lies-image" src={ltrblackbkgrnd} alt="LTR Black background" />  
         
         <div className="liestext-centered">
-          Lies in the Media
+          Media Lies
         </div>
         
         </div>
