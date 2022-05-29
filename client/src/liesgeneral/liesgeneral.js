@@ -8,11 +8,11 @@ function LiesGeneral(){
     </div>
 
     <div className="abmiss-mid">
-    problems
+    Gender Lies
     </div>
 
     <div className="abmiss-bottom">
-    <p>The anti-social site</p>
+    <p>Women who are 40, but say they are 38 need the site to remember</p>
     </div>
 
   </div>
