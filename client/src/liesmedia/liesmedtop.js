@@ -1,17 +1,17 @@
 import React from "react";
 import ltrdeceive from "../images/ltrdeceive.png";
 
-function LiesTop(){
+function LiesGeneralTop(){
     return(
-        <div className="abtop-container">
-          <img className="ab-image" src={ltrdeceive} alt="LTR Deceive" />  
+        <div className="liestop-container">
+          <img className="lies-image" src={ltrdeceive} alt="LTR Deceive" />  
         
-        <div className="abtext-centered">
-          About Lies
+        <div className="liestext-centered">
+          General Lies
         </div>
         
         </div>
     );
 }
     
-export default LiesTop;
+export default LiesGeneralTop;
