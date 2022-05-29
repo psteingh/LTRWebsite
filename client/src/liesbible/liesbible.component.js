@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 import UserService from "../services/user.service";
 
-import LiesGeneralTop from "./liesgentop";
+import LiesBibleTop from "./liesbibtop";
 import LiesNavBar from "../lies/liesnavbar";
-import LiesGeneral from "./liesgeneral";
+import LiesBible from "./liesbible";
 
-export default class LiesGeneralComponent extends Component {
+export default class LiesBibleComponent extends Component {
   constructor(props) {
     super(props);
 
@@ -36,9 +36,9 @@ export default class LiesGeneralComponent extends Component {
   render() {
     return (
       <div className="container">
-        <LiesGeneralTop />
+        <LiesBibleTop />
         <LiesNavBar />
-        <LiesGeneral />
+        <LiesBible />
       </div>
     );
   }
