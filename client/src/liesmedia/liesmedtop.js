@@ -4,7 +4,7 @@ import ltrblackbkgrnd from "../images/ltrblackbkgrnd.png";
 function LiesMediaTop(){
     return(
         <div className="liestop-container">
-          <img className="liesbkgrnd-image" src={ltrblackbkgrnd} alt="LTR Black background" />  
+          <img className="liesab-image" src={ltrblackbkgrnd} alt="LTR Black background" />  
         
         <div className="liestext-centered">
           Media Lies
