@@ -327,6 +327,10 @@ label {
 	padding-right: 7.5%;
 }
 
+.liesgen-image {
+	width: 100%;
+}
+
 .liesnavbar-grid {
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
