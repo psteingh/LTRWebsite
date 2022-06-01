@@ -57,9 +57,9 @@ render() {
           Lier Board
           </Link>
 
-          <Link to={"/lies"} className="navbar-mid">
+          {/* <Link to={"/lies"} className="navbar-mid">
           About Lies
-          </Link>
+          </Link> */}
 
           {currentUser ? (
             <div className="navbar-nav ml-auto">
