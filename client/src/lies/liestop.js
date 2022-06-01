@@ -4,7 +4,7 @@ import ltrblackbkgrnd from "../images/ltrblackbkgrnd.png";
 function LiesTop(){
     return(
         <div className="liestop-container">
-          <img className="lies-image" src={ltrblackbkgrnd} alt="LTR Black background" />
+          <img className="liesbkgrnd-image" src={ltrblackbkgrnd} alt="LTR Black background" />
 
         <div className="liestext-centered">
           About Lies

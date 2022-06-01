@@ -315,13 +315,20 @@ label {
 	color: #FFFFF0;
 	font-size: 3rem;
 	font-weight: bold;
-	top: 75%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
 .lies-image {
 	width: 100%;
+}
+
+.liesbkgrnd-image {
+	width: 100%;
+	height: 100px;
+	padding-left: 7.5%;
+	padding-right: 7.5%;
 }
 
 .liesnavbar-grid {
