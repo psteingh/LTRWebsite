@@ -322,37 +322,36 @@ label {
 
 .liesab-image {
 	width: 100%;
-	height: 100px;
-	padding-left: 7.5%;
-	padding-right: 7.5%;
+	height: 60px;
 }
 
 .liesnavbar-grid {
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 2%;
-	margin: 2% 7.5% 2% 7.5%;
+	margin-top: 2%;
 	text-align: center;
 }
 
 .lies-container {
+	margin-top: 2%;
 	color: #000000;
-	margin: 2% 7.5% 2% 7.5%;
+	background-color: #FFFFFF;
 	border-radius: 1%;
 }
 
 .lies-title {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	font-weight: bold;
-	padding: 1%;
+	padding-left: 1%;
 }
 
 .lies-mid {
-	padding: 1%;
+	padding-left: 1%;
 }
 
 .lies-bottom {
-	padding: 1%;
+	padding-left: 1%;
 }
 
 /* Login Register */

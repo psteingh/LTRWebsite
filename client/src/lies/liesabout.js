@@ -3,7 +3,8 @@ import React from "react";
 function LiesAbout(){
   return(
   <div>
-  <div className="white lies-container">
+
+  <div className="lies-container">
     <div className="lies-title">
     Purpose of Lies
     </div>
@@ -11,7 +12,7 @@ function LiesAbout(){
     There are many conditions which determine the purpose of lying
     </div>
     <div className="lies-bottom">
-    <p>Our society has fully incorporated lying so why not keep track of them for yourself</p>
+    Our society has fully incorporated lying so why not keep track of them for yourself
     </div>
   </div>
 
