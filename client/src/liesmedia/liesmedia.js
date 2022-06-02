@@ -8,10 +8,10 @@ function LiesMedia(){
     Lies in the Media
     </div>
     <div className="lies-mid">
-    Umbrella term for Media: Movies, TV Shows, Books, Games
+    The umbrella term for Media includes: Books, Games, Movies, Music, TV Shows
     </div>
     <div className="lies-bottom">
-    <p>Lies that you see in daily life</p>
+    <p>Lies that you see in the media</p>
     </div>
   </div>
 
@@ -38,9 +38,8 @@ function LiesMedia(){
     <p>“Lies are a necessity, they are the source of meaning”</p>
     </div>
   </div>
-  </div>
 
-  
+  </div>
   
   );
 }

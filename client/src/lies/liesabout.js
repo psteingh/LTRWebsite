@@ -1,6 +1,6 @@
 import React from "react";
 
-function LiesPurpose(){
+function LiesAbout(){
   return(
   <div>
   <div className="white lies-container">
@@ -20,10 +20,10 @@ function LiesPurpose(){
     Question of Lying
     </div>
     <div className="lies-mid">
-    There are many conditions which determine the purpose of lying
+    Is omission of fact a lie?
     </div>
     <div className="lies-bottom">
-    <p>Our society has fully incorporated lying so why not keep track of them for yourself</p>
+    <p>Depending on the situation, leaving out details does not have to be a lie</p>
     </div>
   </div>
 
@@ -32,4 +32,4 @@ function LiesPurpose(){
   );
 }
 
-export default LiesPurpose;
+export default LiesAbout;

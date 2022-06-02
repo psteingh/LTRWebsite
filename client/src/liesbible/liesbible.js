@@ -8,10 +8,10 @@ function LiesBible(){
     Lies in the Bible
     </div>
     <div className="lies-mid">
-    brief explanation
+    Lie and/or truth mentioned in the Bible
     </div>
     <div className="lies-bottom">
-    <p>Lies that you come across in the Bible</p>
+    <p>Lies that you come across in the Bible's New Testament</p>
     </div>
   </div>
 
@@ -28,9 +28,7 @@ function LiesBible(){
   </div>
 
   </div>
-
-  
-  
+    
   );
 }
 
