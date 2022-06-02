@@ -4,7 +4,7 @@ import UserService from "../services/user.service";
 
 import LiesTop from "./liestop";
 import LiesNavBar from "./liesnavbar";
-import LiesPurpose from "./liespurpose";
+import LiesAbout from "./liesabout";
 
 export default class Lies extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ export default class Lies extends Component {
       <div className="container">
         <LiesTop />
         <LiesNavBar />
-        <LiesPurpose />
+        <LiesAbout />
       </div>
     );
   }
