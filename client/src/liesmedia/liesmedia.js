@@ -3,7 +3,7 @@ import React from "react";
 function LiesMedia(){
   return(
   <div>
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Lies in the Media
     </div>
@@ -11,11 +11,11 @@ function LiesMedia(){
     The umbrella term for Media includes: Books, Games, Movies, Music, TV Shows
     </div>
     <div className="lies-bottom">
-    <p>Lies that you see in the media</p>
+    Lies that you see in the media
     </div>
   </div>
 
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Movie
     </div>
@@ -23,11 +23,11 @@ function LiesMedia(){
     Easy A
     </div>
     <div className="lies-bottom">
-    <p>"Acclerated velocity of terminological inexactitude"</p>
+    "Acclerated velocity of terminological inexactitude"
     </div>
   </div>
 
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Movie
     </div>
@@ -35,7 +35,7 @@ function LiesMedia(){
     Jupiter Ascending
     </div>
     <div className="lies-bottom">
-    <p>“Lies are a necessity, they are the source of meaning”</p>
+    “Lies are a necessity, they are the source of meaning”
     </div>
   </div>
 

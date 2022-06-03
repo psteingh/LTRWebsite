@@ -3,7 +3,7 @@ import React from "react";
 function LiesBible(){
   return(
   <div>
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Lies in the Bible
     </div>
@@ -11,11 +11,11 @@ function LiesBible(){
     Lie and/or truth mentioned in the Bible
     </div>
     <div className="lies-bottom">
-    <p>Lies that you come across in the Bible's New Testament</p>
+    Lies that you come across in the Bible's New Testament
     </div>
   </div>
 
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     John 18:37
     </div>

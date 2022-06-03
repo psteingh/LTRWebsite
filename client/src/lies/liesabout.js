@@ -16,7 +16,7 @@ function LiesAbout(){
     </div>
   </div>
 
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Question of Lying
     </div>
@@ -24,7 +24,7 @@ function LiesAbout(){
     Is omission of fact a lie?
     </div>
     <div className="lies-bottom">
-    <p>Depending on the situation, leaving out details does not have to be a lie</p>
+    Depending on the situation, leaving out details does not have to be a lie
     </div>
   </div>
 

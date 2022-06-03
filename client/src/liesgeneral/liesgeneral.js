@@ -3,7 +3,7 @@ import React from "react";
 function LiesGeneral(){
   return(
   <div>
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Examples of Lies in general
     </div>
@@ -16,7 +16,7 @@ function LiesGeneral(){
     </div>
   </div>
 
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Slang, Colloquialisms, Idioms, Jargon
     </div>
@@ -24,11 +24,11 @@ function LiesGeneral(){
     Saying the opposite of what was previously said
     </div>
     <div className="lies-bottom">
-    <p>"walks back"</p>
+    "walks back"
     </div>
   </div>
 
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Gender Lies
     </div>
@@ -36,11 +36,11 @@ function LiesGeneral(){
     Female
     </div>
     <div className="lies-bottom">
-    <p>Women who are 40, but say they are 30</p>
+    Women who are 40, but say they are 30
     </div>
   </div>
 
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Gender Lies
     </div>
@@ -48,11 +48,11 @@ function LiesGeneral(){
     Male
     </div>
     <div className="lies-bottom">
-    <p>"I am the manager of the company"</p>
+    "I am the manager of the company"
     </div>
   </div>
 
-  <div className="white lies-container">
+  <div className="lies-container">
     <div className="lies-title">
     Lies that have good intentions
     </div>
@@ -60,7 +60,7 @@ function LiesGeneral(){
     When someone is dying
     </div>
     <div className="lies-bottom">
-    <p>"you will be OK"</p>
+    "you will be OK"
     </div>
   </div>
   
