@@ -17,11 +17,11 @@ function AboutMission(){
     </div>
 
     <div className="abmiss-bottom">
-    <p>Social sites are about getting as many people signed up
+    Social sites are about getting as many people signed up
     and then telling all of their friends.
     This is the opposite of that - The anti-social site.<br />
     Everyone will be on this site but no one will want
-    to know that.</p>
+    to know that.
     </div>
 
   </div>
