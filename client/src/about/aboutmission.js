@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutMission(){
   return(
-  <div className="white abmiss-container">
+  <div className="abmiss-container">
     <div className="abmiss-title">
     You want to stay in control
     </div>

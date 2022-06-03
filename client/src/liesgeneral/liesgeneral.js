@@ -11,9 +11,8 @@ function LiesGeneral(){
     This section is for understanding the basics of lies that you come across in daily life
     </div>
     <div className="lies-bottom">
-    <p>There are 5 main demographic segments of lies;
+    There are 5 main demographic segments of lies;
       age, gender, occupation, cultural background, family status
-    </p>
     </div>
   </div>
 

@@ -23,7 +23,7 @@ function LiesBible(){
     Jesus answered
     </div>
     <div className="lies-bottom">
-    <p>“You say that I am a king. In fact, the reason I was born and came into the world is to testify to the truth. Everyone on the side of truth listens to me.”</p>
+    “You say that I am a king. In fact, the reason I was born and came into the world is to testify to the truth. Everyone on the side of truth listens to me.”
     </div>
   </div>
 
