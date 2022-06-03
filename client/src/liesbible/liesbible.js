@@ -8,7 +8,7 @@ function LiesBible(){
     Lies in the Bible
     </div>
     <div className="lies-mid">
-    Lie and/or truth mentioned in the Bible
+    Lie or truth mentioned in the Bible
     </div>
     <div className="lies-bottom">
     Lies that you come across in the Bible's New Testament
