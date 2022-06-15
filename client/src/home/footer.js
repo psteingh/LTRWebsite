@@ -7,6 +7,12 @@ function Footer(){
   <footer className="dblue footer-sec">
     
     <div className="footertext-sec">
+      <div className="fmess-text">
+        Due to limited server space,
+        lawyers & politicians are not allowed to use this site.
+      </div>
+    </div>
+    <div className="footertext-sec">
       <div className="fabout-text">
         <Link to="/">
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
