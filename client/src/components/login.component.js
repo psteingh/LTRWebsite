@@ -109,6 +109,8 @@ export default class Login extends Component {
             }}
           >
           
+            <h4>LOG IN</h4>
+
             <div className="form-group">
                   <Input
                     placeholder="Email"
@@ -134,7 +136,7 @@ export default class Login extends Component {
             </div>
             <div className="form-group">
               <button
-                className="submit-button"
+                className="submit-button submit-signlog-btn"
                 disabled={this.state.loading}
               >
                 {this.state.loading && (
@@ -159,9 +161,9 @@ export default class Login extends Component {
             />
           </Form>
         
-        <div>
+        <div className="already-need">
           <h4>Need an account?
-          <button className="action-button">
+          <button className="action-button action-signlog-btn">
           <Link to={"/register"}>
             Sign Up
           </Link>
