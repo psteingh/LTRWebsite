@@ -13,17 +13,17 @@ const email = value => {
   if (!isEmail(value)) {
     return (
       <div className="alert alert-notice" role="alert">
-        Email is required
+        Please enter a valid email address
       </div>
     );
   }
 };
 
 const password = value => {
-  if (value.length < 6 || value.length > 40) {
+  if (value.length < 6 || value.length > 12) {
     return (
       <div className="alert alert-notice" role="alert">
-        Password must be between 6 and 40 characters
+        Password must be between 6 and 12 characters
       </div>
     );
   }

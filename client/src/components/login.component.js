@@ -13,7 +13,7 @@ const email = value => {
   if (!isEmail(value)) {
     return (
       <div className="alert alert-notice" role="alert">
-        Email is required
+        Please enter a valid email address
       </div>
     );
   }
@@ -23,7 +23,7 @@ const password = value => {
   if (!value) {
     return (
       <div className="alert alert-notice" role="alert">
-        Password is required
+        Please enter your password
       </div>
     );
   }
