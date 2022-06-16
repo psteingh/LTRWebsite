@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LtrLieDataService from "../services/ltrlie.service";
+import AuthService from "../services/auth.service";
 
 export default class LtrLieList extends Component {
   constructor(props) {
@@ -17,11 +18,16 @@ export default class LtrLieList extends Component {
       currentLtrLie: null,
       currentIndex: -1,
       searchName: "",
+      currentUser: { email: ""}
     };
   }
 
   componentDidMount() {
     this.retrieveLtrLies();
+
+    const currentUser = AuthService.getCurrentUser();
+    if (!currentUser) this.setState({ redirect: "/home" });
+    this.setState({ currentUser: currentUser, userReady: true })
   }
   
   onChangeSearchName(e) {
@@ -83,13 +89,21 @@ export default class LtrLieList extends Component {
   }
 
   render() {
-    const { searchName, ltrlies, currentLtrLie, currentIndex } = this.state;
+    const { searchName,
+            ltrlies,
+            currentLtrLie,
+            currentIndex,
+            currentUser } = this.state;
 
     return (
       <div className="list row">
         <div className="opake">
           <h3>Only you see this</h3>
         </div>
+        <p>
+          <strong>Email:</strong>{" "}
+          {currentUser.email}
+        </p>
         <div className="col-md-8">
           <div className="input-group mb-3">
             <input
