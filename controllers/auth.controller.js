@@ -7,7 +7,6 @@ const bcrypt = require("bcryptjs");
 
 exports.signup = (req, res) => {
   const user = new User({
-    // username: req.body.username,
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password, 8)
   });
@@ -17,14 +16,13 @@ exports.signup = (req, res) => {
       res.status(500).send({ message: err });
       return;
     }
-    res.send({ message: "User was registered successfully" });
+    res.send({ message: "User's email was registered successfully" });
   });
   
 };
 
 exports.signin = (req, res) => {
   User.findOne({
-    // username: req.body.username
     email: req.body.email
   })
     .exec(async (err, user) => {
@@ -34,7 +32,7 @@ exports.signin = (req, res) => {
       }
 
       if (!user) {
-        return res.status(404).send({ message: "User Not found" });
+        return res.status(404).send({ message: "User's email not found" });
       }
 
       let passwordIsValid = bcrypt.compareSync(
@@ -59,7 +57,6 @@ exports.signin = (req, res) => {
       
       res.status(200).send({
         id: user._id,
-        // username: user.username,
         email: user.email,
         accessToken: token,
         refreshToken: refreshToken,

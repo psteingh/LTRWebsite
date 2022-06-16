@@ -9,16 +9,6 @@ import AuthService from "../services/auth.service";
 
 import FooterSmall from "../home/footersmall";
 
-// const username = value => {
-//   if (!value) {
-//     return (
-//       <div className="alert alert-notice" role="alert">
-//         User Name is required
-//       </div>
-//     );
-//   }
-// };
-
 const email = value => {
   if (!isEmail(value)) {
     return (
@@ -43,12 +33,10 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     this.handleLogin = this.handleLogin.bind(this);
-    // this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
 
     this.state = {
-      // username: "",
       email: "",
       password: "",
       currentUser: AuthService.getCurrentUser(),
@@ -56,12 +44,6 @@ export default class Login extends Component {
       message: ""
     };
   }
-
-  // onChangeUsername(e) {
-  //   this.setState({
-  //     username: e.target.value
-  //   });
-  // }
 
   onChangeEmail(e) {
     this.setState({
@@ -87,7 +69,6 @@ export default class Login extends Component {
 
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
-        // this.state.username,
         this.state.email,
         this.state.password,
         this.state.currentUser,
@@ -127,18 +108,7 @@ export default class Login extends Component {
               this.form = c;
             }}
           >
-            {/* <div className="form-group">
-              <Input
-                placeholder="User Name"
-                type="text"
-                className="form-control"
-                name="username"
-                value={this.state.username}
-                onChange={this.onChangeUsername}
-                validations={[username]}
-              />
-            </div> */}
-            
+          
             <div className="form-group">
                   <Input
                     placeholder="Email"

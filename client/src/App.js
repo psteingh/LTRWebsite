@@ -6,7 +6,6 @@ import "./style.css";
 import Home from "./components/home.component";
 import LierBoard from "./components/lierboard.component";
 import Login from "./components/login.component";
-import Profile from "./components/profile.component";
 import Register from "./components/register.component";
 
 import Navbar from "./home/navbar";
@@ -35,7 +34,6 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/lierboard" component={LierBoard} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/profile" component={Profile} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
 
