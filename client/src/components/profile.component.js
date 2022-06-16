@@ -9,7 +9,7 @@ export default class Profile extends Component {
     this.state = {
       redirect: null,
       userReady: false,
-      currentUser: { username: "" }
+      // currentUser: { username: "" }
     };
   }
 
@@ -34,10 +34,10 @@ export default class Profile extends Component {
         <header className="jumbotron">
           <h3> Profile </h3>
         </header>
-        <p>
+        {/* <p>
           <strong>User Name:</strong>{" "}
           {currentUser.username}
-        </p>
+        </p> */}
         <p>
           <strong>Email:</strong>{" "}
           {currentUser.email}

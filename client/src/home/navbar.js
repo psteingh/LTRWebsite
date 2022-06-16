@@ -64,11 +64,11 @@ render() {
           {currentUser ? (
             <div className="navbar-nav ml-auto">
             
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to={"/profile"} className="nav-link">
                 {currentUser.username}
               </Link>
-            </li>           
+            </li>            */}
             
             <li className="nav-item">
               <Link to={"/ltrlies"} className="nav-link">

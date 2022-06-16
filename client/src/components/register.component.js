@@ -19,15 +19,15 @@ const email = value => {
   }
 };
 
-const username = value => {
-  if (value.length < 3 || value.length > 20) {
-    return (
-      <div className="alert alert-notice" role="alert">
-        User Name must be between 3 and 20 characters
-      </div>
-    );
-  }
-};
+// const username = value => {
+//   if (value.length < 3 || value.length > 20) {
+//     return (
+//       <div className="alert alert-notice" role="alert">
+//         User Name must be between 3 and 20 characters
+//       </div>
+//     );
+//   }
+// };
 
 const password = value => {
   if (value.length < 6 || value.length > 40) {
@@ -43,12 +43,12 @@ export default class Register extends Component {
   constructor(props) {
     super(props);
     this.handleRegister = this.handleRegister.bind(this);
-    this.onChangeUsername = this.onChangeUsername.bind(this);
+    // this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
 
     this.state = {
-      username: "",
+      // username: "",
       email: "",
       password: "",
       successful: false,
@@ -56,11 +56,11 @@ export default class Register extends Component {
     };
   }
 
-  onChangeUsername(e) {
-    this.setState({
-      username: e.target.value
-    });
-  }
+  // onChangeUsername(e) {
+  //   this.setState({
+  //     username: e.target.value
+  //   });
+  // }
 
   onChangeEmail(e) {
     this.setState({
@@ -86,7 +86,7 @@ export default class Register extends Component {
 
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.register(
-        this.state.username,
+        // this.state.username,
         this.state.email,
         this.state.password
       ).then(
@@ -125,7 +125,7 @@ export default class Register extends Component {
           >
             {!this.state.successful && (
               <div>
-                <div className="form-group">
+                {/* <div className="form-group">
                   <Input
                     placeholder="User Name"
                     type="text"
@@ -135,7 +135,7 @@ export default class Register extends Component {
                     onChange={this.onChangeUsername}
                     validations={[username]}
                   />
-                </div>
+                </div> */}
                 <div className="form-group">
                   <Input
                     placeholder="Email"
