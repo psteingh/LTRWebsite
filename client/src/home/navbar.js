@@ -72,7 +72,7 @@ render() {
             
             <li className="nav-item">
                 <a href="/login" className="nav-link" onClick={this.logOut}>
-                  Log Out
+                  Logout
                 </a>
               </li>
             </div>
@@ -81,7 +81,7 @@ render() {
 
               <li className="nav-item">
                 <Link to={"/login"} className="nav-link">
-                 Log In
+                 Login
                 </Link>
               </li>
 

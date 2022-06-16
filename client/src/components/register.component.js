@@ -106,7 +106,8 @@ export default class Register extends Component {
           >
             {!this.state.successful && (
               <div>
-                <h4>SIGN UP</h4>
+                
+                <div className="headertitle-text">SIGN UP</div>
                 
                 <div className="form-group">
                   <Input
@@ -162,14 +163,11 @@ export default class Register extends Component {
           </Form>
 
           <div className="already-need">
-          <h4>Already signed up?
-          <button className="action-button action-signlog-btn">
-          <Link to={"/login"}>
-            Log In
+          Already signed up?
+          <Link className="action-signlog" to={"/login"}>
+            Login
           </Link>
-          </button>
-          </h4>
-        </div>
+          </div>
 
         </div>
 

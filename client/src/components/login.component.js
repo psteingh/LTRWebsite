@@ -109,7 +109,7 @@ export default class Login extends Component {
             }}
           >
           
-            <h4>LOG IN</h4>
+            <div className="headertitle-text">LOGIN</div>
 
             <div className="form-group">
                   <Input
@@ -142,7 +142,7 @@ export default class Login extends Component {
                 {this.state.loading && (
                   <span className="spinner-border spinner-border-sm"></span>
                 )}
-                <span>Log In</span>
+                <span>Login</span>
               </button>
             </div>
 
@@ -162,13 +162,10 @@ export default class Login extends Component {
           </Form>
         
         <div className="already-need">
-          <h4>Need an account?
-          <button className="action-button action-signlog-btn">
-          <Link to={"/register"}>
+          Need an account?
+          <Link className="action-signlog" to={"/register"}>
             Sign Up
           </Link>
-          </button>
-          </h4>
         </div>
         
         </div>

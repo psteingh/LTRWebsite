@@ -377,6 +377,7 @@ label {
 
 .already-need {
 	margin-top: 10px;
+	color:#368B88;
 }
 
 .alert-notice {
@@ -431,9 +432,10 @@ label {
 	color: #FFFFFF;
 }
 
-.action-signlog-btn {
+.action-signlog {
 	margin-left: 10px;
-	width: 30%;
+	color:#8C4845;
+	font-weight: bold;
 }
 
 .submit-button {
