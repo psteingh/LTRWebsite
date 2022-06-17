@@ -111,8 +111,8 @@ export default class Register extends Component {
               
                 <div className="form-group">
                   <Input
-                    placeholder="Email"
                     type="text"
+                    placeholder="Email"
                     className="form-control"
                     name="email"
                     value={this.state.email}
@@ -120,6 +120,8 @@ export default class Register extends Component {
                     validations={[email]}
                   />
                 </div>
+
+                <div>Warning: {this.state.email}</div>
 
                 <div className="form-group">
                   <Input
