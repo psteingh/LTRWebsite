@@ -94,6 +94,14 @@ export default class Register extends Component {
     }
   }
 
+  errorClass(error) {
+    return (error.length === 3 ? '' : 
+      <div className="alert alert-notice" role="alert">
+        Please enter a valid email address
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="col-md-12">
@@ -121,8 +129,10 @@ export default class Register extends Component {
                   />
                 </div>
 
-                <div>Warning: {this.state.email}</div>
-
+                <div className="form-group">
+                 {this.errorClass(this.state.email)}
+                </div>
+                  
                 <div className="form-group">
                   <Input
                     placeholder="Password"
@@ -156,6 +166,7 @@ export default class Register extends Component {
                 </div>
               </div>
             )}
+
             <CheckButton
               style={{ display: "none" }}
               ref={c => {
