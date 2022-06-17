@@ -95,7 +95,7 @@ export default class Register extends Component {
   }
 
   errorClass(error) {
-    return (error.length === 3 ? '' : 
+    return (error.length !== 3 ? '' : 
       <div className="alert alert-notice" role="alert">
         Please enter a valid email address
       </div>
@@ -129,10 +129,8 @@ export default class Register extends Component {
                   />
                 </div>
 
-                <div className="form-group">
-                 {this.errorClass(this.state.email)}
-                </div>
-                  
+                <div>{this.errorClass(this.state.email)}</div>
+                
                 <div className="form-group">
                   <Input
                     placeholder="Password"
