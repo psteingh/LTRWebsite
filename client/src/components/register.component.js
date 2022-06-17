@@ -40,7 +40,7 @@ export default class Register extends Component {
       email: "",
       password: "",
       successful: false,
-      message: ""
+      message: "",
     };
   }
 
@@ -108,7 +108,7 @@ export default class Register extends Component {
               <div>
                 
                 <div className="headertitle-text">SIGN UP</div>
-                
+              
                 <div className="form-group">
                   <Input
                     placeholder="Email"
