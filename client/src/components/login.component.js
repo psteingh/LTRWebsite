@@ -167,6 +167,13 @@ export default class Login extends Component {
             Sign Up
           </Link>
         </div>
+
+        <div className="already-need">
+          Forgot password?
+          <Link className="action-signlog" to={"/forgot"}>
+            Reset password
+          </Link>
+        </div>
         
         </div>
 

@@ -43,7 +43,7 @@ class App extends Component {
 
             <Route path="/loginb" component={LoginB} />
             <Route path="/registerb" component={RegisterB} />
-            <Route path="/forgot-password" component={Forgot} />
+            <Route path="/forgot" component={Forgot} />
 
             <Route exact path="/about" component={About} />
             <Route exact path="/lies" component={Lies} />

@@ -43,11 +43,11 @@ const Forgot = () => {
 
   return (
       <div className="col-md-12">
+        <div className="card card-container">
 
-      <div className="col-12 col-md-7 col-lg-6 auth-main-col text-center">
-        <div className="d-flex flex-column align-content-end">
-          <div className="auth-body mx-auto">
-            <p>Forgot Password</p>
+          <div className="already-need">
+            Forgot Password</div>
+      
                 <div className="auth-form-container text-start">
                   <form className="auth-form" method="POST" onSubmit={forgotPassword} autoComplete={'off'}>
                     <div className="email mb-3">
@@ -70,10 +70,13 @@ const Forgot = () => {
                     </div>
                   </form>
 
-                  <hr />
-                  <div className="auth-option text-center pt-2"><Link className="text-link" to="/login" >Back to Login</Link></div>
-                  </div>
-                </div>
+            <div className="already-need">
+              <Link className="action-signlog" to="/login" >
+                Login
+              </Link>
+            </div>
+                
+                
               </div>
             </div>
       
