@@ -8,6 +8,10 @@ import LierBoard from "./components/lierboard.component";
 import Login from "./components/login.component";
 import Register from "./components/register.component";
 
+import Forgot from "./components/Forgot";
+import LoginB from "./components/Login";
+import RegisterB from "./components/Register";
+
 import Navbar from "./home/navbar";
 import Contact from "./home/contact";
 
@@ -36,6 +40,10 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
+
+            <Route path="/loginb" component={LoginB} />
+            <Route path="/registerb" component={RegisterB} />
+            <Route path="/forgot-password" component={Forgot} />
 
             <Route exact path="/about" component={About} />
             <Route exact path="/lies" component={Lies} />
