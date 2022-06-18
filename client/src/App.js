@@ -8,7 +8,7 @@ import LierBoard from "./components/lierboard.component";
 import Login from "./components/login.component";
 import Register from "./components/register.component";
 
-import Forgot from "./components/Forgot";
+import Forgot from "./components/forgot.component";
 import LoginB from "./components/Login";
 import RegisterB from "./components/Register";
 
