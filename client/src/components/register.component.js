@@ -101,7 +101,7 @@ export default class Register extends Component {
       </div>
     );
   }
-
+  
   render() {
     return (
       <div className="col-md-12">
@@ -130,7 +130,7 @@ export default class Register extends Component {
                 </div>
 
                 <div>{this.errorClass(this.state.email)}</div>
-                
+
                 <div className="form-group">
                   <Input
                     placeholder="Password"
