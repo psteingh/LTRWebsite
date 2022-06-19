@@ -48,39 +48,40 @@ const Forgot = () => {
           <div className="already-need">
             Forgot Password</div>
       
-                <div className="auth-form-container text-start">
-                  <form className="auth-form" method="POST" onSubmit={forgotPassword} autoComplete={'off'}>
-                    <div className="email mb-3">
-                      <input type="email"
-                      className={`form-control ${validate.validate && validate.validate.email ? 'is-invalid ' : ''}`}
-                      id="email"
-                      name="email"
-                      value={email}
-                      placeholder="Email"
-                      onChange={(e) => setEmail(e.target.value)}
-                      />
+            <div className="auth-form-container text-start">
+              <form className="auth-form" method="POST" onSubmit={forgotPassword} autoComplete={'off'}>
+                <div className="email mb-3">
+                  <input type="email"
+                  className={`form-control ${validate.validate && validate.validate.email ? 'is-invalid ' : ''}`}
+                  id="email"
+                  name="email"
+                  value={email}
+                  placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  />
 
-                    <div className={`invalid-feedback text-start ${(validate.validate && validate.validate.email) ? 'd-block' : 'd-none'}`} >
-                    {(validate.validate && validate.validate.email) ? validate.validate.email[0] : ''}
-                    </div>
-                    </div>
+                <div className={`invalid-feedback text-start ${(validate.validate && validate.validate.email) ? 'd-block' : 'd-none'}`} >
+                  {(validate.validate && validate.validate.email) ? validate.validate.email[0] : ''}
+                </div>
+                
+                </div>
                                 
-                    <div className="text-center">
-                      <button type="submit" className="btn btn-primary w-100 theme-btn mx-auto">Forgot Password</button>
-                    </div>
-                  </form>
+                <div className="text-center">
+                  <button type="submit" className="btn btn-primary w-100 theme-btn mx-auto">Forgot Password</button>
+                </div>
 
-            <div className="already-need">
-              <Link className="action-signlog" to="/login" >
-                Login
-              </Link>
-            </div>
-                
-                
+              </form>
+
+              <div className="already-need">
+                <Link className="action-signlog" to="/login" >
+                  Login
+                </Link>
               </div>
+               
             </div>
+          </div>
       
-        <FooterSmall />
+          <FooterSmall />
 
       </div>
     );
