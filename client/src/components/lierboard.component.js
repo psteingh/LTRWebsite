@@ -10,6 +10,7 @@ export default class LierBoard extends Component {
     this.retrievePublishedLtrLies = this.retrievePublishedLtrLies.bind(this);
     this.refreshList = this.refreshList.bind(this);
     this.setActiveLtrLie = this.setActiveLtrLie.bind(this);
+    // this.sortActiveLtrLie = this.sortActiveLtrLie.bind(this);
 
     this.state = {
       ltrlies: [],
@@ -57,7 +58,7 @@ export default class LierBoard extends Component {
     });
   }
 
-  setActiveLtrLie(ltrlie, index) {
+  setActiveLtrLie(index) {
     this.setState({
       currentIndex: index,
     });
