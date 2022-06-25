@@ -9,8 +9,6 @@ import Login from "./components/login.component";
 import Register from "./components/register.component";
 
 import Forgot from "./components/forgot.component";
-import LoginB from "./components/Login";
-import RegisterB from "./components/Register";
 
 import Navbar from "./home/navbar";
 import Contact from "./home/contact";
@@ -41,8 +39,6 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
 
-            <Route path="/loginb" component={LoginB} />
-            <Route path="/registerb" component={RegisterB} />
             <Route path="/forgot" component={Forgot} />
 
             <Route exact path="/about" component={About} />

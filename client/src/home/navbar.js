@@ -80,18 +80,6 @@ render() {
             <div className="navbar-nav ml-auto navbar-logsign">
             
               <li className="nav-item">
-                <Link to={"/loginb"} className="nav-link">
-                 LoginB
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link to={"/registerb"} className="nav-link">
-                 Sign UpB
-                </Link>
-              </li>
-              
-              <li className="nav-item">
                 <Link to={"/login"} className="nav-link">
                  Login
                 </Link>
