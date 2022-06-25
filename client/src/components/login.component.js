@@ -170,7 +170,7 @@ export default class Login extends Component {
 
         <div className="already-need">
           Forgot password?
-          <Link className="action-signlog" to={"/forgot"}>
+          <Link className="action-signlog" to={"/"}>
             Reset password
           </Link>
         </div>
