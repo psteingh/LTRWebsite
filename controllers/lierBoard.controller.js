@@ -6,7 +6,8 @@ exports.findAllPublished = (req, res) => {
 
   LtrLie.find({published: true})
   .then(data => {
-    console.log(data);
+    // console.log(data);
+
     res.send(data);
   })
   .catch(err => {
@@ -19,9 +20,9 @@ exports.findAllPublished = (req, res) => {
 
 // Sort all published LtrLies
 exports.sortAllPublished = (req, res) => {
-  const name = req.body.name;
+  // const arr = { name: req.body.name };
   
-  LtrLie.sort(name)
+  LtrLie.find({sort: {name: req.body.name}})
   .then(data => {
     console.log(data);
 
