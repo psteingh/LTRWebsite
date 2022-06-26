@@ -10,7 +10,7 @@ export default class LierBoard extends Component {
     this.retrievePublishedLtrLies = this.retrievePublishedLtrLies.bind(this);
     this.refreshList = this.refreshList.bind(this);
     this.setActiveLtrLie = this.setActiveLtrLie.bind(this);
-    this.sortLtrLie = this.sortLtrLie.bind(this);
+    // this.sortLtrLie = this.sortLtrLie.bind(this);
 
     this.state = {
       ltrlies: [],
@@ -64,15 +64,8 @@ export default class LierBoard extends Component {
     });
   }
 
-  sortLtrLie(ltrlies) {
-    ltrlies.sort((a, b) => a - b)
-  }
-
-  // sortLtrLie(name) {
-  //   this.retrieveLtrLies();
-  //   this.setState({
-  //     ltrlies: name,
-  //   });
+  // sortLtrLie(ltrlies) {
+  //   ltrlies.sort()
   // }
 
   render() {
