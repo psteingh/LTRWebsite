@@ -5,15 +5,17 @@ const LtrLie = db.ltrlies;
 exports.findAllPublished = (req, res) => {
   // const arr = ["Beta", "Alpha"];
 
-  const arr = ["Beta", "Alpha"];
+  const ltrlie = [
+    {name: req.body.name,
+     stuff: req.body.stuff}];
 
   LtrLie.find({published: true})
   
   .then(data => {
     // console.log(data);
 
-    arr.sort();
-    console.log(data);
+    ltrlie.sort((a, b) => a - b);
+    console.log(ltrlie);
 
     res.send(data);
   })
