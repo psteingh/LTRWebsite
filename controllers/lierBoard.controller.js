@@ -3,10 +3,17 @@ const LtrLie = db.ltrlies;
 
 // Retrieve all published LtrLies
 exports.findAllPublished = (req, res) => {
+  // const arr = ["Beta", "Alpha"];
+
+  const arr = ["Beta", "Alpha"];
 
   LtrLie.find({published: true})
+  
   .then(data => {
     // console.log(data);
+
+    arr.sort();
+    console.log(data);
 
     res.send(data);
   })
@@ -18,11 +25,11 @@ exports.findAllPublished = (req, res) => {
   });
 };
 
-exports.sortAllPublished = (req, res) => {
-  const arr = [{name: req.body.name}];
+// exports.sortAllPublished = (req, res) => {
+//   const arr = ["Beta", "Alpha"];
 
-  arr.sort(function (a, b) {return a.name - b.name});
-    console.log(arr);
+//   arr.sort();
+//     console.log(arr);
   
   // .then(data => {
   //   console.log(data);
@@ -35,4 +42,3 @@ exports.sortAllPublished = (req, res) => {
   //       err.message || "Some error occurred while retrieving ltrlies."
   //     });
   // });
-};
