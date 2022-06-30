@@ -11,10 +11,10 @@ module.exports = app => {
   });
 
   // Retrieve all published LtrLies
-  router.get("/", ltrlies.findAllPublished);
+  // router.get("/", ltrlies.findAllPublished);
   
   // Sort all published LtrLies
-  // router.get("/", ltrlies.sortAllPublished);
+  router.get("/", ltrlies.sortAllPublished);
 
   app.use("/api/lierboard", router);
 

@@ -6,7 +6,12 @@ class LierBoardService {
   getAllPublished() {
       return api.get("/lierboard");
   }
-  
+
+  // Sort all published LtrLies
+  sortAllPublished() {
+    return api.get("/lierboard");
+  }
+
 }
 
 export default new LierBoardService();

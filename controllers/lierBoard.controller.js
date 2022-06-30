@@ -19,18 +19,20 @@ exports.findAllPublished = (req, res) => {
 };
 
 exports.sortAllPublished = (req, res) => {
-  const name = req.body.name;
+  const arr = [{name: req.body.name}];
 
-  LtrLie.sort(name, req.body, (a, b) => a.name.localCompare(b.name))
-  .then(data => {
-    console.log(data);
+  arr.sort(function (a, b) {return a.name - b.name});
+    console.log(arr);
+  
+  // .then(data => {
+  //   console.log(data);
 
-    res.send(data);
-  })
-  .catch(err => {
-    res.status(500).send({
-      message:
-        err.message || "Some error occurred while retrieving ltrlies."
-      });
-  });
+  //   res.send(data);
+  // })
+  // .catch(err => {
+  //   res.status(500).send({
+  //     message:
+  //       err.message || "Some error occurred while retrieving ltrlies."
+  //     });
+  // });
 };
