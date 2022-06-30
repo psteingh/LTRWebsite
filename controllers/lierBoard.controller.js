@@ -19,54 +19,18 @@ exports.findAllPublished = (req, res) => {
 };
 
 exports.sortAllPublished = (req, res) => {
-  const match = {}
-  const sort = {}
+  const name = req.body.name;
 
-  if(req.query.published){
-    match.published = req.query.published === 'true'
-}
-
-  if(req.query.sortBy && req.query.OrderBy){
-    sort[req.query.sortBy]   = req.query.OrderBy === 'desc' ? -1 : 1
-  }
-
-  LtrLie()
-  try {
-    req.user.populate({
-        // path:'posts',
-        match,
-        options:{
-            // limit: parseInt(req.query.limit),
-            // skip: parseInt(req.query.skip),
-            sort
-        }
-    }).execPopulate()
-    res.send(data)
+  LtrLie.sort(name, req.body, (a, b) => a.name.localCompare(b.name))
+  .then(data => {
     console.log(data);
-  }
-  catch(error) {
+
+    res.send(data);
+  })
+  .catch(err => {
     res.status(500).send({
       message:
         err.message || "Some error occurred while retrieving ltrlies."
       });
-  };
+  });
 };
-
-
-
-// Sort all published LtrLies
-// exports.sortAllPublished = (req, res) => {
-  
-//   LtrLie.find()
-//   .then(data => {
-//     console.log(data);
-
-//     res.send(data);
-//   })
-//   .catch(err => {
-//     res.status(500).send({
-//       message:
-//         err.message || "Some error occurred while retrieving ltrlies."
-//       });
-//   });
-// };
