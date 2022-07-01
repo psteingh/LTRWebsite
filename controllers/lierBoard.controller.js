@@ -8,7 +8,6 @@ exports.findAllPublished = (req, res) => {
   LtrLie.find({published: true})
     .sort(arr)
     .then(data => {
-      // console.log(data);
     res.send(data);
     })
 
