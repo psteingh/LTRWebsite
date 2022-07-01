@@ -33,6 +33,7 @@ exports.create = (req, res) => {
 
 // Retrieve all LtrLies
 exports.findAll = (req, res) => {
+  const arr = { name: 1};
   const currentUser = req.userId;
   const name = req.query.name;
   var condition = {$and: [
@@ -40,6 +41,7 @@ exports.findAll = (req, res) => {
           {currentUser} ]};
 
       LtrLie.find(condition)
+  .sort(arr)
   .then(data => {
     res.send(data);
   })
