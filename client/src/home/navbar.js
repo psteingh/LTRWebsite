@@ -22,7 +22,7 @@ class Navbar extends Component {
     if (user) {
       this.setState({
         currentUser: user,
-        showAdmin: user.roles.include("ROLE_ADMIN"),
+        // showAdmin: user.roles.include("ROLE_ADMIN"),
       });
     }
     EventBus.on("logout", () => {
