@@ -10,7 +10,6 @@ export default class LierBoard extends Component {
     this.retrievePublishedLtrLies = this.retrievePublishedLtrLies.bind(this);
     this.refreshList = this.refreshList.bind(this);
     this.setActiveLtrLie = this.setActiveLtrLie.bind(this);
-    this.sortPublishedLtrLies = this.sortPublishedLtrLies.bind(this);
 
     this.state = {
       ltrlies: [],
@@ -20,8 +19,6 @@ export default class LierBoard extends Component {
 
   componentDidMount() {
     this.retrievePublishedLtrLies();
-
-    this.sortPublishedLtrLies();
 
     UserService.getPublicContent().then(
       response => {
@@ -52,20 +49,7 @@ export default class LierBoard extends Component {
         console.log(e);
       });
   }
-
-  sortPublishedLtrLies() {
-    LierBoardService.sortAllPublished().then(
-      response => {
-        this.setState({
-          ltrlies: response.data,
-        });
-        console.log(response.data);
-      })
-      .catch(e => {
-        console.log(e);
-      });
-  }
-
+  
   refreshList() {
     this.retrieveLtrLies();
     this.setState({
