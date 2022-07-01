@@ -168,12 +168,12 @@ export default class Login extends Component {
           </Link>
         </div>
 
-        <div className="already-need">
+        {/* <div className="already-need">
           Forgot password?
           <Link className="action-signlog" to={"/"}>
             Reset password
           </Link>
-        </div>
+        </div> */}
         
         </div>
 
