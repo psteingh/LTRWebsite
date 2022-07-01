@@ -11,6 +11,7 @@ class Navbar extends Component {
       this.logOut = this.logOut.bind(this);
   
       this.state = {
+        showAdmin: false,
         currentUser: undefined,
       };
     }
@@ -21,6 +22,7 @@ class Navbar extends Component {
     if (user) {
       this.setState({
         currentUser: user,
+        showAdmin: user.roles.include("ROLE_ADMIN"),
       });
     }
     EventBus.on("logout", () => {
@@ -34,12 +36,13 @@ class Navbar extends Component {
         logOut() {
           AuthService.logout();
           this.setState({
+            showAdmin: false,
             currentUser: undefined,
           });
         }
 
 render() {
-    const { currentUser } = this.state;
+    const { currentUser, showAdmin } = this.state;
 
     return (
         <div>
@@ -49,6 +52,14 @@ render() {
           <img className="logo-ftr" src={ltrbrand} alt="LTR logo" />
           </Link>
 
+          {showAdmin && (
+              <li className="nav-item">
+                <Link to={"/admin"} className="nav-link">
+                  Admin
+                </Link>
+              </li>
+            )}
+          
           <Link to={"/about"} className="navbar-mid">
           About Us
           </Link>

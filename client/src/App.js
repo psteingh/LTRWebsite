@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
+import Admin from "./components/admin.component";
 import Home from "./components/home.component";
 import LierBoard from "./components/lierboard.component";
 import Login from "./components/login.component";
@@ -36,6 +37,8 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
+
+            <Route path="/admin" component={Admin} />
         
             <Route exact path="/about" component={About} />
             <Route exact path="/lies" component={Lies} />
