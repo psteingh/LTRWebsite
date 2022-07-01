@@ -1,7 +1,7 @@
 const db = require("../models");
 const LtrLie = db.ltrlies;
 
-// Retrieve all published LtrLies
+// Retrieve and Sort all published LtrLies
 exports.findAllPublished = (req, res) => {
   const arr = { name: 1 };
 

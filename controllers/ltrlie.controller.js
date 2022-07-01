@@ -31,7 +31,7 @@ exports.create = (req, res) => {
     });
 };
 
-// Retrieve all LtrLies
+// Retrieve and Sort all LtrLies
 exports.findAll = (req, res) => {
   const arr = { name: 1};
   const currentUser = req.userId;
