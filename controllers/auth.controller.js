@@ -1,6 +1,6 @@
 const config = require("../config/auth.config");
 const db = require("../models");
-const { user: User, refreshToken: RefreshToken } = db;
+const { user: User, role: Role, refreshToken: RefreshToken } = db;
 
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
@@ -16,15 +16,54 @@ exports.signup = (req, res) => {
       res.status(500).send({ message: err });
       return;
     }
-    res.send({ message: "User's email was registered successfully" });
+    if (req.body.roles) {
+      Role.find(
+        {
+          name: { $in: req.body.roles },
+        },
+        (err, roles) => {
+          if (err) {
+            res.status(500).send({ message: err });
+            return;
+          }
+
+          user.roles = roles.map((role) => role._id);
+          user.save((err) => {
+            if (err) {
+              res.status(500).send({ message: err });
+              return;
+            }
+
+            res.send({ message: "User's email was registered successfully" });
+          });
+        }
+      );
+    } else {
+      Role.findOne({ name: "user" }, (err, role) => {
+        if (err) {
+          res.status(500).send({ message: err });
+          return;
+        }
+
+        user.roles = [role._id];
+        user.save((err) => {
+          if (err) {
+            res.status(500).send({ message: err });
+            return;
+          }
+
+          res.send({ message: "User's email was registered successfully" });
+        });
+      });
+    }
   });
-  
 };
 
 exports.signin = (req, res) => {
   User.findOne({
     email: req.body.email
   })
+    .populate("roles", "-__v")
     .exec(async (err, user) => {
       if (err) {
         res.status(500).send({ message: err });
@@ -54,10 +93,15 @@ exports.signin = (req, res) => {
       let refreshToken = await RefreshToken.createToken(user);
 
       let authorities = [];
+
+      for (let i = 0; i < user.roles.length; i++) {
+        authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
+      }
       
       res.status(200).send({
         id: user._id,
         email: user.email,
+        roles: authorities,
         accessToken: token,
         refreshToken: refreshToken,
       });
