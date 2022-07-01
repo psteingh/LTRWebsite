@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const db = require("./models");
+const Role = db.role;
 
 db.mongoose
   .connect(
@@ -55,3 +56,30 @@ const PORT = process.env.PORT || port;
 app.listen(PORT, hostname, () => {
   console.log(`app.js.app.listen: http://${hostname}:${PORT}/`);
 });
+
+function initial() {
+  Role.estimatedDocumentCount((err, count) => {
+    if (!err && count === 0) {
+      
+      // new Role({
+      //   name: "user"
+      // }).save(err => {
+      //   if (err) {
+      //     console.log("error", err);
+      //   }
+
+      //   console.log("added 'user' to roles collection");
+      // });
+
+      new Role({
+        name: "admin"
+      }).save(err => {
+        if (err) {
+          console.log("error", err);
+        }
+
+        console.log("added 'admin' to roles collection");
+      });
+    }
+  });
+}

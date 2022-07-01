@@ -5,3 +5,7 @@
   exports.user = (req, res) => {
     res.status(200).send("Only you see this");
   };
+
+  exports.admin = (req, res) => {
+    res.status(200).send("Admin");
+  };
