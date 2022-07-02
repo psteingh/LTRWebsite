@@ -13,4 +13,7 @@ db.refreshToken = require("./refreshToken.model");
 // LtrLie
 db.ltrlies = require("./ltrlie.model");
 
+// LieBible
+db.liesbible = require("./liebible.model");
+
 module.exports = db;

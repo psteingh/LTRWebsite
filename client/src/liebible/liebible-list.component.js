@@ -6,7 +6,7 @@ import AuthService from "../services/auth.service";
 export default class LieBibleList extends Component {
   constructor(props) {
     super(props);
-    this.onChangeSearchName = this.onChangeSearchName.bind(this);
+    this.onChangeSearchTitle = this.onChangeSearchTitle.bind(this);
     this.retrieveLiesBible = this.retrieveLiesBible.bind(this);
     this.refreshList = this.refreshList.bind(this);
     this.setActiveLieBible = this.setActiveLieBible.bind(this);
