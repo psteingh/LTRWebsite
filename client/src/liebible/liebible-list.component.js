@@ -126,72 +126,72 @@ export default class LieBibleList extends Component {
         </div>
         
         <div className="col-md-6">
-          <h4>List of Lies</h4>
+          <h4>List of Biblical Lies</h4>
           <ul className="list-group">
-            {ltrlies &&
-              ltrlies.map((ltrlie, index) => (
+            {liesbible &&
+              liesbible.map((liebible, index) => (
               <li
                 className={
                 "list-group-item " +
                 (index === currentIndex ? "active" : "")
                 }
-                onClick={() => this.setActiveLtrLie(ltrlie, index)}
+                onClick={() => this.setActiveLieBible(liebible, index)}
                 key={index}>
                 
-                {ltrlie.name}
+                {liebible.title}
               </li>
               ))}
           </ul>
           
           <p><button
             className="submit-button">
-            <Link to={"/add"}>
-              Add a Lie </Link>
+            <Link to={"/liesbibleadd"}>
+              Add a Biblical Lie </Link>
           </button></p>
 
           <p><button className="submit-button"
               onClick={this.refreshPage}>
-            List of Lies
+            List of Biblical Lies
           </button></p>
         </div>
 
         <div className="col-md-6">
-          {currentLtrLie ? (
+          {currentLieBible ? (
             <div>
-              <h5>Lie details</h5>
+              <h5>Bible Lie details</h5>
               <div>
                 <label>
-                  <strong>Name:</strong>
+                  <strong>Title:</strong>
                 </label>{" "}
-                {currentLtrLie.name}
+                {currentLieBible.title}
               </div>
               <div>
                 <label>
-                <strong>Subject:</strong>
+                <strong>Middle:</strong>
                 </label>{" "}
-                {currentLtrLie.subject}
+                {currentLieBible.middle}
               </div>
               <div>
                 <label>
-                <strong>Stuff:</strong>
+                <strong>Bottom:</strong>
                 </label>{" "}
-                {currentLtrLie.stuff}
+                {currentLieBible.bottom}
               </div>
               <div>
                 <label>
                   <strong>Status:</strong>
                 </label>{" "}
-                {currentLtrLie.published ? "Public" : "Private"}
+                {currentLieBible.published ? "Public" : "Private"}
               </div>
               <button className="submit-button">
-                <Link to={"/ltrlies/" + currentLtrLie.id}>
+                <Link to={"/liesbible/" + currentLieBible.id}>
                   Edit </Link>
               </button>            
             </div>
           ) : (
             <div>
               <br />
-              <p>Click on Lie for details</p>
+              <p>Click on Bible Lie for details</p>
             </div>
           )}
         </div>

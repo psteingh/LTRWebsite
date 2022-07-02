@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import LtrLieDataService from "../services/ltrlie.service";
+import LieBibleDataService from "../services/liebible.service";
 
-export default class LtrLieUpdate extends Component {
+export default class LieBibleUpdate extends Component {
   constructor(props) {
     super(props);
-    this.onChangeName = this.onChangeName.bind(this);
-    this.onChangeSubject = this.onChangeSubject.bind(this);
-    this.onChangeStuff = this.onChangeStuff.bind(this);
-    this.getLtrLie = this.getLtrLie.bind(this);
+    this.onChangeTitle = this.onChangeTitle.bind(this);
+    this.onChangeMiddle = this.onChangeMiddle.bind(this);
+    this.onChangeBottom = this.onChangeBottom.bind(this);
+    this.getLieBible = this.getLieBible.bind(this);
     this.updatePublished = this.updatePublished.bind(this);
-    this.updateLtrLie = this.updateLtrLie.bind(this);
-    this.deleteLtrLie = this.deleteLtrLie.bind(this);
+    this.updateLieBible = this.updateLieBible.bind(this);
+    this.deleteLieBible = this.deleteLieBible.bind(this);
 
     this.state = {
-      currentLtrLie: {
+      currentLieBible: {
         id: null,
-        name: "",
-        subject: "",
-        stuff: "",
+        title: "",
+        middle: "",
+        bottom: "",
         published: false
       },
       message: ""
@@ -26,49 +26,49 @@ export default class LtrLieUpdate extends Component {
   }
 
   componentDidMount() {
-    this.getLtrLie(this.props.match.params.id);
+    this.getLieBible(this.props.match.params.id);
   }
 
-  onChangeName(e) {
-    const name = e.target.value;
+  onChangeTitle(e) {
+    const title = e.target.value;
 
     this.setState(function(prevState) {
       return {
-        currentLtrLie: {
-          ...prevState.currentLtrLie,
-          name: name
+        currentLieBible: {
+          ...prevState.currentLieBible,
+          title: title
         }
       };
     });
   }
 
-  onChangeSubject(e) {
-    const subject = e.target.value;
+  onChangeMiddle(e) {
+    const middle = e.target.value;
     
     this.setState(prevState => ({
-      currentLtrLie: {
-        ...prevState.currentLtrLie,
-        subject: subject
+      currentLieBible: {
+        ...prevState.currentLieBible,
+        middle: middle
       }
     }));
   }
 
-  onChangeStuff(e) {
-    const stuff = e.target.value;
+  onChangeBottom(e) {
+    const bottom = e.target.value;
     
     this.setState(prevState => ({
-      currentLtrLie: {
-        ...prevState.currentLtrLie,
-        stuff: stuff
+      currentLieBible: {
+        ...prevState.currentLieBible,
+        bottom: bottom
       }
     }));
   }
 
-  getLtrLie(id) {
-    LtrLieDataService.get(id)
+  getLieBible(id) {
+    LieBibleDataService.get(id)
       .then(response => {
         this.setState({
-          currentLtrLie: response.data
+          currentLieBible: response.data
         });
         console.log(response.data);
       })
@@ -79,18 +79,18 @@ export default class LtrLieUpdate extends Component {
  
   updatePublished(status) {
     var data = {
-      id: this.state.currentLtrLie.id,
-      name: this.state.currentLtrLie.name,
-      subject: this.state.currentLtrLie.subject,
-      stuff: this.state.currentLtrLie.stuff,
+      id: this.state.currentLieBible.id,
+      title: this.state.currentLieBible.title,
+      middle: this.state.currentLieBible.middle,
+      bottom: this.state.currentLieBible.bottom,
       published: status
     };
     
-    LtrLieDataService.update(this.state.currentLtrLie.id, data)
+    LieBibleDataService.update(this.state.currentLieBible.id, data)
       .then(response => {
         this.setState(prevState => ({
-          currentLtrLie: {
-            ...prevState.currentLtrLie,
+          currentLieBible: {
+            ...prevState.currentLieBible,
             published: status
           }
         }));
@@ -101,15 +101,15 @@ export default class LtrLieUpdate extends Component {
       });
   }
 
-  updateLtrLie() {
-    LtrLieDataService.update(
-      this.state.currentLtrLie.id,
-      this.state.currentLtrLie
+  updateLieBible() {
+    LieBibleDataService.update(
+      this.state.currentLieBible.id,
+      this.state.currentLieBible
     )
       .then(response => {
         console.log(response.data);
         this.setState({
-          message: "The lie was updated successfully"
+          message: "The Biblical Lie was updated successfully"
         });
       })
       .catch(e => {
@@ -117,11 +117,11 @@ export default class LtrLieUpdate extends Component {
       });
   }
 
-  deleteLtrLie() {    
-    LtrLieDataService.delete(this.state.currentLtrLie.id)
+  deleteLieBible() {    
+    LieBibleDataService.delete(this.state.currentLieBible.id)
       .then(response => {
         console.log(response.data);
-        this.props.history.push('/ltrlies')
+        this.props.history.push('/liesbible')
       })
       .catch(e => {
         console.log(e);
@@ -129,51 +129,51 @@ export default class LtrLieUpdate extends Component {
   }
 
   render() {
-    const { currentLtrLie } = this.state;
+    const { currentLieBible } = this.state;
 
     return (
       <div>        
-        {currentLtrLie ? (
+        {currentLieBible ? (
           <div className="edit-form">
-            <h5>Lie details</h5>
+            <h5>Biblical Lie details</h5>
             <form>
               <div className="form-group">
-                <label htmlFor="name"><h4>Name</h4></label>
+                <label htmlFor="title"><h4>Title</h4></label>
                 <input
                   type="text"
                   className="form-control"
-                  id="name"
-                  value={currentLtrLie.name}
-                  onChange={this.onChangeName}
+                  id="title"
+                  value={currentLieBible.title}
+                  onChange={this.onChangeTitle}
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="subject"><h4>Subject</h4></label>
+                <label htmlFor="middle"><h4>Middle</h4></label>
                 <input
                   type="text"
                   className="form-control"
-                  id="subject"
-                  value={currentLtrLie.subject}
-                  onChange={this.onChangeSubject}
+                  id="middle"
+                  value={currentLieBible.middle}
+                  onChange={this.onChangeMiddle}
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="stuff"><h4>Stuff</h4></label>
+                <label htmlFor="bottom"><h4>Bottom</h4></label>
                 <input
                   type="text"
                   className="form-control"
-                  id="stuff"
-                  value={currentLtrLie.stuff}
-                  onChange={this.onChangeStuff}
+                  id="bottom"
+                  value={currentLieBible.bottom}
+                  onChange={this.onChangeBottom}
                 />
               </div>
               <div className="form-group">
                 <label><h4>Status:</h4></label>
-                {currentLtrLie.published ? "Public" : "Private"}
+                {currentLieBible.published ? "Public" : "Private"}
               </div>
             </form>
 
-            {currentLtrLie.published ? (
+            {currentLieBible.published ? (
               <button className="action-button"
                 onClick={() => this.updatePublished(false)}
               >
@@ -189,7 +189,7 @@ export default class LtrLieUpdate extends Component {
 
             <button
               className="action-button"
-              onClick={this.deleteLtrLie}>
+              onClick={this.deleteLieBible}>
               
               Delete
             </button>
@@ -197,21 +197,21 @@ export default class LtrLieUpdate extends Component {
             <button
               type="submit"
               className="submit-button"
-              onClick={this.updateLtrLie}>
+              onClick={this.updateLieBible}>
             
               Update
             </button>
             <p><button
                 className="submit-button">
-                <Link to={"/ltrlies"}>
-                List of Lies </Link>
+                <Link to={"/liesbible"}>
+                List of Biblical Lies </Link>
               </button></p>
             <p>{this.state.message}</p>
           </div>
         ) : (
           <div>
             <br />
-            <p>Please click on a Lie...</p>
+            <p>Please click on a Biblical Lie...</p>
           </div>
         )}
       </div>

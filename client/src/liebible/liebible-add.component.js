@@ -41,9 +41,9 @@ export default class LieBibleAdd extends Component {
   constructor(props) {
     super(props);
     this.handleCreate = this.handleCreate.bind(this);
-    this.onChangeName = this.onChangeName.bind(this);
-    this.onChangeSubject = this.onChangeSubject.bind(this);
-    this.onChangeStuff = this.onChangeStuff.bind(this);
+    this.onChangeTitle = this.onChangeTitle.bind(this);
+    this.onChangeMiddle = this.onChangeMiddle.bind(this);
+    this.onChangeBottom = this.onChangeBottom.bind(this);
     this.newLieBible = this.newLieBible.bind(this);
     
     this.state = {
