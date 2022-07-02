@@ -9,10 +9,6 @@ class UserService {
     return api.get('/test/user');
   }
 
-  getAdmin() {
-    return api.get('/test/admin');
-  }
-
 }
 
 export default new UserService();
