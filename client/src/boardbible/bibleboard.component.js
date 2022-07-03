@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import BibleBoardService from "../services/bibleboard.service";
 import UserService from "../services/user.service";
 
+import LiesBibleTop from "./liesbibtop";
+import LiesNavBar from "../aboutlies/liesnavbar";
+import LiesBible from "./liesbible";
+
 import FooterLogo from "../home/footerlogo";
 
 export default class BibleBoard extends Component {
@@ -14,6 +18,7 @@ export default class BibleBoard extends Component {
     this.state = {
       liesbible: [],
       currentIndex: -1,
+      content: ""
     };
   }
 
@@ -69,11 +74,9 @@ export default class BibleBoard extends Component {
     return (
     <div className="container">
       <div>
-        <div className="opake">
-          <h3>{this.state.content}</h3>
-        </div>
-
-          <h4>Biblical Lies</h4>
+          <LiesBibleTop />
+          <LiesNavBar />
+          <LiesBible />
 
           <ul className="lierboard-group">
             {liesbible &&

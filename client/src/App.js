@@ -15,7 +15,7 @@ import About from "./about/about.component";
 import Lies from "./aboutlies/lies.component";
 
 import LiesGeneral from "./liesgeneral/liesgeneral.component";
-import BibleBoard from "./aboutlies/bibleboard.component";
+import BibleBoard from "./boardbible/bibleboard.component";
 import LiesMedia from "./liesmedia/liesmedia.component";
 
 import LtrLieAdd from "./vault/ltrlie-add.component";
