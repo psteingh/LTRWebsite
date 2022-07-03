@@ -3,7 +3,7 @@ import React from "react";
 function LiesGeneral(){
   return(
   <div>
-  <div className="lies-container">
+  <div className="boardtop-container">
     <div className="lies-title">
     Examples of Lies in general
     </div>
@@ -16,7 +16,7 @@ function LiesGeneral(){
     </div>
   </div>
 
-  <div className="lies-container">
+  <div className="board-group-item">
     <div className="lies-title">
     Slang, Colloquialisms, Idioms, Jargon
     </div>
@@ -28,7 +28,7 @@ function LiesGeneral(){
     </div>
   </div>
 
-  <div className="lies-container">
+  <div className="board-group-item">
     <div className="lies-title">
     Gender Lies
     </div>
@@ -40,7 +40,7 @@ function LiesGeneral(){
     </div>
   </div>
 
-  <div className="lies-container">
+  <div className="board-group-item">
     <div className="lies-title">
     Gender Lies
     </div>
@@ -52,7 +52,7 @@ function LiesGeneral(){
     </div>
   </div>
 
-  <div className="lies-container">
+  <div className="board-group-item">
     <div className="lies-title">
     Lies that have good intentions
     </div>

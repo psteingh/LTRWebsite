@@ -3,7 +3,7 @@ import React from "react";
 function LiesMedia(){
   return(
   <div>
-  <div className="lies-container">
+  <div className="boardtop-container">
     <div className="lies-title">
     Lies in the Media
     </div>
@@ -15,7 +15,7 @@ function LiesMedia(){
     </div>
   </div>
 
-  <div className="lies-container">
+  <div className="board-group-item">
     <div className="lies-title">
     Movie
     </div>
@@ -27,7 +27,7 @@ function LiesMedia(){
     </div>
   </div>
 
-  <div className="lies-container">
+  <div className="board-group-item">
     <div className="lies-title">
     Movie
     </div>

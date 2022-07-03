@@ -4,7 +4,7 @@ function LiesAbout(){
   return(
   <div>
 
-  <div className="lies-container">
+  <div className="boardtop-container">
     <div className="lies-title">
     Purpose of Lies
     </div>
@@ -16,7 +16,7 @@ function LiesAbout(){
     </div>
   </div>
 
-  <div className="lies-container">
+  <div className="board-group-item">
     <div className="lies-title">
     Question of Lying
     </div>
