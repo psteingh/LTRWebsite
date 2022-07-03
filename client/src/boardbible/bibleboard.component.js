@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import BibleBoardService from "../services/bibleboard.service";
 import UserService from "../services/user.service";
 
-import LiesBibleTop from "./liesbibtop";
+import LiesBibleImage from "./liesbibleimage";
 import LiesNavBar from "../aboutlies/liesnavbar";
-import LiesBible from "./liesbible";
-
-import FooterLogo from "../home/footerlogo";
+import LiesBibleTop from "./liesbibletop";
 
 export default class BibleBoard extends Component {
   constructor(props) {
@@ -73,10 +71,9 @@ export default class BibleBoard extends Component {
 
     return (
     <div className="container">
-      <div>
-          <LiesBibleTop />
+          <LiesBibleImage />
           <LiesNavBar />
-          <LiesBible />
+          <LiesBibleTop />
 
           <ul className="board-group">
             {liesbible &&
@@ -92,10 +89,6 @@ export default class BibleBoard extends Component {
               </li>
               ))}
           </ul>
-
-      </div>
-
-      <FooterLogo />
 
     </div>
     );

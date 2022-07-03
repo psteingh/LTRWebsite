@@ -1,6 +1,6 @@
 import React from "react";
 
-function LiesBible(){
+function LiesBibleTop(){
   return(
   <div className="boardtop-container">
     <div className="lies-title">
@@ -17,4 +17,4 @@ function LiesBible(){
   );
 }
 
-export default LiesBible;
+export default LiesBibleTop;
