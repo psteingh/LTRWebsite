@@ -78,16 +78,16 @@ export default class BibleBoard extends Component {
           <LiesNavBar />
           <LiesBible />
 
-          <ul className="lierboard-group">
+          <ul className="board-group">
             {liesbible &&
               liesbible.map((liebible, index) => (
-              <li className="lierboard-group-item" key={index}>
+              <li className="board-group-item" key={index}>
                 
-                <div className="lbname">Title: {liebible.title}</div>
+                <div className="lies-title">{liebible.title}</div>
 
-                <div className="lbsubject">Middle: {liebible.middle}</div>
+                <div className="lies-mid">{liebible.middle}</div>
                 
-                <div className="lbstuff">Bottom: {liebible.bottom}</div>
+                <div className="lies-bottom">{liebible.bottom}</div>
                 
               </li>
               ))}

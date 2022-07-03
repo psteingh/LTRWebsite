@@ -307,6 +307,23 @@ label {
 }
 
 /* About Lies */
+.boardtop-container {
+	text-align: center;
+}
+
+.board-group {
+	padding: 100px;
+}
+
+.board-group-item {
+	margin-top: 1%;
+	padding: 1%;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 1%;
+}
+
 .liestop-container {
 	position: relative;
 }
