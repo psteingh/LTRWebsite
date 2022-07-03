@@ -12,7 +12,7 @@ import Navbar from "./home/navbar";
 import Contact from "./home/contact";
 
 import About from "./about/about.component";
-import Lies from "./lies/lies.component";
+import Lies from "./aboutlies/lies.component";
 
 import LiesGeneral from "./liesgeneral/liesgeneral.component";
 import LiesMedia from "./liesmedia/liesmedia.component";
@@ -41,7 +41,7 @@ class App extends Component {
             <Route exact path="/contact" component={Contact} />
 
             <Route exact path="/about" component={About} />
-            <Route exact path="/lies" component={Lies} />
+            <Route exact path="/aboutlies" component={Lies} />
 
             <Route exact path="/liesgeneral" component={LiesGeneral} />
             <Route exact path="/liesmedia" component={LiesMedia} />
