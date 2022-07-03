@@ -57,7 +57,7 @@ export default class BibleBoard extends Component {
     });
   }
 
-  setActiveLtrLie(index) {
+  setActiveLieBible(index) {
     this.setState({
       currentIndex: index,
     });
