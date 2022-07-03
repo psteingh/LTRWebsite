@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import UserService from "../services/user.service";
 
 import LiesMediaTop from "./liesmedtop";
-import LiesNavBar from "../lies/liesnavbar";
+import LiesNavBar from "../aboutlies/liesnavbar";
 import LiesMedia from "./liesmedia";
 
 export default class LiesMediaComponent extends Component {

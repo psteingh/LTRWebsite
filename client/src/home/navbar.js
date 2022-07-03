@@ -57,7 +57,7 @@ render() {
           Lier Board
           </Link>
 
-          <Link to={"/lies"} className="navbar-mid">
+          <Link to={"/aboutlies"} className="navbar-mid">
           About Lies
           </Link>
 
