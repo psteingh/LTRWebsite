@@ -20,7 +20,7 @@ render() {
           General
           </Link>
 
-          <Link to={"/liesbible"}>
+          <Link to={"/bibleboard"}>
           Bible
           </Link>
 

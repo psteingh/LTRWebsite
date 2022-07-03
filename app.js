@@ -42,6 +42,8 @@ require("./routes/lierboard.routes")(app);
 
 require("./routes/liebible.routes")(app);
 
+require("./routes/bibleboard.routes")(app);
+
 // for build
 app.use(express.static("public"));
 
