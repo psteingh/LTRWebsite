@@ -92,14 +92,8 @@ export default class Login extends Component {
         }
       );
     
-    }  else if (
-        this.state.email.toLowerCase() === "admin@email.com" &&
-        this.state.password === "654321ad"
-      ) {
-        //Signin Success
-        localStorage.setItem("isAuthenticated", "true");
-        window.location.pathname = "/liesbible";
-      } else {
+    }
+    else {
       this.setState({
         loading: false
       });

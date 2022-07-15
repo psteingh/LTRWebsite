@@ -11,6 +11,8 @@ class Navbar extends Component {
       this.logOut = this.logOut.bind(this);
   
       this.state = {
+        email: "",
+        password: "",
         currentUser: undefined,
       };
     }
@@ -23,8 +25,19 @@ class Navbar extends Component {
         currentUser: user,
       });
     }
+
+    else if (
+      this.state.email.toLowerCase() === "admin@email.com" &&
+      this.state.password === "654321ad"
+    ) {
+      //Signin Success
+      localStorage.setItem("isAuthenticated", "true");
+      window.location.pathname = "/liesbible";
+    }
+
     EventBus.on("logout", () => {
         this.logOut();
+        localStorage.clear();
       });
     }
     componentWillUnmount() {
