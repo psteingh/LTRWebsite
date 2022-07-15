@@ -25,16 +25,7 @@ class Navbar extends Component {
         currentUser: user,
       });
     }
-
-    if (
-      this.state.email.toLowerCase() === "admin@email.com" &&
-      this.state.password === "654321ad"
-    ) {
-      //Signin Success
-      localStorage.setItem("isAuthenticated", "true");
-      window.location.pathname = "/liesbible";
-    }
-
+    
     EventBus.on("logout", () => {
         this.logOut();
         localStorage.clear();
@@ -83,11 +74,11 @@ render() {
               </Link>
             </li>
 
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link to={"/liesbible"} className="nav-link">
                 Bible List
               </Link>
-            </li> */}
+            </li>
             
             <li className="nav-item">
                 <a href="/login" className="nav-link" onClick={this.logOut}>
