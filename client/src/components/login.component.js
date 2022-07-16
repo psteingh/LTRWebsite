@@ -93,15 +93,12 @@ export default class Login extends Component {
     }
     
     if (this.state.email === "admin@email.com") {
-      // AuthService.login(
-        // this.state.email,
-        // this.state.password,
-        // this.state.currentUser,
-        // .then(
-        // () => {
         localStorage.setItem("isAuthenticated", "true");
-        this.props.history.push("/");
-        window.location.reload();
+
+        // window.location.pathname = "/liesbible";
+        
+        this.props.history.push("/liesbible");
+        // window.location.reload();
         }
 
     else {

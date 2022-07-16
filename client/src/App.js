@@ -53,7 +53,7 @@ class App extends Component {
             <Route exact path="/add" component={LtrLieAdd} />
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
 
-            <ProtectedRoute exact path="/" component={LieBibleList} />
+            <ProtectedRoute exact path="/liesbible" component={LieBibleList} />
 
             {/* <Route exact path="/liesbible" component={LieBibleList} /> */}
             {/* <Route exact path="/liesbibleadd" component={LieBibleAdd} />
