@@ -24,8 +24,8 @@ import LtrLieUpdate from "./vault/ltrlie-update.component";
 
 import ProtectedRoute from "./liebible/ProtectedRoute";
 import LieBibleList from "./liebible/liebible-list.component";
-import LieBibleAdd from "./liebible/liebible-add.component";
-import LieBibleUpdate from "./liebible/liebible-update.component";
+// import LieBibleAdd from "./liebible/liebible-add.component";
+// import LieBibleUpdate from "./liebible/liebible-update.component";
 
 class App extends Component {
   render() {
@@ -56,8 +56,8 @@ class App extends Component {
             <ProtectedRoute exact path="/liesbible" component={LieBibleList} />
 
             {/* <Route exact path="/liesbible" component={LieBibleList} /> */}
-            <Route exact path="/liesbibleadd" component={LieBibleAdd} />
-            <Route path="/liesbible/:id" component={LieBibleUpdate} />
+            {/* <Route exact path="/liesbibleadd" component={LieBibleAdd} />
+            <Route path="/liesbible/:id" component={LieBibleUpdate} /> */}
           </Switch>
         </div>
       
