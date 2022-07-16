@@ -33,7 +33,7 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     this.handleLogin = this.handleLogin.bind(this);
-    console.log("if");
+    console.log("if", props);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangePassword = this.onChangePassword.bind(this);
 
@@ -60,16 +60,22 @@ export default class Login extends Component {
 
   handleLogin(e) {
     e.preventDefault();
-    console.log("if");
+
+    if (this.state.email.toLowerCase() === "admin@email.com"
+    && this.state.password === "654321ad") {
+      localStorage.setItem("isAuthenticated", "true")
+      .then(
+        () => {
+          this.props.history.push("/liesbible");
+          window.location.reload();
+        }); }
 
     this.setState({
       message: "",
       loading: true
     });
-    console.log("if");
 
     this.form.validateAll();
-    console.log("if");
 
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
@@ -79,9 +85,7 @@ export default class Login extends Component {
         ).then(
         () => {
           this.props.history.push("/ltrlies");
-          console.log("if");
           window.location.reload();
-          console.log("if");
         },
         error => {
           const resMessage =
@@ -90,36 +94,21 @@ export default class Login extends Component {
               error.response.data.message) ||
             error.message ||
             error.toString();
-            console.log("if");
           this.setState({
             loading: false,
             message: resMessage
           });
-          console.log("if");
         }
         );
-        console.log("if");
     }
     
-    else if (this.state.email.toLowerCase() === "admin@email.com"
-      && this.state.password === "654321ad") {
-        localStorage.setItem("isAuthenticated", "true")
-        .then(
-          () => {
-            this.props.history.push("/liesbible");
-            console.log("else if this", );
-            window.location.reload();
-            console.log("if");
-          })
-      }
+    
 
     else {
       this.setState({
         loading: false
       });
-      console.log("if");
     }
-    console.log("if");
   }
 
   render() {

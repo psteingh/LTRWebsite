@@ -1,14 +1,16 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import LieBibleList from "./liebible-list.component";
+import { Redirect, Route } from "react-router-dom";
 
 function ProtectedRoute({ component: Component}) {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
   console.log("this", isAuthenticated);
 
   return (
-    <Route exact path="/liesbible" component={LieBibleList} />
-  );
+    <Route
+      render={(props) =>
+        isAuthenticated ? <Component {...props} /> : <Redirect to="/" />
+      } />
+    );
 }
 
 // function ProtectedRoute({ component: Component, ...restOfProps }) {
