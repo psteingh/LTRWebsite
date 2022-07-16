@@ -28,7 +28,6 @@ class Navbar extends Component {
     
     EventBus.on("logout", () => {
         this.logOut();
-        localStorage.clear();
       });
     }
     componentWillUnmount() {

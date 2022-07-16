@@ -23,8 +23,8 @@ class TokenService {
       console.log("token.service.setUser", JSON.stringify(user));
       localStorage.setItem("user", JSON.stringify(user));
     }
-  
-      removeUser() {
+
+    removeUser() {
       localStorage.removeItem("user");
     }
   }
