@@ -60,15 +60,6 @@ export default class Login extends Component {
   handleLogin(e) {
     e.preventDefault();
 
-    if (this.state.email.toLowerCase() === "admin@email.com"
-    && this.state.password === "654321ad") {
-      localStorage.setItem("isAuthenticated", "true")
-      .then(
-        () => {
-          this.props.history.push("/liesbible");
-          window.location.reload();
-        }); }
-
     this.setState({
       message: "",
       loading: true
@@ -101,7 +92,17 @@ export default class Login extends Component {
         );
     }
     
-    
+    if (this.state.email === "admin@email.com") {
+      // AuthService.login(
+        // this.state.email,
+        // this.state.password,
+        // this.state.currentUser,
+        // .then(
+        // () => {
+        localStorage.setItem("isAuthenticated", "true");
+        this.props.history.push("/");
+        window.location.reload();
+        }
 
     else {
       this.setState({
