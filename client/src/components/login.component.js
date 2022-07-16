@@ -88,25 +88,24 @@ export default class Login extends Component {
           this.setState({
             loading: false,
             message: resMessage
-          });
-        }
-      );
+          }); }
+        );
     }
 
-    else if (
-      this.state.email.toLowerCase() === "admin@email.com" &&
-      this.state.password === "654321ad"
-    ) {
-      //Signin Success
-      localStorage.setItem("isAuthenticated", "true");
-      window.location.pathname = "/liesbible";
-    }
+    else if (this.state.email.toLowerCase() === "admin@email.com"
+      && this.state.password === "654321ad") {
+        localStorage.setItem("isAuthenticated", "true")
+        .then(
+          () => {
+            this.props.history.push("/liesbible");
+            window.location.reload(); })
+        // window.location.pathname = "/liesbible";
+      }
 
     else {
       this.setState({
         loading: false
-      });
-    }
+      }); }
   }
 
   render() {
