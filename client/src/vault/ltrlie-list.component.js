@@ -196,11 +196,11 @@ export default class LtrLieList extends Component {
           )}
         </div>
 
-        <p><button
+        {/* <p><button
             className="submit-button">
             <Link to={"/liesbible"}>
               Bible List </Link>
-          </button></p>
+          </button></p> */}
 
       </div>
     );
