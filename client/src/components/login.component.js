@@ -94,11 +94,9 @@ export default class Login extends Component {
     
     if (this.state.email === "admin@email.com") {
         localStorage.setItem("isAuthenticated", "true");
-
         // window.location.pathname = "/liesbible";
-        
         this.props.history.push("/liesbible");
-        // window.location.reload();
+        window.location.reload();
         }
 
     else {
