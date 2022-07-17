@@ -67,6 +67,11 @@ export default class Login extends Component {
 
     this.form.validateAll();
 
+    if (this.state.email.toLowerCase() === "admin@email.com" && 
+            this.state.password === "654321ad") {
+      localStorage.setItem("isAuthenticated", "true");
+      window.location.pathname = "/admin";}
+
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
         this.state.email,
@@ -90,12 +95,6 @@ export default class Login extends Component {
           });
         }
         );
-    }
-
-    else if (this.state.email.toLowerCase() === "admin@email.com" && 
-            this.state.password === "654321ad") {
-      localStorage.setItem("isAuthenticated", "true");
-      window.location.pathname = "/admin";
     }
 
     else {

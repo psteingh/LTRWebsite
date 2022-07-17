@@ -1,41 +1,35 @@
 import React, { Component } from "react";
 
-import UserService from "../services/user.service";
+import AuthService from "../services/auth.service";
 
 import Footer from "../home/footer";
 
-export default class Home extends Component {
+export default class Admin extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      content: ""
+      content: "",
+      currentUser: { email: ""}
     };
   }
 
   componentDidMount() {
-    UserService.getPublicContent().then(
-      response => {
-        this.setState({
-          content: response.data
-        });
-      },
-      error => {
-        this.setState({
-          content:
-            (error.response && error.response.data) ||
-            error.message ||
-            error.toString()
-        });
-      }
-    );
+    const currentUser = AuthService.getCurrentUser();
+    if (!currentUser) this.setState({ redirect: "/" });
+    this.setState({ currentUser: currentUser, userReady: true })
   }
 
   render() {
+    // const { currentUser } = this.state;
+
     return (
       <div className="container">
 
-        <h1>Admin component</h1>
+        <h3>Admin component</h3>
+        
+        {/* <p><strong>Email:</strong>{" "}
+          {currentUser.email}</p> */}
 
         <Footer />
       </div>
