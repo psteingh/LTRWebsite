@@ -92,7 +92,7 @@ export default class Login extends Component {
         );
     }
 
-    else if (this.state.email === "admin@email.com" && 
+    else if (this.state.email.toLowerCase() === "admin@email.com" && 
             this.state.password === "654321ad") {
       localStorage.setItem("isAuthenticated", "true");
       window.location.pathname = "/admin";
