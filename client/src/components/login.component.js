@@ -94,7 +94,7 @@ export default class Login extends Component {
 
     else if (this.state.email === "admin@email.com") {
       localStorage.setItem("isAuthenticated", "true");
-      window.location.pathname = "/";
+      window.location.pathname = "/admin";
     }
 
     else {
