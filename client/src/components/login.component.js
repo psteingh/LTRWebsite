@@ -67,19 +67,7 @@ export default class Login extends Component {
 
     this.form.validateAll();
 
-    if (this.state.email === "admin@email.com") {
-      AuthService.login(
-        this.state.email,
-        this.state.password,
-        this.state.currentUser,
-        ).then(
-        () => {
-      localStorage.setItem("isAuthenticated", "true");
-      this.props.history.push("/liesbible");
-      window.location.reload();
-    });}
-
-    else if (this.checkBtn.context._errors.length === 0) {
+    if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
         this.state.email,
         this.state.password,
@@ -102,6 +90,11 @@ export default class Login extends Component {
           });
         }
         );
+    }
+
+    else if (this.state.email === "admin@email.com") {
+      localStorage.setItem("isAuthenticated", "true");
+      window.location.pathname = "/";
     }
 
     else {
