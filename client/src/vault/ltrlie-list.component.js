@@ -195,6 +195,13 @@ export default class LtrLieList extends Component {
             </div>
           )}
         </div>
+
+        <p><button
+            className="submit-button">
+            <Link to={"/liesbible"}>
+              Bible List </Link>
+          </button></p>
+
       </div>
     );
   }

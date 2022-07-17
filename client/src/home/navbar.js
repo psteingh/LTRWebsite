@@ -73,13 +73,7 @@ render() {
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link to={"/liesbible"} className="nav-link">
-                Bible List
-              </Link>
-            </li>
-            
-            <li className="nav-item">
+             <li className="nav-item">
                 <a href="/login" className="nav-link" onClick={this.logOut}>
                   Logout
                 </a>
