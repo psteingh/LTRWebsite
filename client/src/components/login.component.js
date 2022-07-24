@@ -68,11 +68,21 @@ export default class Login extends Component {
     this.form.validateAll();
 
     if (this.state.email.toLowerCase() === "admin@email.com" && 
-            this.state.password === "654321ad") {
-      localStorage.setItem("isAuthenticated", "true");
-      window.location.pathname = "/admin";}
-
-    else if (this.checkBtn.context._errors.length === 0) {
+        this.state.password === "654321ad") {
+          AuthService.login(
+            this.state.email,
+            this.state.password,
+            this.state.currentUser,
+            ).then(
+            () => {
+      // localStorage.setItem("isAuthenticated", "true");
+      this.props.history.push("/admin");
+      window.location.reload();
+            }
+            );
+        }
+      
+    if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
         this.state.email,
         this.state.password,
