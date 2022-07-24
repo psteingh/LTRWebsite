@@ -64,9 +64,17 @@ render() {
           About Lies
           </Link>
 
+          {/* {currentUser === (this.state.email.toLowerCase() === "admin@email.com" && 
+            this.state.password === "654321ad") {
+              <li className="nav-item"> 
+              <Link to={"/admin"} className="nav-link">
+                Admin page
+              </Link>
+              </li> } */}
+
           {currentUser ? (
             <div className="navbar-nav ml-auto">
-                        
+            
             <li className="nav-item">
               <Link to={"/ltrlies"} className="nav-link">
                 List of Lies
