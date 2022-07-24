@@ -80,7 +80,7 @@ export default class Login extends Component {
       window.location.reload();
             });}
       
-    if (this.checkBtn.context._errors.length === 0) {
+    else if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
         this.state.email,
         this.state.password,
