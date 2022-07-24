@@ -26,13 +26,6 @@ class Navbar extends Component {
       });
     }
 
-    // renderElement() {
-    //   if (this.state.email.toLowerCase() === "admin@email.com" && 
-    //         this.state.password === "654321ad")
-    //     return <Text>data</Text>;
-    //   return null;
-    // };
-    
     EventBus.on("logout", () => {
         this.logOut();
       });
@@ -80,11 +73,11 @@ render() {
               </Link>
             </li>
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to={"/admin"} className="nav-link">
                 Admin Page
               </Link>
-            </li>
+            </li> */}
 
             <li className="nav-item">
               <a href="/login" className="nav-link" onClick={this.logOut}>
