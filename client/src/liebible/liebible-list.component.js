@@ -26,7 +26,7 @@ export default class LieBibleList extends Component {
     this.retrieveLiesBible();
 
     const currentUser = AuthService.getCurrentUser();
-    if (!currentUser) this.setState({ redirect: "/home" });
+    if (!currentUser) this.setState({ redirect: "/" });
     this.setState({ currentUser: currentUser, userReady: true })
   }
   

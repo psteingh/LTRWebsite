@@ -26,7 +26,7 @@ export default class LtrLieList extends Component {
     this.retrieveLtrLies();
 
     const currentUser = AuthService.getCurrentUser();
-    if (!currentUser) this.setState({ redirect: "/home" });
+    if (!currentUser) this.setState({ redirect: "/" });
     this.setState({ currentUser: currentUser, userReady: true })
   }
   
