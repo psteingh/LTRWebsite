@@ -25,6 +25,13 @@ class Navbar extends Component {
         currentUser: user,
       });
     }
+
+    // renderElement() {
+    //   if (this.state.email.toLowerCase() === "admin@email.com" && 
+    //         this.state.password === "654321ad")
+    //     return <Text>data</Text>;
+    //   return null;
+    // };
     
     EventBus.on("logout", () => {
         this.logOut();
@@ -63,15 +70,7 @@ render() {
           <Link to={"/aboutlies"} className="navbar-mid">
           About Lies
           </Link>
-
-          {/* {currentUser === (this.state.email.toLowerCase() === "admin@email.com" && 
-            this.state.password === "654321ad") {
-              <li className="nav-item"> 
-              <Link to={"/admin"} className="nav-link">
-                Admin page
-              </Link>
-              </li> } */}
-
+          
           {currentUser ? (
             <div className="navbar-nav ml-auto">
             
@@ -81,11 +80,17 @@ render() {
               </Link>
             </li>
 
-             <li className="nav-item">
-                <a href="/login" className="nav-link" onClick={this.logOut}>
-                  Logout
-                </a>
-              </li>
+            <li className="nav-item">
+              <Link to={"/admin"} className="nav-link">
+                Admin Page
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <a href="/login" className="nav-link" onClick={this.logOut}>
+                Logout
+              </a>
+            </li>
             </div>
           ) : (
             <div className="navbar-nav ml-auto navbar-logsign">
