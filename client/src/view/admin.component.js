@@ -10,7 +10,8 @@ export default class Admin extends Component {
 
     this.state = {
       content: "",
-      currentUser: { email: ""}
+      currentUser: {
+        email: ""}
     };
   }
 
@@ -21,15 +22,15 @@ export default class Admin extends Component {
   }
 
   render() {
-    // const { currentUser } = this.state;
+    const { currentUser } = this.state;
 
     return (
       <div className="container">
 
         <h3>Admin component</h3>
         
-        {/* <p><strong>Email:</strong>{" "}
-          {currentUser.email}</p> */}
+        <p><strong>Email:</strong>{" "}
+          {currentUser.email}</p>
 
         <Footer />
       </div>
