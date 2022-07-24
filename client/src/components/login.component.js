@@ -75,10 +75,12 @@ export default class Login extends Component {
             this.state.currentUser,
             ).then(
             () => {
-      const isAuthenticated = localStorage.getItem("isAuthenticated");
-            
-      localStorage.setItem("isAuthenticated", "true");
-      console.log("login.component.js, this:", isAuthenticated);
+
+      // const isAuthenticated = localStorage.getItem("isAuthenticated");
+      // console.log("login.component.js, this:", isAuthenticated);
+      
+      // localStorage.setItem("isAuthenticated", "true");
+
       this.props.history.push("/admin");
       window.location.reload();
             });
