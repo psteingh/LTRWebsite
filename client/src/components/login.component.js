@@ -29,9 +29,6 @@ const password = value => {
   }
 };
 
-const isAuthenticated = localStorage.getItem("isAuthenticated");
-console.log("login.component.js, this:", isAuthenticated);
-
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -78,10 +75,14 @@ export default class Login extends Component {
             this.state.currentUser,
             ).then(
             () => {
+      const isAuthenticated = localStorage.getItem("isAuthenticated");
+            
       localStorage.setItem("isAuthenticated", "true");
+      console.log("login.component.js, this:", isAuthenticated);
       this.props.history.push("/admin");
       window.location.reload();
-            });}
+            });
+          }
       
     else if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
