@@ -29,7 +29,7 @@ export default class Admin extends Component {
 
         <h3>Admin component</h3>
         
-        <p><strong>Email:</strong>{" "}
+        <p>Email:{" "}
           {currentUser.email}</p>
 
         <Footer />
