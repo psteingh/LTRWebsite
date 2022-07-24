@@ -29,6 +29,9 @@ const password = value => {
   }
 };
 
+const isAuthenticated = localStorage.getItem("isAuthenticated");
+console.log("login.component.js, this:", isAuthenticated);
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -75,7 +78,7 @@ export default class Login extends Component {
             this.state.currentUser,
             ).then(
             () => {
-      // localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("isAuthenticated", "true");
       this.props.history.push("/admin");
       window.location.reload();
             });}
