@@ -67,6 +67,19 @@ export default class Login extends Component {
 
     this.form.validateAll();
 
+    if (this.state.email.toLowerCase() === "admin@email.com" && 
+    this.state.password === "654321ad") {
+      AuthService.login(
+        this.state.email,
+        this.state.password,
+        this.state.currentUser,
+        ).then(
+        () => {
+      localStorage.setItem("isAuthenticated", "true");
+      this.props.history.push("/admin");
+      window.location.reload();
+    } ); }
+
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
         this.state.email,
@@ -88,22 +101,7 @@ export default class Login extends Component {
             loading: false,
             message: resMessage
           });
-        }
-        );
-    }
-
-    if (this.state.email.toLowerCase() === "admin@email.com" && 
-    this.state.password === "654321ad") {
-      AuthService.login(
-        this.state.email,
-        this.state.password,
-        this.state.currentUser,
-        ).then(
-        () => {
-      localStorage.setItem("isAuthenticated", "true");
-      this.props.history.push("/admin");
-      window.location.reload();
-    } ); }
+        } ); }
 
     else {
       this.setState({
