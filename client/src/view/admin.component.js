@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import AuthService from "../services/auth.service";
 
@@ -31,6 +32,12 @@ export default class Admin extends Component {
         
         <p>Email:{" "}
           {currentUser.email}</p>
+
+          <p><button
+            className="submit-button">
+            <Link to={"/liesbible"}>
+            Bible List</Link>
+          </button></p>
 
         <Footer />
       </div>
