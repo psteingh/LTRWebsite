@@ -92,12 +92,18 @@ export default class Login extends Component {
         );
     }
 
-    else if (this.state.email.toLowerCase() === "admin@email.com" && 
+    if (this.state.email.toLowerCase() === "admin@email.com" && 
     this.state.password === "654321ad") {
+      AuthService.login(
+        this.state.email,
+        this.state.password,
+        this.state.currentUser,
+        ).then(
+        () => {
       localStorage.setItem("isAuthenticated", "true");
       this.props.history.push("/admin");
       window.location.reload();
-    }
+    } ); }
 
     else {
       this.setState({
