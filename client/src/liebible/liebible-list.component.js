@@ -149,10 +149,18 @@ export default class LieBibleList extends Component {
               Add a Biblical Lie </Link>
           </button></p>
 
-          <p><button className="submit-button"
+          <p><button
+            className="submit-button"
               onClick={this.refreshPage}>
-            List of Biblical Lies
+              List of Biblical Lies
           </button></p>
+
+          <p><button
+            className="submit-button">
+            <Link to={"/admin"}>
+            Back to admin</Link>
+          </button></p>
+
         </div>
 
         <div className="col-md-6">
