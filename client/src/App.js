@@ -26,8 +26,8 @@ import Admin from "./view/admin.component";
 import ProtectedRoute from "./view/ProtectedRoute";
 
 import LieBibleList from "./liebible/liebible-list.component";
-// import LieBibleAdd from "./liebible/liebible-add.component";
-// import LieBibleUpdate from "./liebible/liebible-update.component";
+import LieBibleAdd from "./liebible/liebible-add.component";
+import LieBibleUpdate from "./liebible/liebible-update.component";
 
 class App extends Component {
   render() {
@@ -58,8 +58,8 @@ class App extends Component {
             <ProtectedRoute exact path="/admin" component={Admin} />
 
             <Route exact path="/liesbible" component={LieBibleList} />
-            {/* <Route exact path="/liesbibleadd" component={LieBibleAdd} />
-            <Route path="/liesbible/:id" component={LieBibleUpdate} /> */}
+            <Route exact path="/liesbibleadd" component={LieBibleAdd} />
+            <Route path="/liesbible/:id" component={LieBibleUpdate} />
           </Switch>
         </div>
       
