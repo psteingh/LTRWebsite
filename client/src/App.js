@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
@@ -40,22 +40,22 @@ class App extends Component {
       <Navbar />
         
         <div className="container mt-3">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/lierboard" component={LierBoard} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/contact" component={Contact} />
+          <Routes>
+            <Route path="/" component={Home} />
+            <Route path="/lierboard" component={LierBoard} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/contact" component={Contact} />
 
-            <Route exact path="/about" component={About} />
-            <Route exact path="/aboutlies" component={Lies} />
+            <Route path="/about" component={About} />
+            <Route path="/aboutlies" component={Lies} />
 
-            <Route exact path="/liesgeneral" component={LiesGeneral} />
-            <Route exact path="/bibleboard" component={BibleBoard} />
-            <Route exact path="/liesmedia" component={LiesMedia} />
+            <Route path="/liesgeneral" component={LiesGeneral} />
+            <Route path="/bibleboard" component={BibleBoard} />
+            <Route path="/liesmedia" component={LiesMedia} />
 
-            <Route exact path="/ltrlies" component={LtrLieList} />
-            <Route exact path="/add" component={LtrLieAdd} />
+            <Route path="/ltrlies" component={LtrLieList} />
+            <Route path="/add" component={LtrLieAdd} />
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
 
             <Route path="/admin" element={
@@ -65,10 +65,10 @@ class App extends Component {
             
             {/* <ProtectedRoute exact path="/admin" component={Admin} /> */}
 
-            <Route exact path="/liesbible" component={LieBibleList} />
-            <Route exact path="/liesbibleadd" component={LieBibleAdd} />
+            <Route path="/liesbible" component={LieBibleList} />
+            <Route path="/liesbibleadd" component={LieBibleAdd} />
             <Route path="/liesbible/:id" component={LieBibleUpdate} />
-          </Switch>
+          </Routes>
         </div>
       
       </div>
