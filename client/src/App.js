@@ -23,15 +23,18 @@ import LtrLieList from "./vault/ltrlie-list.component";
 import LtrLieUpdate from "./vault/ltrlie-update.component";
 
 import Admin from "./view/admin.component";
-import ProtectedRoute from "./view/ProtectedRoute";
+import Protected from "./view/Protected";
+
+// import ProtectedRoute from "./view/ProtectedRoute";
 
 import LieBibleList from "./liebible/liebible-list.component";
 import LieBibleAdd from "./liebible/liebible-add.component";
 import LieBibleUpdate from "./liebible/liebible-update.component";
 
+const isAuthenticated = localStorage.getItem("isAuthenticated");
+  console.log("ProtectedRoute.js, this:", isAuthenticated);
 class App extends Component {
   render() {
-
     return (
       <div>
       <Navbar />
@@ -55,7 +58,12 @@ class App extends Component {
             <Route exact path="/add" component={LtrLieAdd} />
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
 
-            <ProtectedRoute exact path="/admin" component={Admin} />
+            <Route path="/admin" element={
+              <Protected isAuthenticated={isAuthenticated}>
+                <Admin />
+              </Protected> } />
+            
+            {/* <ProtectedRoute exact path="/admin" component={Admin} /> */}
 
             <Route exact path="/liesbible" component={LieBibleList} />
             <Route exact path="/liesbibleadd" component={LieBibleAdd} />
