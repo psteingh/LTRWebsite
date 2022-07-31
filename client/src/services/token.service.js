@@ -29,8 +29,10 @@ class TokenService {
       localStorage.setItem("user", JSON.stringify(user));
     }
 
-    
-
+    // Protected Route
+    getIsAuthenticated() {
+      return JSON.parse(localStorage.getItem("isAuthenticated"));
+    }
 
     // Logout    
     removeUser() {
