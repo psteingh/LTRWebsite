@@ -32,7 +32,7 @@ import LieBibleAdd from "./liebible/liebible-add.component";
 import LieBibleUpdate from "./liebible/liebible-update.component";
 
 const isAuthenticated = localStorage.getItem("isAuthenticated");
-  console.log("ProtectedRoute.js, this:", isAuthenticated);
+//   console.log("Protected.js, this:", isAuthenticated);
 class App extends Component {
   render() {
     return (
@@ -58,7 +58,7 @@ class App extends Component {
             <Route path="/add" element={<LtrLieAdd />} />
             <Route path="/ltrlies/:id" element={<LtrLieUpdate />} />
 
-            <Route path="/admin" element={
+            <Route path="admin" element={
               <Protected isAuthenticated={isAuthenticated}>
                 <Admin />
               </Protected> } />
