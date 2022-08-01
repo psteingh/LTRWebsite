@@ -42,21 +42,21 @@ class App extends Component {
         <div className="container mt-3">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/lierboard" element={<LierBoard />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="lierboard" element={<LierBoard />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+            <Route path="contact" element={<Contact />} />
 
-            <Route path="/about" element={<About />} />
-            <Route path="/aboutlies" element={<Lies />} />
+            <Route path="about" element={<About />} />
+            <Route path="aboutlies" element={<Lies />} />
 
-            <Route path="/liesgeneral" element={<LiesGeneral />} />
-            <Route path="/bibleboard" element={<BibleBoard />} />
-            <Route path="/liesmedia" element={<LiesMedia />} />
+            <Route path="liesgeneral" element={<LiesGeneral />} />
+            <Route path="bibleboard" element={<BibleBoard />} />
+            <Route path="liesmedia" element={<LiesMedia />} />
 
-            <Route path="/ltrlies" element={<LtrLieList />} />
-            <Route path="/add" element={<LtrLieAdd />} />
-            <Route path="/ltrlies/:id" element={<LtrLieUpdate />} />
+            <Route path="ltrlies" element={<LtrLieList />} />
+            <Route path="add" element={<LtrLieAdd />} />
+            <Route path="ltrlies/:id" element={<LtrLieUpdate />} />
 
             <Route path="admin" element={
               <Protected isAuthenticated={isAuthenticated}>
@@ -65,9 +65,9 @@ class App extends Component {
             
             {/* <ProtectedRoute exact path="/admin" component={Admin} /> */}
 
-            <Route path="/liesbible" element={<LieBibleList />} />
-            <Route path="/liesbibleadd" element={<LieBibleAdd />} />
-            <Route path="/liesbible/:id" element={<LieBibleUpdate />} />
+            <Route path="liesbible" element={<LieBibleList />} />
+            <Route path="liesbibleadd" element={<LieBibleAdd />} />
+            <Route path="liesbible/:id" element={<LieBibleUpdate />} />
           </Routes>
         </div>
       
