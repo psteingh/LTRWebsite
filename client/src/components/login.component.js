@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
@@ -29,6 +29,8 @@ const password = value => {
   }
 };
 
+
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -57,6 +59,8 @@ export default class Login extends Component {
     });
   }
 
+  
+
   handleLogin(e) {
     e.preventDefault();
 
@@ -66,7 +70,7 @@ export default class Login extends Component {
     });
 
     this.form.validateAll();
-
+    
     if (this.state.email.toLowerCase() === "admin@email.com" && 
     this.state.password === "654321ad") {
       AuthService.login(
@@ -75,8 +79,9 @@ export default class Login extends Component {
         this.state.currentUser,
         ).then(
         () => {
+      let navigate = useNavigate();
       localStorage.setItem("isAuthenticated", "true");
-      this.props.history.push("/admin");
+      navigate("/admin");
       window.location.reload();
     } ); }
 
@@ -87,7 +92,8 @@ export default class Login extends Component {
         this.state.currentUser,
         ).then(
         () => {
-          this.props.history.push("ltrlies");
+          let navigate = useNavigate();
+          navigate("/ltrlies");
           window.location.reload();
         },
         error => {
