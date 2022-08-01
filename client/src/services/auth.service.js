@@ -32,9 +32,9 @@ class AuthService {
     return TokenService.getUser();
   }
 
-  getCurrentIsAuth() {
-    return TokenService.getIsAuthenticated();
-  }
+  // getCurrentIsAuth() {
+  //   return TokenService.getIsAuthenticated();
+  // }
 
 }
 

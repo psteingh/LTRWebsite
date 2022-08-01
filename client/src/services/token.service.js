@@ -30,9 +30,9 @@ class TokenService {
     }
 
     // Protected Route
-    getIsAuthenticated() {
-      return JSON.parse(localStorage.getItem("isAuthenticated"));
-    }
+    // getIsAuthenticated() {
+    //   return JSON.parse(localStorage.getItem("isAuthenticated"));
+    // }
 
     // Logout    
     removeUser() {
