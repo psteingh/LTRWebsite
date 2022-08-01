@@ -9,6 +9,8 @@ import AuthService from "../services/auth.service";
 
 import FooterSmall from "../home/footersmall";
 
+let navigate = useNavigate;
+
 const email = value => {
   if (!isEmail(value)) {
     return (
@@ -28,8 +30,6 @@ const password = value => {
     );
   }
 };
-
-
 
 export default class Login extends Component {
   constructor(props) {
@@ -59,8 +59,6 @@ export default class Login extends Component {
     });
   }
 
-  
-
   handleLogin(e) {
     e.preventDefault();
 
@@ -79,7 +77,6 @@ export default class Login extends Component {
         this.state.currentUser,
         ).then(
         () => {
-      let navigate = useNavigate();
       localStorage.setItem("isAuthenticated", "true");
       navigate("/admin");
       window.location.reload();
@@ -92,7 +89,6 @@ export default class Login extends Component {
         this.state.currentUser,
         ).then(
         () => {
-          let navigate = useNavigate();
           navigate("/ltrlies");
           window.location.reload();
         },
