@@ -29,9 +29,6 @@ class TokenService {
       localStorage.setItem("user", JSON.stringify(user));
     }
 
-    
-
-
     // Logout    
     removeUser() {
       localStorage.removeItem("user");
