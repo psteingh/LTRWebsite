@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
@@ -8,8 +8,6 @@ import { isEmail } from "validator";
 import AuthService from "../services/auth.service";
 
 import FooterSmall from "../home/footersmall";
-
-let navigate = useNavigate;
 
 const email = value => {
   if (!isEmail(value)) {
@@ -68,7 +66,7 @@ export default class Login extends Component {
     });
 
     this.form.validateAll();
-    
+
     if (this.state.email.toLowerCase() === "admin@email.com" && 
     this.state.password === "654321ad") {
       AuthService.login(
@@ -78,7 +76,7 @@ export default class Login extends Component {
         ).then(
         () => {
       localStorage.setItem("isAuthenticated", "true");
-      navigate("/admin");
+      this.props.history.push("/admin");
       window.location.reload();
     } ); }
 
@@ -89,7 +87,7 @@ export default class Login extends Component {
         this.state.currentUser,
         ).then(
         () => {
-          navigate("/ltrlies");
+          this.props.history.push("/ltrlies");
           window.location.reload();
         },
         error => {

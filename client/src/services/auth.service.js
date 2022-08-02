@@ -31,11 +31,6 @@ class AuthService {
   getCurrentUser() {
     return TokenService.getUser();
   }
-
-  // getCurrentIsAuth() {
-  //   return TokenService.getIsAuthenticated();
-  // }
-
 }
 
 export default new AuthService();

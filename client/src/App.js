@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
@@ -23,52 +23,44 @@ import LtrLieList from "./vault/ltrlie-list.component";
 import LtrLieUpdate from "./vault/ltrlie-update.component";
 
 import Admin from "./view/admin.component";
-import Protected from "./view/Protected";
-
-// import ProtectedRoute from "./view/ProtectedRoute";
+import ProtectedRoute from "./view/ProtectedRoute";
 
 import LieBibleList from "./liebible/liebible-list.component";
 import LieBibleAdd from "./liebible/liebible-add.component";
 import LieBibleUpdate from "./liebible/liebible-update.component";
 
-const isAuthenticated = localStorage.getItem("isAuthenticated");
-//   console.log("Protected.js, this:", isAuthenticated);
 class App extends Component {
   render() {
+
     return (
       <div>
       <Navbar />
         
         <div className="container mt-3">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="lierboard" element={<LierBoard />} />
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route path="contact" element={<Contact />} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/lierboard" component={LierBoard} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/contact" component={Contact} />
 
-            <Route path="about" element={<About />} />
-            <Route path="aboutlies" element={<Lies />} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/aboutlies" component={Lies} />
 
-            <Route path="liesgeneral" element={<LiesGeneral />} />
-            <Route path="bibleboard" element={<BibleBoard />} />
-            <Route path="liesmedia" element={<LiesMedia />} />
+            <Route exact path="/liesgeneral" component={LiesGeneral} />
+            <Route exact path="/bibleboard" component={BibleBoard} />
+            <Route exact path="/liesmedia" component={LiesMedia} />
 
-            <Route path="ltrlies" element={<LtrLieList />} />
-            <Route path="add" element={<LtrLieAdd />} />
-            <Route path="ltrlies/:id" element={<LtrLieUpdate />} />
+            <Route exact path="/ltrlies" component={LtrLieList} />
+            <Route exact path="/add" component={LtrLieAdd} />
+            <Route path="/ltrlies/:id" component={LtrLieUpdate} />
 
-            <Route path="admin" element={
-              <Protected isAuthenticated={isAuthenticated}>
-                <Admin />
-              </Protected> } />
-            
-            {/* <ProtectedRoute exact path="/admin" component={Admin} /> */}
+            <ProtectedRoute exact path="/admin" component={Admin} />
 
-            <Route path="liesbible" element={<LieBibleList />} />
-            <Route path="liesbibleadd" element={<LieBibleAdd />} />
-            <Route path="liesbible/:id" element={<LieBibleUpdate />} />
-          </Routes>
+            <Route exact path="/liesbible" component={LieBibleList} />
+            <Route exact path="/liesbibleadd" component={LieBibleAdd} />
+            <Route path="/liesbible/:id" component={LieBibleUpdate} />
+          </Switch>
         </div>
       
       </div>
