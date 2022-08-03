@@ -13,6 +13,10 @@ class AuthService {
           TokenService.setUser(response.data);
         }
 
+        if (response.data.accessToken) {
+          TokenService.setAuthenticate(response.data);
+        }
+
         return response.data;
       });
   }
@@ -31,6 +35,11 @@ class AuthService {
   getCurrentUser() {
     return TokenService.getUser();
   }
+
+  getCurrentAuthenticate() {
+    return TokenService.getAuthenticate();
+  }
+
 }
 
 export default new AuthService();

@@ -29,6 +29,16 @@ class TokenService {
       localStorage.setItem("user", JSON.stringify(user));
     }
 
+    // Authenticate - setItem
+    setAuthenticate() {
+      localStorage.setItem("isAuthenticated", "true");
+    }
+
+    // Authenticate - getItem
+    getAuthenticate() {
+      return JSON.parse(localStorage.getItem("isAuthenticated"));
+    }
+
     // Logout    
     removeUser() {
       localStorage.removeItem("user");
