@@ -40,6 +40,7 @@ export default class Login extends Component {
       email: "",
       password: "",
       currentUser: AuthService.getCurrentUser(),
+      currentAuthenticate: AuthService.getCurrentAuthenticate(),
       loading: false,
       message: ""
     };
@@ -73,6 +74,7 @@ export default class Login extends Component {
         this.state.email,
         this.state.password,
         this.state.currentUser,
+        this.state.currentAuthenticate,
         ).then(
         () => {
       localStorage.setItem("isAuthenticated", "true");
@@ -85,6 +87,7 @@ export default class Login extends Component {
         this.state.email,
         this.state.password,
         this.state.currentUser,
+        this.state.currentAuthenticate,
         ).then(
         () => {
           this.props.history.push("/ltrlies");
