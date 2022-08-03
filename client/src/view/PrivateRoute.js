@@ -5,7 +5,7 @@ const PrivateRoute = (props) => {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
   console.log("PrivateRoute.js, this:", isAuthenticated);
   return isAuthenticated ? (<Route {...props} />) : (
-    <Redirect to={{ pathname: "/login",
+    <Redirect to={{ pathname: "/",
                     // state: { from: location}
     }} />
   );
