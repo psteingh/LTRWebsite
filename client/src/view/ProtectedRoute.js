@@ -27,7 +27,7 @@ export default class ProtectedRoute extends Component {
 
     if (this.state.email.toLowerCase() === "admin@email.com" && 
     this.state.password === "654321ad") {
-      localStorage.setItem("isAuthenticated", "true");
+      // localStorage.setItem("isAuthenticated", "true");
       this.props.history.push("/admin");
       window.location.reload();
     }
@@ -45,7 +45,7 @@ export default class ProtectedRoute extends Component {
           {currentUser.email}</p> */}
       
         <Route {...props}
-          render={props => ( this.state.currentUser.isAuthenticated ?
+          render={props => ( this.authLogin.isAuthenticated ?
             <Component {...props} /> :
             <Redirect to="/" />
           )} />
