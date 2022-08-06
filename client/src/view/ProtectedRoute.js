@@ -9,8 +9,8 @@ export default class ProtectedRoute extends Component {
     this.authLogin = this.authLogin.bind(this);
 
     this.state = {
-    //   email: "",
-    //   password: "",
+    email: "",
+    password: "",
     currentUser: AuthService.getCurrentUser(),
     //   // loading: false,
     //   // message: "",
@@ -27,11 +27,16 @@ export default class ProtectedRoute extends Component {
 
     if (this.state.email.toLowerCase() === "admin@email.com" && 
     this.state.password === "654321ad") {
-      // localStorage.setItem("isAuthenticated", "true");
+      AuthService.login(
+        this.state.email,
+        this.state.password,
+        this.state.currentUser,
+        ).then(
+        () => {
+      localStorage.setItem("isAuthenticated", "true");
       this.props.history.push("/admin");
       window.location.reload();
-    }
-  }
+    } ) } }
 
   render() {
     // const { currentUser } = this.state;
@@ -45,7 +50,7 @@ export default class ProtectedRoute extends Component {
           {currentUser.email}</p> */}
       
         <Route {...props}
-          render={props => ( this.authLogin.isAuthenticated ?
+          render={props => ( isAuthenticated ?
             <Component {...props} /> :
             <Redirect to="/" />
           )} />
