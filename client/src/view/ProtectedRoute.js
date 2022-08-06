@@ -60,6 +60,7 @@ export default class ProtectedRoute extends Component {
   render() {
     const { currentUser } = this.state;
     const { component: Component, ...props } = this.props;
+    console.log("ProtectedRoute");
     
     return (
       <div>
