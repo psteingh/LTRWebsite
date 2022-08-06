@@ -45,8 +45,7 @@ export default class ProtectedRoute extends Component {
           {currentUser.email}</p> */}
       
         <Route {...props}
-          render={props => (
-            this.state.isAuthenticated ?
+          render={props => ( isAuthenticated ?
             <Component {...props} /> :
             <Redirect to="/" />
           )} />
