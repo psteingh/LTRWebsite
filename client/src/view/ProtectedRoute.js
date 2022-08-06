@@ -27,7 +27,7 @@ export default class ProtectedRoute extends Component {
 
     if (this.state.email.toLowerCase() === "admin@email.com" && 
     this.state.password === "654321ad") {
-      localStorage.setItem("isAuthenticated", "true");
+      // localStorage.setItem("isAuthenticated", "true");
       this.props.history.push("/admin");
       window.location.reload();
     }
@@ -37,7 +37,8 @@ export default class ProtectedRoute extends Component {
     // const { currentUser } = this.state;
     const { component: Component, ...props } = this.props;
     const isAuthenticated = localStorage.getItem("isAuthenticated");
-    console.log("ProtectedRoute.js, this:", isAuthenticated);
+    console.log("ProtectedRoute.js, this:", isAuthenticated,
+                this.state);
     
     return (
       <div>
