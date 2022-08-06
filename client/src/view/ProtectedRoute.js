@@ -1,33 +1,33 @@
 import React, { Component } from "react";
 import { Redirect, Route } from "react-router-dom";
 
-import AuthService from "../services/auth.service";
+// import AuthService from "../services/auth.service";
 
 export default class ProtectedRoute extends Component {
   constructor(props) {
     super(props);
     this.authLogin = this.authLogin.bind(this);
 
-    this.state = {
-      email: "",
-      password: "",
-      currentUser: AuthService.getCurrentUser(),
-      loading: false,
-      message: "",
-    };
+    // this.state = {
+    //   email: "",
+    //   password: "",
+    //   // currentUser: AuthService.getCurrentUser(),
+    //   // loading: false,
+    //   // message: "",
+    // };
   }
 
   authLogin(e) {
     e.preventDefault();
 
-    this.setState({
-      message: "",
-      loading: true
-    });
+    // this.setState({
+    //   message: "",
+    //   loading: true
+    // });
 
     if (this.state.email.toLowerCase() === "admin@email.com" && 
     this.state.password === "654321ad") {
-      // localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("isAuthenticated", "true");
       this.props.history.push("/admin");
       window.location.reload();
     }
@@ -37,8 +37,7 @@ export default class ProtectedRoute extends Component {
     // const { currentUser } = this.state;
     const { component: Component, ...props } = this.props;
     const isAuthenticated = localStorage.getItem("isAuthenticated");
-    console.log("ProtectedRoute.js, this:", isAuthenticated,
-                this.state);
+    console.log("ProtectedRoute.js, this:", isAuthenticated);
     
     return (
       <div>
