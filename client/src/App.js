@@ -23,8 +23,7 @@ import LtrLieList from "./vault/ltrlie-list.component";
 import LtrLieUpdate from "./vault/ltrlie-update.component";
 
 import Admin from "./view/admin.component";
-import PrivateRoute from "./view/PrivateRoute";
-// import ProtectedRoute from "./view/ProtectedRoute";
+import ProtectedRoute from "./view/ProtectedRoute";
 
 import LieBibleList from "./liebible/liebible-list.component";
 import LieBibleAdd from "./liebible/liebible-add.component";
@@ -39,8 +38,6 @@ class App extends Component {
         
         <div className="container mt-3">
           <Switch>
-
-            <PrivateRoute path="/admin" component={Admin} />
 
             <Route exact path="/" component={Home} />
             <Route exact path="/lierboard" component={LierBoard} />
@@ -59,7 +56,7 @@ class App extends Component {
             <Route exact path="/add" component={LtrLieAdd} />
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
             
-            {/* <ProtectedRoute exact path="/admin" component={Admin} /> */}
+            <ProtectedRoute exact path="/admin" component={Admin} />
 
             <Route exact path="/liesbible" component={LieBibleList} />
             <Route exact path="/liesbibleadd" component={LieBibleAdd} />

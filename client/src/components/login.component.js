@@ -40,7 +40,6 @@ export default class Login extends Component {
       email: "",
       password: "",
       currentUser: AuthService.getCurrentUser(),
-      currentAuthenticate: AuthService.getCurrentAuthenticate(),
       loading: false,
       message: ""
     };
@@ -68,21 +67,7 @@ export default class Login extends Component {
 
     this.form.validateAll();
 
-    if (this.state.email.toLowerCase() === "admin@email.com" && 
-    this.state.password === "654321ad") {
-      AuthService.login(
-        this.state.email,
-        this.state.password,
-        this.state.currentUser,
-        this.state.currentAuthenticate,
-        ).then(
-        () => {
-      localStorage.setItem("isAuthenticated", "true");
-      this.props.history.push("/admin");
-      window.location.reload();
-    } ); }
-    
-    else if (this.checkBtn.context._errors.length === 0) {
+    if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
         this.state.email,
         this.state.password,
@@ -182,13 +167,6 @@ export default class Login extends Component {
             Sign Up
           </Link>
         </div>
-
-        {/* <div className="already-need">
-          Forgot password?
-          <Link className="action-signlog" to={"/"}>
-            Reset password
-          </Link>
-        </div> */}
         
         </div>
 
