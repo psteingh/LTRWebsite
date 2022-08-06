@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import { Redirect, Route } from "react-router-dom";
 
-// import AuthService from "../services/auth.service";
+import AuthService from "../services/auth.service";
 
 export default class ProtectedRoute extends Component {
   constructor(props) {
     super(props);
     this.authLogin = this.authLogin.bind(this);
 
-    // this.state = {
+    this.state = {
     //   email: "",
     //   password: "",
-    //   // currentUser: AuthService.getCurrentUser(),
+    currentUser: AuthService.getCurrentUser(),
     //   // loading: false,
     //   // message: "",
-    // };
+    };
   }
 
   authLogin(e) {
@@ -45,7 +45,7 @@ export default class ProtectedRoute extends Component {
           {currentUser.email}</p> */}
       
         <Route {...props}
-          render={props => ( isAuthenticated ?
+          render={props => ( this.state.currentUser.isAuthenticated ?
             <Component {...props} /> :
             <Redirect to="/" />
           )} />
