@@ -72,7 +72,6 @@ export default class Login extends Component {
         this.state.email,
         this.state.password,
         this.state.currentUser,
-        this.state.currentAuthenticate,
         ).then(
         () => {
           this.props.history.push("/ltrlies");
