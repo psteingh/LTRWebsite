@@ -69,7 +69,7 @@ export default class Login extends Component {
 
     this.form.validateAll();
 
-    if (this.state.email.toLowerCase() === "admin@email.com" && 
+    if (this.state.email === "admin@email.com" && 
         this.state.password === "654321ad") {
           AuthService.login(
             this.state.email,
