@@ -17,26 +17,26 @@ export default class ProtectedRoute extends Component {
     };
   }
 
-  // authLogin(e) {
-  //   e.preventDefault();
+  authLogin(e) {
+    e.preventDefault();
 
-    // this.setState({
-    //   message: "",
-    //   loading: true
-    // });
+    this.setState({
+      message: "",
+      loading: true
+    });
 
-    // if (this.state.email.toLowerCase() === "admin@email.com" && 
-    // this.state.password === "654321ad") {
-    //   AuthService.login(
-    //     this.state.email,
-    //     this.state.password,
-    //     this.state.currentUser,
-    //     ).then(
-    //     () => {
-    //   localStorage.setItem("isAuthenticated", "true");
-    //   this.props.history.push("/admin");
-    //   window.location.reload();
-    // } ) } }
+    if (this.state.email.toLowerCase() === "admin@email.com" && 
+    this.state.password === "654321ad") {
+      AuthService.login(
+        this.state.email,
+        this.state.password,
+        this.state.currentUser,
+        ).then(
+        () => {
+      // localStorage.setItem("isAuthenticated", "true");
+      this.props.history.push("/admin");
+      window.location.reload();
+    } ) } }
 
   render() {
     // const { currentUser } = this.state;
@@ -50,7 +50,7 @@ export default class ProtectedRoute extends Component {
           {currentUser.email}</p> */}
       
         <Route {...props}
-          render={props => ( this.state.currentUser.isAuthenticated ?
+          render={props => ( this.authLogin ?
             <Component {...props} /> :
             <Redirect to="/" />
           )} />
