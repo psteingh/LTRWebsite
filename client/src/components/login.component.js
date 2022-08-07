@@ -29,7 +29,7 @@ const password = value => {
   }
 };
 
-console.log("login.component.js localStorage.getItem, isAuthenticated:", localStorage.getItem("isAuthenticated"));
+console.log("login.component.js localStorage.getItem isAuthenticated:", localStorage.getItem("isAuthenticated"));
 
 export default class Login extends Component {
   constructor(props) {
@@ -43,7 +43,8 @@ export default class Login extends Component {
       password: "",
       currentUser: AuthService.getCurrentUser(),
       loading: false,
-      message: ""
+      message: "",
+      localStorage: false,
     };
   }
 
