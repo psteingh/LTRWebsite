@@ -112,7 +112,7 @@ export default class Login extends Component {
       this.setState({
         loading: false
       });
-    }
+    }    
   }
 
   render() {
