@@ -89,6 +89,7 @@ export default class Login extends Component {
         this.state.currentUser,
         ).then(
         () => {
+          localStorage.setItem("isAuthenticated", "false");
           this.props.history.push("/ltrlies");
           window.location.reload();
         },
