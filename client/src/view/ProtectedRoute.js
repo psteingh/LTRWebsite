@@ -6,7 +6,7 @@ export default class ProtectedRoute extends Component {
   render() {
     const { component: Component, ...restOfProps } = this.props;
     const isAuthenticated = localStorage.getItem("isAuthenticated");
-    console.log("ProtectedRoute.js localStorage.getItem, isAuthenticated:", isAuthenticated);
+    console.log("ProtectedRoute.js", isAuthenticated);
     
     return (
       <div>

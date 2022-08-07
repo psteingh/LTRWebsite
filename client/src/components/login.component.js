@@ -29,7 +29,8 @@ const password = value => {
   }
 };
 
-console.log("login.component.js localStorage.getItem isAuthenticated:", localStorage.getItem("isAuthenticated"));
+const isAuthenticated = localStorage.getItem("isAuthenticated");
+console.log("login.component.js", isAuthenticated);
 
 export default class Login extends Component {
   constructor(props) {
