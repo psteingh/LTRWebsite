@@ -45,7 +45,6 @@ export default class Login extends Component {
       currentUser: AuthService.getCurrentUser(),
       loading: false,
       message: "",
-      localStorage: false,
     };
   }
 
@@ -71,12 +70,12 @@ export default class Login extends Component {
 
     this.form.validateAll();
 
-    if (this.state.email === "admin@email.com" && 
-        this.state.password === "654321ad") {
+    if (this.state.email === "admin@email.com" &&
+       this.state.password === "654321ad") {
           AuthService.login(
             this.state.email,
             this.state.password,
-            this.state.currentUser,
+            // this.state.currentUser,
             ).then(
             () => {
           localStorage.setItem("isAuthenticated", "true");
