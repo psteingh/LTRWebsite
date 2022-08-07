@@ -6,7 +6,7 @@ import AuthService from "../services/auth.service";
 export default class ProtectedRoute extends Component {
   constructor(props) {
     super(props);
-    // this.authLogin = this.authLogin.bind(this);
+    this.authLogin = this.authLogin.bind(this);
 
     this.state = {
     email: "",
@@ -20,10 +20,10 @@ export default class ProtectedRoute extends Component {
   authLogin(e) {
     e.preventDefault();
 
-    this.setState({
-      message: "",
-      loading: true
-    });
+    // this.setState({
+    //   message: "",
+    //   loading: true
+    // });
 
     if (this.state.email.toLowerCase() === "admin@email.com" && 
     this.state.password === "654321ad") {
@@ -33,7 +33,7 @@ export default class ProtectedRoute extends Component {
         this.state.currentUser,
         ).then(
         () => {
-      // localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("isAuthenticated", "true");
       this.props.history.push("/admin");
       window.location.reload();
     } ) } }
@@ -50,7 +50,7 @@ export default class ProtectedRoute extends Component {
           {currentUser.email}</p> */}
       
         <Route {...props}
-          render={props => ( this.authLogin ?
+          render={props => ( isAuthenticated ?
             <Component {...props} /> :
             <Redirect to="/" />
           )} />
