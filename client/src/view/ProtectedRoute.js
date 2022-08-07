@@ -8,9 +8,5 @@ export default class ProtectedRoute extends Component {
     console.log("ProtectedRoute.js", isAuthenticated);
     
     return (
-        <Route exact path="/admin"
-          render={() => (isAuthenticated ?
-            <Component /> :
-            <Redirect to="/login" />
-          )} />
-  )}}
+        <Route render={() => (isAuthenticated ? <Component /> : <Redirect to="/" />)} />
+    ); } }
