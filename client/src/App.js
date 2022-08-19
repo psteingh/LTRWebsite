@@ -62,12 +62,8 @@ class App extends Component {
             <Route exact path="/add" component={LtrLieAdd} />
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
             
-            <Route path="/admin" element={
-              <ProtectedRoute isAuthenticated={true}>
-              <Admin />
-              </ProtectedRoute>
-            } />
-            
+            <ProtectedRoute path="/admin" component={Admin} />
+                        
             {/* <ProtectedRoute exact path="/admin" component={Admin} /> */}
 
             <Route exact path="/liesbible" component={LieBibleList} />
