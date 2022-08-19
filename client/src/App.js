@@ -62,7 +62,7 @@ class App extends Component {
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
             
             <Route path="/admin" element={
-              <Protected isAuthenticated={isAuthenticated}>
+              <Protected isAuthenticated={true}>
               <Admin />
               </Protected>
             } />
