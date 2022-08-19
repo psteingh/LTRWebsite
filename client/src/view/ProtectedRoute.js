@@ -3,15 +3,15 @@ import { Redirect, Route } from "react-router-dom";
 
 export default class ProtectedRoute extends Component {
   render() {
-    const { component: Component } = this.props;
-    // console.log("ProtectedRoute.js Component:", Component);
+    const { component: Test } = this.props;
+    console.log("ProtectedRoute.js Test:", Test);
 
     const isAuthenticated = localStorage.getItem("isAuthenticated");
-    // console.log("ProtectedRoute.js isAuthenticated:", isAuthenticated);
+    console.log("ProtectedRoute.js isAuthenticated:", isAuthenticated);
     
     return (
         <Route
           render={() => (
-            isAuthenticated ? <Component />
+            isAuthenticated ? <Test />
              : <Redirect to="/" />)} />
     ); } }

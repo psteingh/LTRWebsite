@@ -32,9 +32,6 @@ import LieBibleUpdate from "./liebible/liebible-update.component";
 class App extends Component {
   render() {
 
-    // const isAuthenticated = localStorage.getItem("isAuthenticated");
-    // console.log("App.js isAuthenticated:", isAuthenticated);
-
     return (
       <div>
       <Navbar />

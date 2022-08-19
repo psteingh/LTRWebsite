@@ -29,8 +29,8 @@ const password = value => {
   }
 };
 
-// const isAuthenticated = localStorage.getItem("isAuthenticated");
-// console.log("login.component.js, before Login:", isAuthenticated);
+const isAuthenticated = localStorage.getItem("isAuthenticated");
+console.log("login.component.js, before Login:", isAuthenticated);
 
 export default class Login extends Component {
   constructor(props) {
@@ -69,21 +69,17 @@ export default class Login extends Component {
     });
 
     this.form.validateAll();
-    
-    // console.log("login.component.js, after Login:");
 
     if (this.state.email === "admin@email.com" &&
        this.state.password === "654321ad") {
           AuthService.login(
             this.state.email,
             this.state.password,
-            // this.state.currentUser,
             ).then(
             () => {
           localStorage.setItem("isAuthenticated", "true");
           this.props.history.push("/admin");
           window.location.reload();
-          // console.log("login.component.js, after Login:");
         } ); }
 
     else if (this.checkBtn.context._errors.length === 0) {
@@ -96,7 +92,6 @@ export default class Login extends Component {
           localStorage.setItem("isAuthenticated", "false");
           this.props.history.push("/ltrlies");
           window.location.reload();
-          // console.log("login.component.js, after Login:");
         },
         error => {
           const resMessage =
@@ -109,19 +104,12 @@ export default class Login extends Component {
             loading: false,
             message: resMessage
           });
-        } );
-
-    // console.log("login.component.js, after Login:");
-
-    }
+        } ); }
 
     else {
       this.setState({
         loading: false
-      });
-      // console.log("login.component.js, after Login:");
-
-    }    
+      }); }    
   }
 
   render() {
