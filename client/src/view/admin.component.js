@@ -10,17 +10,19 @@ export default class Admin extends Component {
     super(props);
 
     this.state = {
-      content: "",
-      currentUser: {
-        email: ""}
+      email: "",
+      currentUser: AuthService.getCurrentUser(),
+      // content: "",
+      // currentUser: {
+      //   email: ""}
     };
   }
 
-  componentDidMount() {
-    const currentUser = AuthService.getCurrentUser();
-    if (!currentUser) this.setState({ redirect: "/" });
-    this.setState({ currentUser: currentUser, userReady: true })
-  }
+  // componentDidMount() {
+  //   const currentUser = AuthService.getCurrentUser();
+  //   if (!currentUser) this.setState({ redirect: "/" });
+  //   this.setState({ currentUser: currentUser, userReady: true })
+  // }
 
   render() {
     const { currentUser } = this.state;
