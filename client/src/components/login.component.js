@@ -105,7 +105,7 @@ export default class Login extends Component {
             message: resMessage
           });
         } ); }
-
+    
     else {
       this.setState({
         loading: false
