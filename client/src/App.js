@@ -23,9 +23,10 @@ import LtrLieList from "./vault/ltrlie-list.component";
 import LtrLieUpdate from "./vault/ltrlie-update.component";
 
 import Admin from "./view/admin.component";
-import Protected from "./view/Protected";
 
-// import ProtectedRoute from "./view/ProtectedRoute";
+// import Protected from "./view/Protected";
+
+import ProtectedRoute from "./view/ProtectedRoute";
 
 import LieBibleList from "./liebible/liebible-list.component";
 import LieBibleAdd from "./liebible/liebible-add.component";
@@ -62,9 +63,9 @@ class App extends Component {
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
             
             <Route path="/admin" element={
-              <Protected isAuthenticated={true}>
+              <ProtectedRoute isAuthenticated={true}>
               <Admin />
-              </Protected>
+              </ProtectedRoute>
             } />
             
             {/* <ProtectedRoute exact path="/admin" component={Admin} /> */}
