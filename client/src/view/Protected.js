@@ -1,8 +1,8 @@
-import { Navigate } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 const Protected = ({ isAuthenticated, children }) => {
   if (!isAuthenticated) {
-    return <Navigate to="/" replace />;
+    return <Redirect to="/" replace />;
   }
 
   return children;
