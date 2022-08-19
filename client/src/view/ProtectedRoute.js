@@ -11,6 +11,6 @@ export default class ProtectedRoute extends Component {
     return (
         <Route
           render={() => (
-            isAuthenticated ? <Component />
-             : <Redirect to="/" />)} />
+            isAuthenticated ? <Redirect to="/admin" />
+             : <Component />)} />
     ); } }
