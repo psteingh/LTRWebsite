@@ -39,16 +39,10 @@ class App extends Component {
         
         <div className="container mt-3">
           <Switch>
-
+  
             <Route exact path="/" component={Home} />
-            <Route path="/login" component={Login} />
-
-            {/* <ProtectedRoute exact={true} path="/" component={Home} /> */}
+            <Route exact path="/login" component={Login} />
             
-            <ProtectedRoute path="/" component={About} />
-
-            <Route exact path="/admin" component={Admin} /> 
-
             <Route exact path="/lierboard" component={LierBoard} />
             
             <Route exact path="/register" component={Register} />
@@ -64,14 +58,15 @@ class App extends Component {
             <Route exact path="/ltrlies" component={LtrLieList} />
             <Route exact path="/add" component={LtrLieAdd} />
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
-
-            {/* <ProtectedRoute exact={true} path="/admin" component={Admin} /> */}
-            
-            {/* <ProtectedRoute exact path="/admin" component={Admin} /> */}
-            
+ 
             <Route exact path="/liesbible" component={LieBibleList} />
             <Route exact path="/liesbibleadd" component={LieBibleAdd} />
             <Route path="/liesbible/:id" component={LieBibleUpdate} />
+            
+            <ProtectedRoute path="/admin" component={Admin} />
+
+            <ProtectedRoute path="/" component={About} />
+
           </Switch>
         </div>
       
