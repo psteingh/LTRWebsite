@@ -23,6 +23,7 @@ import LtrLieList from "./vault/ltrlie-list.component";
 import LtrLieUpdate from "./vault/ltrlie-update.component";
 
 import Admin from "./view/admin.component";
+
 import ProtectedRoute from "./view/ProtectedRoute";
 
 import LieBibleList from "./liebible/liebible-list.component";
@@ -41,7 +42,7 @@ class App extends Component {
 
             <Route exact path="/" component={Home} />
             <Route exact path="/lierboard" component={LierBoard} />
-            <Route exact path="/login" component={Login} />
+            <Route path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
 
@@ -55,9 +56,11 @@ class App extends Component {
             <Route exact path="/ltrlies" component={LtrLieList} />
             <Route exact path="/add" component={LtrLieAdd} />
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
-            
+
+            <ProtectedRoute exact={true} path="/" component={About} />
             <ProtectedRoute path="/admin" component={Admin} />
-                        
+            <ProtectedRoute component={About} />
+            
             <Route exact path="/liesbible" component={LieBibleList} />
             <Route exact path="/liesbibleadd" component={LieBibleAdd} />
             <Route path="/liesbible/:id" component={LieBibleUpdate} />
