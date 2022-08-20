@@ -41,8 +41,16 @@ class App extends Component {
           <Switch>
 
             <Route exact path="/" component={Home} />
-            <Route exact path="/lierboard" component={LierBoard} />
             <Route path="/login" component={Login} />
+
+            {/* <ProtectedRoute exact={true} path="/" component={Home} /> */}
+            
+            <ProtectedRoute path="/" component={About} />
+
+            <Route exact path="/admin" component={Admin} /> 
+
+            <Route exact path="/lierboard" component={LierBoard} />
+            
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
 
@@ -57,9 +65,9 @@ class App extends Component {
             <Route exact path="/add" component={LtrLieAdd} />
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
 
-            <ProtectedRoute exact={true} path="/" component={About} />
-            <ProtectedRoute path="/admin" component={Admin} />
-            <ProtectedRoute component={About} />
+            {/* <ProtectedRoute exact={true} path="/admin" component={Admin} /> */}
+            
+            {/* <ProtectedRoute exact path="/admin" component={Admin} /> */}
             
             <Route exact path="/liesbible" component={LieBibleList} />
             <Route exact path="/liesbibleadd" component={LieBibleAdd} />
