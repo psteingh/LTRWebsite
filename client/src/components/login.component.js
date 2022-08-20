@@ -29,8 +29,8 @@ const password = value => {
   }
 };
 
-const isAuthenticated = localStorage.getItem("isAuthenticated");
-console.log("login.component.js, before Login:", isAuthenticated);
+// const isAuthenticated = localStorage.getItem("isAuthenticated");
+// console.log("login.component.js, before Login:", isAuthenticated);
 
 export default class Login extends Component {
   constructor(props) {
@@ -77,7 +77,7 @@ export default class Login extends Component {
             this.state.password,
             ).then(
             () => {
-          localStorage.setItem("isAuthenticated", "true");
+          // localStorage.setItem("isAuthenticated", "true");
           this.props.history.push("/admin");
           window.location.reload();
         } ); }
@@ -89,7 +89,7 @@ export default class Login extends Component {
         this.state.currentUser,
         ).then(
         () => {
-          localStorage.setItem("isAuthenticated", "false");
+          // localStorage.setItem("isAuthenticated", "false");
           this.props.history.push("/ltrlies");
           window.location.reload();
         },
