@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-// import Admin from "./admin.component";
 
 export default class ProtectedRoute extends Component {
   
