@@ -22,7 +22,7 @@ import LtrLieAdd from "./vault/ltrlie-add.component";
 import LtrLieList from "./vault/ltrlie-list.component";
 import LtrLieUpdate from "./vault/ltrlie-update.component";
 
-import Admin from "./view/admin.component";
+// import Admin from "./view/admin.component";
 
 import ProtectedRoute from "./view/ProtectedRoute";
 
@@ -63,7 +63,7 @@ class App extends Component {
             <Route exact path="/liesbibleadd" component={LieBibleAdd} />
             <Route path="/liesbible/:id" component={LieBibleUpdate} />
             
-            <ProtectedRoute exact path="/admin" component={Admin} />
+            {/* <ProtectedRoute path="/admin" component={Admin} /> */}
 
             <ProtectedRoute path="/" component={About} />
 
