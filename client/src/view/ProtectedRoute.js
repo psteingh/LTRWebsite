@@ -12,6 +12,6 @@ export default class ProtectedRoute extends Component {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
   console.log("ProtectedRoute.js isAuthenticated:", isAuthenticated);
 
-  return ( !isAuthenticated ? ( <Contact /> ) : (
+  return ( isAuthenticated ? ( <Contact /> ) : (
       <Admin /> ))
 } }
