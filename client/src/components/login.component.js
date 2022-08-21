@@ -45,6 +45,7 @@ export default class Login extends Component {
       currentUser: AuthService.getCurrentUser(),
       loading: false,
       message: "",
+      isAuthenticated: false,
     };
   }
 
