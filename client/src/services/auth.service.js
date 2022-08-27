@@ -13,16 +13,12 @@ class AuthService {
           TokenService.setUser(response.data);
         }
 
-        // if (response.data.accessToken) {
-        //   TokenService.setAuthenticate(response.data); }
-
         return response.data;
       });
   }
 
   logout() {
     TokenService.removeUser();
-    localStorage.clear();
   }
 
   register(email, password) {
@@ -35,9 +31,6 @@ class AuthService {
   getCurrentUser() {
     return TokenService.getUser();
   }
-
-  // getCurrentAuthenticate() {
-  //   return TokenService.getAuthenticate(); }
 
 }
 
