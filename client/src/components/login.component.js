@@ -70,26 +70,26 @@ export default class Login extends Component {
 
     this.form.validateAll();
 
-    if (this.state.email === "admin@email.com" &&
-       this.state.password === "654321ad") {
-          AuthService.login(
-            this.state.email,
-            this.state.password,
-            ).then(
-            () => {
-          localStorage.setItem("isAuthenticated", "true");
-          this.props.history.push("/admin");
-          window.location.reload();
-        } ); }
+    // if (this.state.email === "admin@email.com" &&
+    //    this.state.password === "654321ad") {
+    //       AuthService.login(
+    //         this.state.email,
+    //         this.state.password,
+    //         ).then(
+    //         () => {
+    //       localStorage.setItem("isAuthenticated", "true");
+    //       this.props.history.push("/admin");
+    //       window.location.reload();
+    //     } ); }
 
-    else if (this.checkBtn.context._errors.length === 0) {
+    if (this.checkBtn.context._errors.length === 0) {
       AuthService.login(
         this.state.email,
         this.state.password,
         this.state.currentUser,
         ).then(
         () => {
-          localStorage.setItem("isAuthenticated", "false");
+          // localStorage.setItem("isAuthenticated", "false");
           this.props.history.push("/ltrlies");
           window.location.reload();
         },
