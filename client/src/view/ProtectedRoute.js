@@ -1,18 +1,21 @@
-import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
+import AuthService from "../services/auth.service";
+// import Admin from "../view/admin.component";
+// import Contact from "../home/contact";
 
-function ProtectedRoute({ component: Component, ...restOfProps }) {
-  const isAuthenticated = localStorage.getItem("isAuthenticated");
-  console.log("this", isAuthenticated);
+export default class ProtectedRoute extends Component {
+  render() {
 
-  return (
-    <Route
-      {...restOfProps}
-      render={(props) =>
-        isAuthenticated ? <Component {...props} /> : <Redirect to="/login" />
-      }
-    />
-  );
-}
+  const Test = this.props.component;
+  // console.log("ProtectedRoute.js Component:", Component);
 
-export default ProtectedRoute;
+  const isAuthenticated = AuthService.getCurrentUser;
+
+  // const isAuthenticated = localStorage.getItem("isAuthenticated");
+  console.log("ProtectedRoute.js isAuthenticated:", isAuthenticated);
+
+
+  return isAuthenticated ? ( <Test /> ) : (
+      <Redirect to={"/login"} /> );
+} }
