@@ -63,6 +63,8 @@ class App extends Component {
             <Route exact path="/liesbibleadd" component={LieBibleAdd} />
             <Route path="/liesbible/:id" component={LieBibleUpdate} />
             
+            {/* <Route exact path="/admin" component={Admin} /> */}
+
             <ProtectedRoute exact path="/" component={About} />
 
           </Switch>
