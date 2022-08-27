@@ -77,7 +77,7 @@ export default class Login extends Component {
     //         this.state.password,
     //         ).then(
     //         () => {
-    //       localStorage.setItem("isAuthenticated", "true");
+    //       // localStorage.setItem("isAuthenticated", "true");
     //       this.props.history.push("/admin");
     //       window.location.reload();
     //     } ); }

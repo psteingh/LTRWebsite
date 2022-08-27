@@ -30,14 +30,12 @@ class TokenService {
     }
 
     // Authenticate - setItem
-    setAuthenticate() {
-      localStorage.setItem("isAuthenticated", "true");
-    }
+    // setAuthenticate() {
+    //   localStorage.setItem("isAuthenticated", "true"); }
 
     // Authenticate - getItem
-    getAuthenticate() {
-      return JSON.parse(localStorage.getItem("isAuthenticated"));
-    }
+    // getAuthenticate() {
+    //   return JSON.parse(localStorage.getItem("isAuthenticated")); }
 
     // Logout    
     removeUser() {

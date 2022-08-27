@@ -13,9 +13,8 @@ class AuthService {
           TokenService.setUser(response.data);
         }
 
-        if (response.data.accessToken) {
-          TokenService.setAuthenticate(response.data);
-        }
+        // if (response.data.accessToken) {
+        //   TokenService.setAuthenticate(response.data); }
 
         return response.data;
       });
@@ -37,9 +36,8 @@ class AuthService {
     return TokenService.getUser();
   }
 
-  getCurrentAuthenticate() {
-    return TokenService.getAuthenticate();
-  }
+  // getCurrentAuthenticate() {
+  //   return TokenService.getAuthenticate(); }
 
 }
 
