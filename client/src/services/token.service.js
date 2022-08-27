@@ -32,6 +32,7 @@ class TokenService {
     // Logout    
     removeUser() {
       localStorage.removeItem("user");
+      localStorage.clear();
     }
   }
   
