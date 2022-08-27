@@ -17,5 +17,5 @@ export default class ProtectedRoute extends Component {
   console.log("ProtectedRoute.js isAuthenticated:", isAuthenticated);
 
   return isAuthenticated ? ( <Test /> ) : (
-      <Redirect to={"/login"} /> );
+      <Redirect to={"/about"} /> );
 } }
