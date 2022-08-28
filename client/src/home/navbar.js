@@ -48,7 +48,7 @@ render() {
     console.log("navbar.js isAuthenticated:", isAuthenticated);
 
     return (
-        <div>
+      <div>
         <nav className="dblue navbar navbar-expand navbar-dark">
           
           <Link to={"/"} className="navbar-brand">
@@ -107,7 +107,7 @@ render() {
           )}
           
         </nav>
-    </div>
+      </div>
     );
 }
 }
