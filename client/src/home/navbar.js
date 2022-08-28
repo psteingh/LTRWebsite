@@ -66,6 +66,22 @@ render() {
           <Link to={"/aboutlies"} className="navbar-mid">
           About Lies
           </Link>
+
+          {isAuthenticated ? (
+            <div className="navbar-nav ml-auto">
+            
+            <li className="nav-item">
+              <Link to={"/admin"} className="nav-link">
+                Admin Page
+              </Link>
+            </li>
+            </div>
+          ) : (
+            <div className="navbar-nav ml-auto">
+            <li className="nav-item">
+            </li>
+            </div>
+          )}
           
           {currentUser ? (
             <div className="navbar-nav ml-auto">
@@ -75,12 +91,6 @@ render() {
                 List of Lies
               </Link>
             </li>
-
-            {/* <li className="nav-item">
-              <Link to={"/admin"} className="nav-link">
-                Admin Page
-              </Link>
-            </li> */}
 
             <li className="nav-item">
               <a href="/login" className="nav-link" onClick={this.logOut}>
@@ -103,26 +113,6 @@ render() {
                   Sign Up
                 </Link>
               </li>
-            </div>
-          )}
-
-          {isAuthenticated ? (
-            <div className="navbar-nav ml-auto">
-            
-            <li className="nav-item">
-              <Link to={"/admin"} className="nav-link">
-                Admin Page
-              </Link>
-            </li>
-            </div>
-          ) : (
-            <div className="navbar-nav ml-auto">
-            
-            <li className="nav-item">
-              <Link to={"/"} className="nav-link">
-                X
-              </Link>
-            </li>
             </div>
           )}
 
