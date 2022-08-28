@@ -105,7 +105,27 @@ render() {
               </li>
             </div>
           )}
-          
+
+          {isAuthenticated ? (
+            <div className="navbar-nav ml-auto">
+            
+            <li className="nav-item">
+              <Link to={"/admin"} className="nav-link">
+                Admin Page
+              </Link>
+            </li>
+            </div>
+          ) : (
+            <div className="navbar-nav ml-auto">
+            
+            <li className="nav-item">
+              <Link to={"/"} className="nav-link">
+                X
+              </Link>
+            </li>
+            </div>
+          )}
+
         </nav>
       </div>
     );
