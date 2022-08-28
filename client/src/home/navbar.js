@@ -44,6 +44,9 @@ class Navbar extends Component {
 render() {
     const { currentUser } = this.state;
 
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+    console.log("navbar.js isAuthenticated:", isAuthenticated);
+
     return (
         <div>
         <nav className="dblue navbar navbar-expand navbar-dark">
@@ -73,11 +76,11 @@ render() {
               </Link>
             </li>
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to={"/admin"} className="nav-link">
                 Admin Page
               </Link>
-            </li>
+            </li> */}
 
             <li className="nav-item">
               <a href="/login" className="nav-link" onClick={this.logOut}>
@@ -85,6 +88,7 @@ render() {
               </a>
             </li>
             </div>
+
           ) : (
             <div className="navbar-nav ml-auto navbar-logsign">
             
@@ -101,6 +105,7 @@ render() {
               </li>
             </div>
           )}
+          
         </nav>
     </div>
     );
