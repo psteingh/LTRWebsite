@@ -43,10 +43,8 @@ class Navbar extends Component {
 
 render() {
     const { currentUser } = this.state;
-
     const isAuthenticated = localStorage.getItem("isAuthenticated");
-    console.log("navbar.js isAuthenticated:", isAuthenticated);
-
+    
     return (
       <div>
         <nav className="dblue navbar navbar-expand navbar-dark">

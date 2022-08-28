@@ -196,12 +196,6 @@ export default class LtrLieList extends Component {
           )}
         </div>
 
-        <p><button
-            className="submit-button">
-            <Link to={"/admin"}>
-              Admin Test only</Link>
-          </button></p>
-
       </div>
     );
   }

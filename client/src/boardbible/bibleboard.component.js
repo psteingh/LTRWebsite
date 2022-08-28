@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import BibleBoardService from "../services/bibleboard.service";
 import UserService from "../services/user.service";
 
@@ -102,13 +101,6 @@ export default class BibleBoard extends Component {
               </li>
               ))}
           </ul>
-
-          <p><button
-            className="submit-button">
-            <Link to={"/admin"}>
-            Back to admin</Link>
-          </button></p>
-
 
     </div>
     );

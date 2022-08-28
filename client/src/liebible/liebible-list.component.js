@@ -155,12 +155,6 @@ export default class LieBibleList extends Component {
               List of Biblical Lies
           </button></p>
 
-          <p><button
-            className="submit-button">
-            <Link to={"/admin"}>
-            Back to admin</Link>
-          </button></p>
-
         </div>
 
         <div className="col-md-6">
