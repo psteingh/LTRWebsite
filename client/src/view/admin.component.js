@@ -16,14 +16,14 @@ export default class Admin extends Component {
   }
 
   render() {
-    // const { currentUser } = this.state;
+    const { currentUser } = this.state;
 
     return (
       <div className="container">
 
         <h3>Admin component</h3>
         
-        {/* <p>Email:{" "}{currentUser.email}</p> */}
+        <p>Email:{" "}{currentUser.email}</p>
 
           <p><button
             className="submit-button">
