@@ -78,7 +78,6 @@ export default class Login extends Component {
             ).then(
             () => {
           localStorage.setItem("isAuthenticated", "true");
-          console.log(process.env.REACT_APP_EMAIL);
           this.props.history.push("/admin");
           window.location.reload();
         } ); }
