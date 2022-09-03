@@ -9,8 +9,8 @@ import AuthService from "../services/auth.service";
 
 import FooterSmall from "../home/footersmall";
 
-const adminEmail = process.env.local.REACT_APP_EMAIL
-const adminPassword = process.env.local.REACT_APP_PASSWORD
+const adminEmail = process.env.REACT_APP_EMAIL
+const adminPassword = process.env.REACT_APP_PASSWORD
 
 const email = value => {
   if (!isEmail(value)) {
