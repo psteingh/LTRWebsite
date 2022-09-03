@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import AuthService from "../services/auth.service";
 
-import Footer from "../home/footer";
-
 export default class Admin extends Component {
   constructor(props) {
     super(props);
@@ -30,8 +28,7 @@ export default class Admin extends Component {
             <Link to={"/liesbible"}>
             List of Biblical Lies </Link>
           </button></p>
-
-        <Footer />
+      
       </div>
     );
   }
