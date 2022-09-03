@@ -75,21 +75,9 @@ export default class BibleBoard extends Component {
       <LiesNavBar />
       <LiesBibleTop />
 
-        {/* hard coded - to be deleted */}
         <ul className="board-group">
-          <li className="board-group-item">
-            <div className="lies-title">
-              Revelation 14:5</div>
-            <div className="lies-mid">
-              No lie was found in their mouths;</div>
-            <div className="lies-bottom">
-              they are blameless.</div>
-          </li>
-        </ul>
-
-          <ul className="board-group">
-            {liesbible &&
-              liesbible.map((liebible, index) => (
+          {liesbible &&
+            liesbible.map((liebible, index) => (
               <li className="board-group-item" key={index}>
                 
                 <div className="lies-title">{liebible.title}</div>
@@ -100,7 +88,7 @@ export default class BibleBoard extends Component {
                 
               </li>
               ))}
-          </ul>
+        </ul>
 
     </div>
     );
