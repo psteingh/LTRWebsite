@@ -9,6 +9,9 @@ import AuthService from "../services/auth.service";
 
 import FooterSmall from "../home/footersmall";
 
+const adminEmail = process.env.local.REACT_APP_EMAIL
+const adminPassword = process.env.local.REACT_APP_PASSWORD
+
 const email = value => {
   if (!isEmail(value)) {
     return (
@@ -67,14 +70,15 @@ export default class Login extends Component {
 
     this.form.validateAll();
 
-    if (this.state.email === "admin@email.com" &&
-       this.state.password === "654321ad") {
+    if (this.state.email === adminEmail &&
+       this.state.password === adminPassword) {
           AuthService.login(
             this.state.email,
             this.state.password,
             ).then(
             () => {
           localStorage.setItem("isAuthenticated", "true");
+          console.log(process.env.local.REACT_APP_EMAIL);
           this.props.history.push("/admin");
           window.location.reload();
         } ); }
