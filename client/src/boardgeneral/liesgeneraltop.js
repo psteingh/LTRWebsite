@@ -4,17 +4,18 @@ function LiesGeneralTop(){
   return(
   <div>
   <div className="boardtop-container">
-    <div className="lies-title">
+    <div className="board-title">
     Examples of Lies in general
     </div>
-    <div className="lies-mid">
+    <div className="board-mid">
     This section is for understanding the basics of lies that you come across in daily life
     </div>
-    <div className="lies-bottom">
+    <div className="board-bottom">
     There are 5 main demographic segments of lies;
       age, gender, occupation, cultural background, family status
     </div>
   </div>
+
 
   <div className="board-group-item">
     <div className="lies-title">
