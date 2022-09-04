@@ -2,7 +2,6 @@ import React from "react";
 
 function LiesGeneralTop(){
   return(
-  <div>
   <div className="boardtop-container">
     <div className="board-title">
     Examples of Lies in general
@@ -16,57 +15,6 @@ function LiesGeneralTop(){
     </div>
   </div>
 
-
-  <div className="board-group-item">
-    <div className="lies-title">
-    Slang, Colloquialisms, Idioms, Jargon
-    </div>
-    <div className="lies-mid">
-    Saying the opposite of what was previously said
-    </div>
-    <div className="lies-bottom">
-    "walks back"
-    </div>
-  </div>
-
-  <div className="board-group-item">
-    <div className="lies-title">
-    Gender Lies
-    </div>
-    <div className="lies-mid">
-    Female
-    </div>
-    <div className="lies-bottom">
-    Women who are 40, but say they are 30
-    </div>
-  </div>
-
-  <div className="board-group-item">
-    <div className="lies-title">
-    Gender Lies
-    </div>
-    <div className="lies-mid">
-    Male
-    </div>
-    <div className="lies-bottom">
-    "I am the manager of the company"
-    </div>
-  </div>
-
-  <div className="board-group-item">
-    <div className="lies-title">
-    Lies that have good intentions
-    </div>
-    <div className="lies-mid">
-    When someone is dying
-    </div>
-    <div className="lies-bottom">
-    "you will be OK"
-    </div>
-  </div>
-  
-  </div>
-  
   );
 }
 
