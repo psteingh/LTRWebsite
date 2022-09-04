@@ -16,4 +16,7 @@ db.ltrlies = require("./ltrlie.model");
 // LieBible
 db.liesbible = require("./liebible.model");
 
+// LieGeneral
+db.liesgeneral = require("./liegeneral.model");
+
 module.exports = db;

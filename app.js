@@ -41,8 +41,10 @@ require("./routes/ltrlie.routes")(app);
 require("./routes/lierboard.routes")(app);
 
 require("./routes/liebible.routes")(app);
-
 require("./routes/bibleboard.routes")(app);
+
+require("./routes/liegeneral.routes")(app);
+require("./routes/generalboard.routes")(app);
 
 // for build
 app.use(express.static("public"));

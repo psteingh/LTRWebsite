@@ -16,7 +16,7 @@ render() {
           About Lies
           </Link>
 
-          <Link to={"/liesgeneral"}>
+          <Link to={"/generalboard"}>
           General
           </Link>
 

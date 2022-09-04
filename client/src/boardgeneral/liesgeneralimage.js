@@ -1,7 +1,7 @@
 import React from "react";
 import ltrliestruth from "../images/ltrliestruth.png"
 
-function LiesGeneralTop(){
+function LiesGeneralImage(){
     return(
         <div className="liestop-container">
           <img className="liesab-image" src={ltrliestruth} alt="LTR Lies Truth" />  
@@ -14,4 +14,4 @@ function LiesGeneralTop(){
     );
 }
     
-export default LiesGeneralTop;
+export default LiesGeneralImage;

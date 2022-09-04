@@ -1,6 +1,6 @@
 import React from "react";
 
-function LiesGeneral(){
+function LiesGeneralTop(){
   return(
   <div>
   <div className="boardtop-container">
@@ -69,4 +69,4 @@ function LiesGeneral(){
   );
 }
 
-export default LiesGeneral;
+export default LiesGeneralTop;

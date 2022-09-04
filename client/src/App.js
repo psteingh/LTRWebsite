@@ -14,7 +14,10 @@ import Contact from "./home/contact";
 import About from "./about/about.component";
 import Lies from "./aboutlies/lies.component";
 
-import LiesGeneral from "./liesgeneral/liesgeneral.component";
+import Admin from "./view/admin.component";
+import ProtectedRoute from "./view/ProtectedRoute";
+
+import GeneralBoard from "./boardgeneral/generalboard.component";
 import BibleBoard from "./boardbible/bibleboard.component";
 import LiesMedia from "./liesmedia/liesmedia.component";
 
@@ -22,12 +25,13 @@ import LtrLieAdd from "./vault/ltrlie-add.component";
 import LtrLieList from "./vault/ltrlie-list.component";
 import LtrLieUpdate from "./vault/ltrlie-update.component";
 
-import Admin from "./view/admin.component";
-import ProtectedRoute from "./view/ProtectedRoute";
-
 import LieBibleList from "./liebible/liebible-list.component";
 import LieBibleAdd from "./liebible/liebible-add.component";
 import LieBibleUpdate from "./liebible/liebible-update.component";
+
+import LieGeneralList from "./liegeneral/liegeneral-list.component";
+import LieGeneralAdd from "./liegeneral/liegeneral-add.component";
+import LieGeneralUpdate from "./liegeneral/liegeneral-update.component";
 
 class App extends Component {
   render() {
@@ -51,7 +55,7 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/aboutlies" component={Lies} />
 
-            <Route exact path="/liesgeneral" component={LiesGeneral} />
+            <Route exact path="/generalboard" component={GeneralBoard} />
             <Route exact path="/bibleboard" component={BibleBoard} />
             <Route exact path="/liesmedia" component={LiesMedia} />
 
@@ -63,6 +67,10 @@ class App extends Component {
             <Route exact path="/liesbibleadd" component={LieBibleAdd} />
             <Route path="/liesbible/:id" component={LieBibleUpdate} />
 
+            <Route exact path="/liesgeneral" component={LieGeneralList} />
+            <Route exact path="/liesgeneraladd" component={LieGeneralAdd} />
+            <Route path="/liesgeneral/:id" component={LieGeneralUpdate} />
+            
             <ProtectedRoute exact={true} path="/" component={Admin} />
             <ProtectedRoute component={Admin} />
 

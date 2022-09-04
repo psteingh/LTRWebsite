@@ -1,11 +1,11 @@
 const db = require("../models");
-const LieBible = db.liesbible;
+const LieGeneral = db.liesgeneral;
 
-// Retrieve and Sort all published Bible Lies
+// Retrieve and Sort all published General Lies
 exports.findAllPublished = (req, res) => {
   const arr = { name: 1 };
 
-  LieBible.find({published: true})
+  LieGeneral.find({published: true})
     .sort(arr)
     .then(data => {
     res.send(data);
@@ -14,7 +14,7 @@ exports.findAllPublished = (req, res) => {
   .catch(err => {
     res.status(500).send({
       message:
-        err.message || "Some error occurred while retrieving bible lies."
+        err.message || "Some error occurred while retrieving general lies."
       });
   });
 };
