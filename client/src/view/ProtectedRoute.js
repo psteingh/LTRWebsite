@@ -7,7 +7,6 @@ export default class ProtectedRoute extends Component {
   const Test = this.props.component;
 
   const isAuthenticated = localStorage.getItem("isAuthenticated");
-  console.log("ProtectedRoute.js isAuthenticated:", isAuthenticated);
 
   return isAuthenticated ? ( <Test /> ) : (
       <Redirect to={"/about"} /> );
