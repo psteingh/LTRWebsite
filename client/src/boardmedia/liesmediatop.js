@@ -1,6 +1,6 @@
 import React from "react";
 
-function LiesMedia(){
+function LiesMediaTop(){
   return(
   <div>
   <div className="boardtop-container">
@@ -44,4 +44,4 @@ function LiesMedia(){
   );
 }
 
-export default LiesMedia;
+export default LiesMediaTop;

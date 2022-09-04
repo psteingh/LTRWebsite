@@ -1,7 +1,7 @@
 import React from "react";
 import ltrmedia from "../images/ltrmedia.png";
 
-function LiesMediaTop(){
+function LiesMediaImage(){
     return(
         <div className="liestop-container">
           <img className="liesab-image" src={ltrmedia} alt="LTR Media" />  
@@ -14,4 +14,4 @@ function LiesMediaTop(){
     );
 }
     
-export default LiesMediaTop;
+export default LiesMediaImage;

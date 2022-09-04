@@ -19,7 +19,7 @@ import ProtectedRoute from "./view/ProtectedRoute";
 
 import GeneralBoard from "./boardgeneral/generalboard.component";
 import BibleBoard from "./boardbible/bibleboard.component";
-import LiesMedia from "./liesmedia/liesmedia.component";
+import MediaBoard from "./boardmedia/mediaboard.component";
 
 import LtrLieAdd from "./vault/ltrlie-add.component";
 import LtrLieList from "./vault/ltrlie-list.component";
@@ -32,6 +32,10 @@ import LieBibleUpdate from "./liebible/liebible-update.component";
 import LieGeneralList from "./liegeneral/liegeneral-list.component";
 import LieGeneralAdd from "./liegeneral/liegeneral-add.component";
 import LieGeneralUpdate from "./liegeneral/liegeneral-update.component";
+
+import LieMediaList from "./liemedia/liemedia-list.component";
+import LieMediaAdd from "./liemedia/liemedia-add.component";
+import LieMediaUpdate from "./liemedia/liemedia-update.component";
 
 class App extends Component {
   render() {
@@ -57,7 +61,7 @@ class App extends Component {
 
             <Route exact path="/generalboard" component={GeneralBoard} />
             <Route exact path="/bibleboard" component={BibleBoard} />
-            <Route exact path="/liesmedia" component={LiesMedia} />
+            <Route exact path="/mediaboard" component={MediaBoard} />
 
             <Route exact path="/ltrlies" component={LtrLieList} />
             <Route exact path="/add" component={LtrLieAdd} />
@@ -70,6 +74,10 @@ class App extends Component {
             <Route exact path="/liesgeneral" component={LieGeneralList} />
             <Route exact path="/liesgeneraladd" component={LieGeneralAdd} />
             <Route path="/liesgeneral/:id" component={LieGeneralUpdate} />
+            
+            <Route exact path="/liesmedia" component={LieMediaList} />
+            <Route exact path="/liesmediaadd" component={LieMediaAdd} />
+            <Route path="/liesmedia/:id" component={LieMediaUpdate} />
             
             <ProtectedRoute exact={true} path="/" component={Admin} />
             <ProtectedRoute component={Admin} />

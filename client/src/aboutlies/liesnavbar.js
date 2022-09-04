@@ -24,7 +24,7 @@ render() {
           Bible
           </Link>
 
-          <Link to={"/liesmedia"}>
+          <Link to={"/mediaboard"}>
           Media
           </Link>
 

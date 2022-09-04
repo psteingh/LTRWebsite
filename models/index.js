@@ -19,4 +19,7 @@ db.liesbible = require("./liebible.model");
 // LieGeneral
 db.liesgeneral = require("./liegeneral.model");
 
+// LieMedia
+db.liesmedia = require("./liemedia.model");
+
 module.exports = db;

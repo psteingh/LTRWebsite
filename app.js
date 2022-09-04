@@ -46,6 +46,9 @@ require("./routes/bibleboard.routes")(app);
 require("./routes/liegeneral.routes")(app);
 require("./routes/generalboard.routes")(app);
 
+require("./routes/liemedia.routes")(app);
+require("./routes/mediaboard.routes")(app);
+
 // for build
 app.use(express.static("public"));
 
