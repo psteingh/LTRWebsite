@@ -25,7 +25,7 @@ export default class Admin extends Component {
 
           <p><button
             className="submit-button">
-            <Link to={"/liesgenral"}>
+            <Link to={"/liesgeneral"}>
             List of General Lies </Link>
           </button></p>
 
