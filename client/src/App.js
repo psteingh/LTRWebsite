@@ -12,7 +12,8 @@ import Navbar from "./home/navbar";
 import Contact from "./home/contact";
 
 import About from "./about/about.component";
-import Lies from "./aboutlies/lies.component";
+
+// import Lies from "./aboutlies/lies.component";
 
 import Admin from "./view/admin.component";
 import ProtectedRoute from "./view/ProtectedRoute";
@@ -62,7 +63,8 @@ class App extends Component {
             <Route exact path="/contact" component={Contact} />
 
             <Route exact path="/about" component={About} />
-            <Route exact path="/aboutlies" component={Lies} />
+            
+            {/* <Route exact path="/aboutlies" component={Lies} /> */}
 
             <Route exact path="/aboutliesboard" component={AboutLiesBoard} />
             <Route exact path="/generalboard" component={GeneralBoard} />
