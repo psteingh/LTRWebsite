@@ -12,13 +12,12 @@ import Navbar from "./home/navbar";
 import Contact from "./home/contact";
 
 import About from "./about/about.component";
-
+import AboutLiesBoard from "./boardaboutlies/aboutliesboard.component";
 // import Lies from "./aboutlies/lies.component";
 
 import Admin from "./view/admin.component";
 import ProtectedRoute from "./view/ProtectedRoute";
 
-import AboutLiesBoard from "./boardaboutlies/aboutliesboard.component";
 import GeneralBoard from "./boardgeneral/generalboard.component";
 import BibleBoard from "./boardbible/bibleboard.component";
 import MediaBoard from "./boardmedia/mediaboard.component";
