@@ -3,7 +3,7 @@ import BibleBoardService from "../services/bibleboard.service";
 import UserService from "../services/user.service";
 
 import LiesBibleImage from "./liesbibleimage";
-import LiesNavBar from "../aboutlies/liesnavbar";
+import AboutLiesNavBar from "../boardaboutlies/aboutliesnavbar";
 import LiesBibleTop from "./liesbibletop";
 
 export default class BibleBoard extends Component {
@@ -72,7 +72,7 @@ export default class BibleBoard extends Component {
     return (
     <div className="container">
       <LiesBibleImage />
-      <LiesNavBar />
+      <AboutLiesNavBar />
       <LiesBibleTop />
 
         <ul className="board-group">

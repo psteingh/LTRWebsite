@@ -3,7 +3,7 @@ import GeneralBoardService from "../services/generalboard.service";
 import UserService from "../services/user.service";
 
 import LiesGeneralImage from "./liesgeneralimage";
-import LiesNavBar from "../aboutlies/liesnavbar";
+import AboutLiesNavBar from "../boardaboutlies/aboutliesnavbar";
 import LiesGeneralTop from "./liesgeneraltop";
 
 export default class GeneralBoard extends Component {
@@ -72,7 +72,7 @@ export default class GeneralBoard extends Component {
     return (
       <div className="container">
         <LiesGeneralImage />
-        <LiesNavBar />
+        <AboutLiesNavBar />
         <LiesGeneralTop />
 
         <ul className="board-group">

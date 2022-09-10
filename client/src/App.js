@@ -17,6 +17,7 @@ import Lies from "./aboutlies/lies.component";
 import Admin from "./view/admin.component";
 import ProtectedRoute from "./view/ProtectedRoute";
 
+import AboutLiesBoard from "./boardaboutlies/aboutliesboard.component";
 import GeneralBoard from "./boardgeneral/generalboard.component";
 import BibleBoard from "./boardbible/bibleboard.component";
 import MediaBoard from "./boardmedia/mediaboard.component";
@@ -63,6 +64,7 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/aboutlies" component={Lies} />
 
+            <Route exact path="/aboutliesboard" component={AboutLiesBoard} />
             <Route exact path="/generalboard" component={GeneralBoard} />
             <Route exact path="/bibleboard" component={BibleBoard} />
             <Route exact path="/mediaboard" component={MediaBoard} />

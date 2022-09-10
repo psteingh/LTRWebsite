@@ -3,7 +3,7 @@ import MediaBoardService from "../services/mediaboard.service";
 import UserService from "../services/user.service";
 
 import LiesMediaImage from "./liesmediaimage";
-import LiesNavBar from "../aboutlies/liesnavbar";
+import AboutLiesNavBar from "../boardaboutlies/aboutliesnavbar";
 import LiesMediaTop from "./liesmediatop";
 
 export default class LiesMediaComponent extends Component {
@@ -72,7 +72,7 @@ export default class LiesMediaComponent extends Component {
     return (
       <div className="container">
         <LiesMediaImage />
-        <LiesNavBar />
+        <AboutLiesNavBar />
         <LiesMediaTop />
 
         <ul className="board-group">

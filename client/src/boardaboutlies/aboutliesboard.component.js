@@ -6,7 +6,7 @@ import AboutLiesImage from "./aboutliesimage";
 import AboutLiesNavBar from "./aboutliesnavbar";
 import AboutLiesTop from "./aboutliestop";
 
-export default class AboutLies extends Component {
+export default class AboutLiesComponent extends Component {
   constructor(props) {
     super(props);
     this.retrievePublishedAboutLies = this.retrievePublishedAboutLies.bind(this);
@@ -60,19 +60,36 @@ export default class AboutLies extends Component {
     });
   }
 
-  setActiveLieMedia(index) {
+  setActiveAboutLies(index) {
     this.setState({
       currentIndex: index,
     });
   }
 
-
   render() {
+    const { aboutlies } = this.state;
+
     return (
       <div className="container">
         <AboutLiesImage />
         <AboutLiesNavBar />
         <AboutLiesTop />
+
+        <ul className="board-group">
+          {aboutlies &&
+            aboutlies.map((aboutlies, index) => (
+              <li className="board-group-item" key={index}>
+                
+                <div className="lies-title">{aboutlies.title}</div>
+
+                <div className="lies-mid">{aboutlies.middle}</div>
+                
+                <div className="lies-bottom">{aboutlies.bottom}</div>
+                
+              </li>
+              ))}
+        </ul>
+
       </div>
     );
   }
