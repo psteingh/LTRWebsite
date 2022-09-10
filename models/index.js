@@ -13,6 +13,9 @@ db.refreshToken = require("./refreshToken.model");
 // LtrLie
 db.ltrlies = require("./ltrlie.model");
 
+// AboutLies
+db.aboutlies = require("./aboutlies.model");
+
 // LieBible
 db.liesbible = require("./liebible.model");
 

@@ -1,7 +1,7 @@
 const db = require("../models");
-const { liesmedia: LieMedia, user: User } = db;
+const { aboutlies: AboutLies, user: User } = db;
 
-// Create and Save a new LieMedia
+// Create and Save a new AboutLies
 exports.create = (req, res) => {
   // Validate request
   if (!req.body.title) {
@@ -9,8 +9,8 @@ exports.create = (req, res) => {
     return;
   }
 
-  // Create a LieMedia
-  const liemedia = new LieMedia({
+  // Create an AboutLies
+  const aboutlies = new AboutLies({
     title: req.body.title,
     middle: req.body.middle,
     bottom: req.body.bottom,
@@ -18,20 +18,20 @@ exports.create = (req, res) => {
     published: req.body.published ? req.body.published : false
   });
   
-  // Save a LieMedia
-  liemedia.save(liemedia)
+  // Save an AboutLies
+  aboutlies.save(aboutlies)
     .then(data => {
       res.send(data);
     })
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while creating the Media Lie"
+          err.message || "Some error occurred while creating the About Lies"
       });
     });
 };
 
-// Retrieve and Sort all LieMedias
+// Retrieve and Sort all AboutLies
 exports.findAll = (req, res) => {
   const arr = { title: 1};
   const currentUser = req.userId;
@@ -40,7 +40,7 @@ exports.findAll = (req, res) => {
           {title: {$regex: new RegExp(title), $options: "i"}},
           {currentUser} ]};
 
-      LieMedia.find(condition)
+      AboutLies.find(condition)
   .sort(arr)
   .then(data => {
     res.send(data);
@@ -48,12 +48,12 @@ exports.findAll = (req, res) => {
   .catch(err => {
     res.status(500).send({
       message:
-        err.message || "Some error occurred while retrieving all media lies."
+        err.message || "Some error occurred while retrieving all about lies."
     });
   });
 };
 
-// Update a LieMedia with id
+// Update an AboutLies with id
 exports.update = (req, res) => {
   if (!req.body) {
       return res.status(400).send({
@@ -62,57 +62,57 @@ exports.update = (req, res) => {
     }
   const id = req.params.id;
   
-  LieMedia.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+  AboutLies.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
       .then(data => {
         if (!data) {
           res.status(404).send({
-            message: `Cannot update Media Lie with id=${id}. Maybe Media Lie was not found`
+            message: `Cannot update About Lies with id=${id}. Maybe About Lie was not found`
           });
-        } else res.send({ message: "Media Lie was updated successfully." });
+        } else res.send({ message: "About Lies was updated successfully." });
       })
       .catch(err => {
         res.status(500).send({
-          message: "Error updating Media Lie with id=" + id
+          message: "Error updating About Lies with id=" + id
         });
       });
 };
 
-// Retrieve a LieMedia with id
+// Retrieve an AboutLies with id
 exports.findOne = (req, res) => {
   const id = req.params.id;
 
-  LieMedia.findById(id)
+  AboutLies.findById(id)
     .then(data => {
       if (!data)
-        res.status(404).send({ message: "Media Lie not found with id " + id });
+        res.status(404).send({ message: "About Lies not found with id " + id });
       else res.send(data);
     })
     .catch(err => {
       res
         .status(500)
-        .send({ message: "Error retrieving Media Lie with id=" + id });
+        .send({ message: "Error retrieving About Lies with id=" + id });
     }); 
 };
 
-// Delete a LieMedia with id
+// Delete an AboutLies with id
 exports.delete = (req, res) => {
     const id = req.params.id;
 
-    LieMedia.findByIdAndRemove(id, { useFindAndModify: false })
+    AboutLies.findByIdAndRemove(id, { useFindAndModify: false })
       .then(data => {
         if (!data) {
           res.status(404).send({
-            message: `Cannot delete Media Lie with id=${id}. Maybe Media Lie was not found`
+            message: `Cannot delete About Lies with id=${id}. Maybe About Lies was not found`
           });
         } else {
           res.send({
-            message: "Media Lie was deleted successfully"
+            message: "About Lies was deleted successfully"
           });
         }
       })
       .catch(err => {
         res.status(500).send({
-          message: "Could not delete Media Lie with id=" + id
+          message: "Could not delete About Lies with id=" + id
         });
       });
 };

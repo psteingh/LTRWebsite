@@ -40,6 +40,9 @@ require("./routes/contact.routes")(app);
 require("./routes/ltrlie.routes")(app);
 require("./routes/lierboard.routes")(app);
 
+require("./routes/aboutlies.routes")(app);
+require("./routes/aboutliesboard.routes")(app);
+
 require("./routes/liebible.routes")(app);
 require("./routes/bibleboard.routes")(app);
 
