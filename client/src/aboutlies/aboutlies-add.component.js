@@ -4,7 +4,7 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
-import LieMediaDataService from "../services/liemedia.service";
+import AboutLiesDataService from "../services/aboutlies.service";
 import AuthService from "../services/auth.service";
 
 const title = value => {
@@ -37,14 +37,14 @@ const bottom = value => {
   }
 };
 
-export default class LieMediaAdd extends Component {
+export default class AboutLiesAdd extends Component {
   constructor(props) {
     super(props);
     this.handleCreate = this.handleCreate.bind(this);
     this.onChangeTitle = this.onChangeTitle.bind(this);
     this.onChangeMiddle = this.onChangeMiddle.bind(this);
     this.onChangeBottom = this.onChangeBottom.bind(this);
-    this.newLieMedia = this.newLieMedia.bind(this);
+    this.newAboutLies = this.newAboutLies.bind(this);
     
     this.state = {
       id: null,
@@ -87,7 +87,7 @@ handleCreate(e) {
 
   this.form.validateAll();
   
-  // saveLieMedia() {
+  // saveAboutLies() {
     var data = {
       title: this.state.title,
       middle: this.state.middle,
@@ -97,7 +97,7 @@ handleCreate(e) {
 
     if (this.checkBtn.context._errors.length === 0) {  
     
-      LieMediaDataService.create(data)
+      AboutLiesDataService.create(data)
       .then(response => {
         this.setState({
           id: response.data.id,
@@ -108,7 +108,7 @@ handleCreate(e) {
           submitted: true
         });
         console.log(response.data);
-        this.props.history.push("/liesmedia");
+        this.props.history.push("/aboutlies");
       },
       error => {
         const resMessage =
@@ -131,7 +131,7 @@ handleCreate(e) {
   }
 }
 
-  newLieMedia() {
+  newAboutLies() {
     this.setState({
       id: null,
       title: "",
@@ -151,13 +151,13 @@ handleCreate(e) {
             <h4>Submitted successfully</h4>
             <p><button
                 className="submit-button"
-                onClick={this.newLieMedia}>
-                Add another Media Lie
+                onClick={this.newAboutLies}>
+                Add another About Lies
               </button></p>
               <p><button
                 className="submit-button">
-                <Link to={"/liesmedia"}>
-                List of Media Lies </Link>
+                <Link to={"/aboutlies"}>
+                List of About Lies </Link>
               </button></p> 
            </div>
         ) : (
@@ -206,13 +206,13 @@ handleCreate(e) {
 
             <p><button
                 className="submit-button"
-                onClick={this.saveLieMedia}>
-                Add Media Lie </button></p>
+                onClick={this.saveAboutLies}>
+                Add About Lies </button></p>
 
               <p><button
                 className="submit-button">
-                <Link to={"/liesmedia"}>
-                List of Media Lies </Link>
+                <Link to={"/aboutlies"}>
+                List of About Lies </Link>
               </button></p>
          
               <CheckButton style={{ display: "none" }}
