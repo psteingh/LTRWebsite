@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ltrbrand from "../images/ltrbrand.png";
 
-class LiesNavbar extends Component {
+class AboutLiesNavbar extends Component {
 render() {
     return (
       <div>
@@ -38,4 +38,4 @@ render() {
 }
 }
 
-export default LiesNavbar;
+export default AboutLiesNavbar;

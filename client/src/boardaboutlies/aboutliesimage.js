@@ -1,7 +1,7 @@
 import React from "react";
 import ltrblackbkgrnd from "../images/ltrblackbkgrnd.png";
 
-function LiesTop(){
+function AboutLiesImage(){
     return(
         <div className="liestop-container">
           <img className="liesab-image" src={ltrblackbkgrnd} alt="LTR Black background" />
@@ -14,4 +14,4 @@ function LiesTop(){
     );
 }
     
-export default LiesTop;
+export default AboutLiesImage;

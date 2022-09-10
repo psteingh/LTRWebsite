@@ -1,6 +1,6 @@
 import React from "react";
 
-function LiesAbout(){
+function AboutLiesTop(){
   return(
   <div>
 
@@ -33,4 +33,4 @@ function LiesAbout(){
   );
 }
 
-export default LiesAbout;
+export default AboutLiesTop;
