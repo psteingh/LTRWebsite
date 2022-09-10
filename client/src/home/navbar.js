@@ -61,7 +61,7 @@ render() {
           Lier Board
           </Link>
 
-          <Link to={"/aboutlies"} className="navbar-mid">
+          <Link to={"/aboutliesboard"} className="navbar-mid">
           About Lies
           </Link>
 
