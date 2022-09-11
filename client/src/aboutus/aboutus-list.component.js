@@ -126,7 +126,7 @@ export default class AboutUsList extends Component {
         </div>
         
         <div className="col-md-6">
-          <h4>List of About Lies</h4>
+          <h4>List of About Us</h4>
           <ul className="list-group">
             {aboutus &&
               aboutus.map((aboutus, index) => (
@@ -135,7 +135,7 @@ export default class AboutUsList extends Component {
                 "list-group-item " +
                 (index === currentIndex ? "active" : "")
                 }
-                onClick={() => this.setActiveAboutLies(aboutus, index)}
+                onClick={() => this.setActiveAboutUs(aboutus, index)}
                 key={index}>
                 
                 {aboutus.title}
