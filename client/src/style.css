@@ -249,6 +249,10 @@ label {
 
 .ab-image {
 	width: 100%;
+	height: 100px;
+	margin: 0%;
+	padding: 0%;
+	object-fit: contain;
 }
 
 .abnavbar-grid {

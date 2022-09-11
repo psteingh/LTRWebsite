@@ -4,7 +4,7 @@ import ltrdeceive from "../images/ltrdeceive.png";
 function AboutUsImage(){
     return(
         <div className="liestop-container">
-          <img className="liesab-image" src={ltrdeceive} alt="LTR Deceive" />  
+          <img className="ab-image" src={ltrdeceive} alt="LTR Deceive" />  
         
         <div className="liestext-centered">
           About Us
