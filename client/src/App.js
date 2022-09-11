@@ -11,9 +11,8 @@ import Register from "./components/register.component";
 import Navbar from "./home/navbar";
 import Contact from "./home/contact";
 
-import About from "./about/about.component";
+import AboutUsBoard from "./boardaboutus/aboutusboard.component";
 import AboutLiesBoard from "./boardaboutlies/aboutliesboard.component";
-// import Lies from "./aboutlies/lies.component";
 
 import Admin from "./view/admin.component";
 import ProtectedRoute from "./view/ProtectedRoute";
@@ -25,6 +24,10 @@ import MediaBoard from "./boardmedia/mediaboard.component";
 import LtrLieAdd from "./vault/ltrlie-add.component";
 import LtrLieList from "./vault/ltrlie-list.component";
 import LtrLieUpdate from "./vault/ltrlie-update.component";
+
+import AboutUsList from "./aboutus/aboutus-list.component";
+import AboutUsAdd from "./aboutus/aboutus-add.component";
+import AboutUsUpdate from "./aboutus/aboutus-update.component";
 
 import AboutLiesList from "./aboutlies/aboutlies-list.component";
 import AboutLiesAdd from "./aboutlies/aboutlies-add.component";
@@ -61,9 +64,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
 
-            <Route exact path="/about" component={About} />
-            
-            {/* <Route exact path="/aboutlies" component={Lies} /> */}
+            <Route exact path="/aboutusboard" component={AboutUsBoard} />
 
             <Route exact path="/aboutliesboard" component={AboutLiesBoard} />
             <Route exact path="/generalboard" component={GeneralBoard} />
@@ -74,6 +75,10 @@ class App extends Component {
             <Route exact path="/add" component={LtrLieAdd} />
             <Route path="/ltrlies/:id" component={LtrLieUpdate} />
  
+            <Route exact path="/aboutus" component={AboutUsList} />
+            <Route exact path="/aboutusadd" component={AboutUsAdd} />
+            <Route path="/aboutus/:id" component={AboutUsUpdate} />
+            
             <Route exact path="/aboutlies" component={AboutLiesList} />
             <Route exact path="/aboutliesadd" component={AboutLiesAdd} />
             <Route path="/aboutlies/:id" component={AboutLiesUpdate} />

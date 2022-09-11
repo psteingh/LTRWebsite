@@ -1,6 +1,6 @@
 import React from "react";
 
-function AboutMission(){
+function AboutUsTop(){
   return(
   <div className="abmiss-container">
     <div className="abmiss-title">
@@ -29,4 +29,4 @@ function AboutMission(){
   );
 }
 
-export default AboutMission;
+export default AboutUsTop;
