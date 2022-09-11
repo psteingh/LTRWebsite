@@ -3,10 +3,10 @@ import ltrdeceive from "../images/ltrdeceive.png";
 
 function AboutUsImage(){
     return(
-        <div className="abtop-container">
-          <img className="ab-image" src={ltrdeceive} alt="LTR Deceive" />  
+        <div className="liestop-container">
+          <img className="liesab-image" src={ltrdeceive} alt="LTR Deceive" />  
         
-        <div className="abtext-centered">
+        <div className="liestext-centered">
           About Us
         </div>
         

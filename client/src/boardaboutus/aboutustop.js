@@ -2,28 +2,16 @@ import React from "react";
 
 function AboutUsTop(){
   return(
-  <div className="abmiss-container">
-    <div className="abmiss-title">
-    You want to stay in control
+  <div className="boardtop-container">
+    <div className="board-title">
+    The purpose of LiesToRemember.com
     </div>
-
-    <div className="abmiss-mid">
-    You do not want to use a lie too many times or
-    with someone in particular.<br />
-    The purpose of this site is not to correct a problem;
-    it is for you to be able to track the lies you tell.<br />
-    If you know all of your lies, there are no secrets that
-    can cause problems.
+    <div className="board-mid">
+    Is for you to be able to track the lies you tell
     </div>
-
-    <div className="abmiss-bottom">
-    Social sites are about getting as many people signed up
-    and then telling all of their friends.
-    This is the opposite of that - The anti-social site.<br />
-    Everyone will be on this site but no one will want
-    to know that.
+    <div className="board-bottom">
+    It is not to correct a problem
     </div>
-
   </div>
 
   );
