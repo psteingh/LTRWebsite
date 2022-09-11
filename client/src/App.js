@@ -17,6 +17,8 @@ import AboutLiesBoard from "./boardaboutlies/aboutliesboard.component";
 import Admin from "./view/admin.component";
 import ProtectedRoute from "./view/ProtectedRoute";
 
+import MusingsBoard from "./boardmusings/musingsboard.component";
+
 import GeneralBoard from "./boardgeneral/generalboard.component";
 import BibleBoard from "./boardbible/bibleboard.component";
 import MediaBoard from "./boardmedia/mediaboard.component";
@@ -28,6 +30,10 @@ import LtrLieUpdate from "./vault/ltrlie-update.component";
 import AboutUsList from "./aboutus/aboutus-list.component";
 import AboutUsAdd from "./aboutus/aboutus-add.component";
 import AboutUsUpdate from "./aboutus/aboutus-update.component";
+
+import MusingsList from "./musings/musings-list.component";
+import MusingsAdd from "./musings/musings-add.component";
+import MusingsUpdate from "./musings/musings-update.component";
 
 import AboutLiesList from "./aboutlies/aboutlies-list.component";
 import AboutLiesAdd from "./aboutlies/aboutlies-add.component";
@@ -65,6 +71,7 @@ class App extends Component {
             <Route exact path="/contact" component={Contact} />
 
             <Route exact path="/aboutusboard" component={AboutUsBoard} />
+            <Route exact path="/musingsboard" component={MusingsBoard} />
 
             <Route exact path="/aboutliesboard" component={AboutLiesBoard} />
             <Route exact path="/generalboard" component={GeneralBoard} />
@@ -78,6 +85,10 @@ class App extends Component {
             <Route exact path="/aboutus" component={AboutUsList} />
             <Route exact path="/aboutusadd" component={AboutUsAdd} />
             <Route path="/aboutus/:id" component={AboutUsUpdate} />
+            
+            <Route exact path="/musings" component={MusingsList} />
+            <Route exact path="/musingsadd" component={MusingsAdd} />
+            <Route path="/musings/:id" component={MusingsUpdate} />
             
             <Route exact path="/aboutlies" component={AboutLiesList} />
             <Route exact path="/aboutliesadd" component={AboutLiesAdd} />

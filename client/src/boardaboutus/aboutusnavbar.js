@@ -16,7 +16,9 @@ render() {
           About Us
           </Link>
 
-          {/* Musings */}
+          <Link to={"/musingsboard"}>
+          Musings
+          </Link>
 
           <Link to={"/contact"}>
           Contact Us
