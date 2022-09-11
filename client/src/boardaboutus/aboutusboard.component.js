@@ -60,7 +60,7 @@ export default class AboutUsComponent extends Component {
     });
   }
 
-  setActiveAboutLies(index) {
+  setActiveAboutUs(index) {
     this.setState({
       currentIndex: index,
     });
