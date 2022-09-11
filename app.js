@@ -43,6 +43,9 @@ require("./routes/lierboard.routes")(app);
 require("./routes/aboutus.routes")(app);
 require("./routes/aboutusboard.routes")(app);
 
+require("./routes/musings.routes")(app);
+require("./routes/musingsboard.routes")(app);
+
 require("./routes/aboutlies.routes")(app);
 require("./routes/aboutliesboard.routes")(app);
 

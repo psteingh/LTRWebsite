@@ -16,6 +16,9 @@ db.ltrlies = require("./ltrlie.model");
 // AboutUs
 db.aboutus = require("./aboutus.model");
 
+// Musings
+db.musings = require("./musings.model");
+
 // AboutLies
 db.aboutlies = require("./aboutlies.model");
 
