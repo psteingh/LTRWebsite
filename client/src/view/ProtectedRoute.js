@@ -9,5 +9,5 @@ export default class ProtectedRoute extends Component {
   const isAuthenticated = localStorage.getItem("isAuthenticated");
 
   return isAuthenticated ? ( <Test /> ) : (
-      <Redirect to={"/about"} /> );
+      <Redirect to={"/aboutusboard"} /> );
 } }
