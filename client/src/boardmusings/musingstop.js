@@ -7,10 +7,8 @@ function MusingsTop(){
     Thoughts not inspired by lies
     </div>
     <div className="board-mid">
-    To be added - middle
     </div>
     <div className="board-bottom">
-    To be added - bottom
     </div>
   </div>
 
