@@ -33,7 +33,7 @@ exports.create = (req, res) => {
 
 // Retrieve and Sort all LtrLies
 exports.findAll = (req, res) => {
-  const arr = { name: 1};
+  const arr = { name: 1 }; 
   const currentUser = req.userId;
   const name = req.query.name;
   var condition = {$and: [
