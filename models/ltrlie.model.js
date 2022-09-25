@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const LtrLieSchema = new mongoose.Schema({
   name: String,
-  collation: String,
   subject: String,
   stuff: String,
   currentUser: String,
