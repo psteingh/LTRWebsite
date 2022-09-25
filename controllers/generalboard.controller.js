@@ -3,7 +3,7 @@ const LieGeneral = db.liesgeneral;
 
 // Retrieve and Sort all published General Lies
 exports.findAllPublished = (req, res) => {
-  const arr = { name: 1 };
+  const arr = { title: 1 };
 
   LieGeneral.find({published: true})
     .collation({locale: "en"})

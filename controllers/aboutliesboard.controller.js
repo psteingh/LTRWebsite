@@ -3,7 +3,7 @@ const AboutLies = db.aboutlies;
 
 // Retrieve and Sort all published About Lies
 exports.findAllPublished = (req, res) => {
-  const arr = { name: 1 };
+  const arr = { title: 1 };
 
   AboutLies.find({published: true})
     .collation({locale: "en"})

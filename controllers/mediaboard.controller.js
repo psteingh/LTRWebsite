@@ -3,7 +3,7 @@ const LieMedia = db.liesmedia;
 
 // Retrieve and Sort all published Media Lies
 exports.findAllPublished = (req, res) => {
-  const arr = { name: 1 };
+  const arr = { title: 1 };
 
   LieMedia.find({published: true})
     .collation({locale: "en"})

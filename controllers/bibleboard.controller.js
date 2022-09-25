@@ -3,7 +3,7 @@ const LieBible = db.liesbible;
 
 // Retrieve and Sort all published Bible Lies
 exports.findAllPublished = (req, res) => {
-  const arr = { name: 1 };
+  const arr = { title: 1 };
 
   LieBible.find({published: true})
     .collation({locale: "en"})

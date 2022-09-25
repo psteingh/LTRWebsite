@@ -3,7 +3,7 @@ const Musings = db.musings;
 
 // Retrieve and Sort all published Musings
 exports.findAllPublished = (req, res) => {
-  const arr = { name: 1 };
+  const arr = { title: 1 };
 
   Musings.find({published: true})
     .collation({locale: "en"})
