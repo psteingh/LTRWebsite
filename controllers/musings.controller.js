@@ -41,6 +41,7 @@ exports.findAll = (req, res) => {
           {currentUser} ]};
 
       Musings.find(condition)
+  .collation({locale: "en"})
   .sort(arr)
   .then(data => {
     res.send(data);

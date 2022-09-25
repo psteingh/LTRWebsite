@@ -6,6 +6,7 @@ exports.findAllPublished = (req, res) => {
   const arr = { name: 1 };
 
   AboutUs.find({published: true})
+    .collation({locale: "en"})
     .sort(arr)
     .then(data => {
     res.send(data);

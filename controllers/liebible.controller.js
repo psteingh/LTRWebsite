@@ -41,6 +41,7 @@ exports.findAll = (req, res) => {
           {currentUser} ]};
 
       LieBible.find(condition)
+  .collation({locale: "en"})
   .sort(arr)
   .then(data => {
     res.send(data);
