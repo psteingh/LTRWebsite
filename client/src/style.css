@@ -8,27 +8,30 @@ body {
 	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
-
+/* tophead, homemid */
 h1 {
 	font-family: 'Libre Baskerville', serif;
 	font-weight: bold;
 	color: #FFFFF0;
 }
+/* contact - Contact Us */
 h2 {
 	font-family: 'Libre Baskerville', serif;
 	font-weight: bold;
 	color: #36648B;
 }
-/* Webpage notice */
+/* Webpage notice - Only you see this */
 h3 {
 	font-family: 'Libre Baskerville', serif;
 	color: #8C4845;
 }
+/* -add, -list, -update */
 h4 {
 	font-family: 'Libre Baskerville', serif;
 	font-weight: bold;
 	color: #368B88;
 }
+/* -list, -update - details */
 h5 {
 	font-family: 'Libre Baskerville', serif;
 	color: #E9EC47;
@@ -37,7 +40,7 @@ h5 {
 .form-control::placeholder {
 	color: #8C4845;
 }
-
+/* -add, -list, -update - Title/Name, Middle/Subject, Bottom/Stuff */
 label {
 	color: #36648B;
 	margin-top: 5%;
@@ -126,11 +129,12 @@ label {
 }
 
 /* Header titles section */
+/* Lies To Remember, Login, Sign Up */
 .headertitle-text {
 	font-size: 4.5rem;
 	text-shadow: 2px 2px 2px #368B88, 4px 4px 4px #7F7F7F, 0 0 60px #FFFFFF;
 }
-
+/* This site is to store & track your lies */
 .headersubtitle-text {
 	font-size: 1.5rem;
 }
