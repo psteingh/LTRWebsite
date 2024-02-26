@@ -21,7 +21,7 @@ const db = require("./models");
 
 db.mongoose
   .connect(
-    process.env.MONGODB_URI)
+    process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(() => {
     console.log("app.js.db.mongoose");
   })
