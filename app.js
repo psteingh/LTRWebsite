@@ -6,8 +6,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 const app = express();
 
-// test GH
-
 // Accessing the path module
 const path = require("path");
 
